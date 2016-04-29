@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/hgursoy/Donando/Build/Products/Debug/Result.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/hgursoy/Donando/Build/Intermediates/Result.build/Debug/Result-Mac.build/unextended-module.modulemap',
+    }]
+  }]
+}

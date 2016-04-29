@@ -1,0 +1,102 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ResultErrorType"
+- "ResultType"
+- "ErrorTypeConvertible"
+- "&&&"
+- "&&&"
+- ">>-"
+- ">>-"
+- "=="
+- "!="
+- "??"
+- "??"
+provides-nominal:
+- "P6Result10ResultType"
+- "P6Result20ErrorTypeConvertible"
+provides-member:
+- ["P6Result10ResultType", ""]
+- ["P6Result20ErrorTypeConvertible", ""]
+- ["P6Result10ResultType", "value"]
+- ["P6Result10ResultType", "error"]
+- ["P6Result10ResultType", "map"]
+- ["P6Result10ResultType", "flatMap"]
+- ["P6Result10ResultType", "mapError"]
+- ["P6Result10ResultType", "flatMapError"]
+- ["P6Result10ResultType", "recover"]
+- ["P6Result10ResultType", "recoverWith"]
+- ["P6Result10ResultType", "tryMap"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "BooleanLiteralType"
+- ">>-"
+- "!="
+- "ResultErrorType"
+- "Result"
+- "ErrorType"
+- !private "!"
+- "Bool"
+- "ResultType"
+- "&&&"
+- "ErrorTypeConvertible"
+- "??"
+- "Equatable"
+- "=="
+depends-member:
+- !private ["Ps28CustomDebugStringConvertible", "Failure"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "Success"]
+- !private ["Ps23CustomStringConvertible", "Failure"]
+- !private ["Ps23CustomStringConvertible", "Success"]
+- ["Ps9ErrorType", "ResultErrorType"]
+- !private ["Ps9ErrorType", "errorFromErrorType"]
+- ["Ps9ErrorType", ""]
+- ["P6Result20ErrorTypeConvertible", "ResultErrorType"]
+- ["P6Result20ErrorTypeConvertible", "errorFromErrorType"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["O6Result6Result", "Failure"]
+- !private ["O6Result6Result", "Success"]
+- ["P6Result10ResultType", "Error"]
+- ["P6Result10ResultType", "ErrorTypeConvertible"]
+- !private ["P6Result10ResultType", "Failure"]
+- ["P6Result10ResultType", "Result"]
+- ["P6Result10ResultType", "ResultErrorType"]
+- ["P6Result10ResultType", "Self"]
+- !private ["P6Result10ResultType", "Success"]
+- ["P6Result10ResultType", "Value"]
+- ["P6Result10ResultType", "analysis"]
+- !private ["P6Result10ResultType", "deinit"]
+- ["P6Result10ResultType", "error"]
+- ["P6Result10ResultType", "flatMap"]
+- ["P6Result10ResultType", "flatMapError"]
+- ["P6Result10ResultType", "init"]
+- ["P6Result10ResultType", "map"]
+- ["P6Result10ResultType", "mapError"]
+- ["P6Result10ResultType", "recover"]
+- ["P6Result10ResultType", "recoverWith"]
+- ["P6Result10ResultType", "tryMap"]
+- ["P6Result10ResultType", "value"]
+- ["Ps12_Reflectable", "Some"]
+depends-nominal:
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- "Ps9ErrorType"
+- "P6Result20ErrorTypeConvertible"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "O6Result6Result"
+- "P6Result10ResultType"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/hgursoy/Downloads/Result-master/Result/Result.h"
+- "/Users/hgursoy/Donando/Build/Intermediates/Result.build/Debug-iphonesimulator/Result-iOS.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+interface-hash: "480d5227d577ede875ecb315ccea08aa"

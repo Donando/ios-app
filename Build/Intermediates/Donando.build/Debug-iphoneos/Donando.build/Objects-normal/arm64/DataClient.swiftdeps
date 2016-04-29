@@ -1,0 +1,45 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DataResult"
+- "DataClient"
+provides-nominal:
+- "P7Donando10DataClient"
+provides-member:
+- ["P7Donando10DataClient", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AnyObject"
+- "String"
+- "DonandoError"
+- "DataResult"
+- "DataClient"
+- "Future"
+depends-member:
+- ["P7Donando10DataClient", "DataResult"]
+- ["P7Donando10DataClient", "String"]
+- ["P7Donando10DataClient", "getNGOs"]
+- ["O7Donando12DonandoError", "deinit"]
+depends-nominal:
+- "P7Donando10DataClient"
+- "O7Donando12DonandoError"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/arm64.swiftmodule"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/Result.swiftmodule/arm64.swiftmodule"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result-Swift.h"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result.h"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/module.modulemap"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
+interface-hash: "68c2b3441fb3aed13f2b178e422d64a3"

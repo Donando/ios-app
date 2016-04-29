@@ -1,0 +1,1 @@
+ const unsigned char Result_MacTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Result-MacTests  PROJECT:Result-1" "\n"; const double Result_MacTestsVersionNumber __attribute__ ((used)) = (double)1.;

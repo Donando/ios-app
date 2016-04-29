@@ -1,0 +1,112 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "APIClient"
+provides-nominal:
+- "C7Donando9APIClient"
+provides-member:
+- ["C7Donando9APIClient", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "APIName"
+- "DataClient"
+- !private "Dictionary"
+- "WebClient"
+- "APIClient"
+- "String"
+- "DataResult"
+- !private "Endpoints"
+depends-member:
+- !private ["C7Donando9APIClient", "APIName"]
+- ["C7Donando9APIClient", "DataResult"]
+- !private ["C7Donando9APIClient", "Endpoints"]
+- ["C7Donando9APIClient", "String"]
+- ["C7Donando9APIClient", "WebClient"]
+- ["C7Donando9APIClient", "deinit"]
+- ["C7Donando9APIClient", "getNGOs"]
+- ["C7Donando9APIClient", "init"]
+- ["C7Donando9APIClient", "webClient"]
+- !private ["O7Donando7APIName", "NGOs"]
+- !private ["Ps9AnyObject", "APIName"]
+- !private ["Ps9AnyObject", "Endpoints"]
+- ["Ps9AnyObject", "WebClient"]
+- !private ["Ps9AnyObject", "createRequest"]
+- ["Ps9AnyObject", "getNGOs"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "sendRequest"]
+- !private ["Ps9AnyObject", "webClient"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["P7Donando10DataClient", "APIName"]
+- !private ["P7Donando10DataClient", "Endpoints"]
+- ["P7Donando10DataClient", "WebClient"]
+- ["P7Donando10DataClient", "getNGOs"]
+- !private ["P7Donando10DataClient", "webClient"]
+- ["P7Donando10DataClient", ""]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["V7Donando9Endpoints", "ngoNear"]
+- !private ["V7Donando9Endpoints", "searchTextToken"]
+- !private ["V7Donando9Endpoints", "zipCodeToken"]
+- !private ["Ps9Equatable", "NGOs"]
+- !private ["Ps8Hashable", "NGOs"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "Value"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16RawRepresentable", "NGOs"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["C7Donando9WebClient", "createRequest"]
+- ["C7Donando9WebClient", "init"]
+- !private ["C7Donando9WebClient", "sendRequest"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Value"]
+depends-nominal:
+- "C7Donando9APIClient"
+- !private "O7Donando7APIName"
+- "Ps9AnyObject"
+- !private "Ps14CollectionType"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- "P7Donando10DataClient"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- !private "V7Donando9Endpoints"
+- !private "Ps9Equatable"
+- !private "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Sq"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- "C7Donando9WebClient"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/arm64.swiftmodule"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/Result.swiftmodule/arm64.swiftmodule"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result-Swift.h"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result.h"
+- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/module.modulemap"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
+- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
+interface-hash: "7b703532377d35f3060026eaec7a3399"

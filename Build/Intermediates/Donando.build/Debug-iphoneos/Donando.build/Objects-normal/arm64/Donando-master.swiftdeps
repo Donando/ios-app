@@ -1,0 +1,17 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "de0e7a98764150df5a07a32c0fc34d3e"
+build_time: [515252992, 553740000]
+inputs:
+  "/Users/hgursoy/Donando/Donando/DataStore.swift": [515251626, 0]
+  "/Users/hgursoy/Donando/Donando/TabBarController.swift": [514919213, 0]
+  "/Users/hgursoy/Donando/Donando/WebClient.swift": [515249677, 0]
+  "/Users/hgursoy/Donando/Donando/ModelFactory.swift": [515250947, 0]
+  "/Users/hgursoy/Donando/Donando/NGOAnnotation.swift": [515251451, 0]
+  "/Users/hgursoy/Donando/Donando/SearchViewController.swift": [515252556, 0]
+  "/Users/hgursoy/Donando/Donando/DataClient.swift": [515249363, 0]
+  "/Users/hgursoy/Donando/Donando/AppDelegate.swift": [515251450, 0]
+  "/Users/hgursoy/Donando/Donando/Error.swift": [515244525, 0]
+  "/Users/hgursoy/Donando/Donando/Extensions.swift": [515243952, 0]
+  "/Users/hgursoy/Donando/Donando/NGODetailViewController.swift": [515171568, 0]
+  "/Users/hgursoy/Donando/Donando/InfoViewController.swift": [514916685, 0]
+  "/Users/hgursoy/Donando/Donando/APIClient.swift": [515249687, 0]

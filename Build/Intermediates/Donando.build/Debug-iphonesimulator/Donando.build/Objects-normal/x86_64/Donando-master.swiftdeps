@@ -1,0 +1,13 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "7dd9161cd2076e5cecd28a063aadb918"
+build_time: [515234218, 939275000]
+inputs:
+  "/Users/hgursoy/Donando/Donando/DataStore.swift": [515234218, 0]
+  "/Users/hgursoy/Donando/Donando/TabBarController.swift": [514919213, 0]
+  "/Users/hgursoy/Donando/Donando/WebClient.swift": [515234191, 0]
+  "/Users/hgursoy/Donando/Donando/NGOAnnotation.swift": [515171379, 0]
+  "/Users/hgursoy/Donando/Donando/SearchViewController.swift": [515234190, 0]
+  "/Users/hgursoy/Donando/Donando/AppDelegate.swift": [514919167, 0]
+  "/Users/hgursoy/Donando/Donando/Extensions.swift": [515097543, 0]
+  "/Users/hgursoy/Donando/Donando/NGODetailViewController.swift": [515171568, 0]
+  "/Users/hgursoy/Donando/Donando/InfoViewController.swift": [514916685, 0]

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NGOCell" customModule="Donando" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="93"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-3N-U2k">
+                    <rect key="frame" x="22" y="8" width="271" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="kG7-7u-YeE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFX-kG-4wZ">
+                    <rect key="frame" x="22" y="32" width="271" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="A4t-kV-GFG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.51629317434210531" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-iU-Njk">
+                    <rect key="frame" x="22" y="61" width="134" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="N8v-7w-gq5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="tintColor" red="0.21960784310000001" green="0.73333333329999995" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Phone number" image="telephone">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" image="InfoTabIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fXB-2S-oTH">
+                    <rect key="frame" x="307" y="31" width="18" height="18"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="ItM-ri-296"/>
+                        <constraint firstAttribute="width" constant="18" id="ZVM-DD-JMl"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xO3-3N-U2k" secondAttribute="trailing" constant="47" id="0ST-9N-dhH"/>
+                <constraint firstItem="fXB-2S-oTH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="31" id="0jz-p0-frS"/>
+                <constraint firstItem="AFX-kG-4wZ" firstAttribute="top" secondItem="xO3-3N-U2k" secondAttribute="bottom" constant="3" id="CPh-Ga-vrb"/>
+                <constraint firstAttribute="trailing" secondItem="AFX-kG-4wZ" secondAttribute="trailing" constant="47" id="F2v-tz-ztn"/>
+                <constraint firstItem="Ieq-iU-Njk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="22" id="FGQ-mx-hjf"/>
+                <constraint firstItem="Ieq-iU-Njk" firstAttribute="top" secondItem="AFX-kG-4wZ" secondAttribute="bottom" constant="8" id="X1N-0w-Q4r"/>
+                <constraint firstItem="xO3-3N-U2k" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="XaE-RJ-5yV"/>
+                <constraint firstAttribute="trailing" secondItem="fXB-2S-oTH" secondAttribute="trailing" constant="15" id="dkC-x4-Ffg"/>
+                <constraint firstAttribute="trailing" secondItem="Ieq-iU-Njk" secondAttribute="trailing" constant="184" id="hYV-YJ-4Yt"/>
+                <constraint firstItem="AFX-kG-4wZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="22" id="kki-OO-k64"/>
+                <constraint firstItem="xO3-3N-U2k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="22" id="lUj-Si-c0j"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLabel" destination="AFX-kG-4wZ" id="GdR-lz-8x4"/>
+                <outlet property="infoButton" destination="fXB-2S-oTH" id="CgS-0f-dNq"/>
+                <outlet property="nameLabel" destination="xO3-3N-U2k" id="QO3-gJ-tWB"/>
+                <outlet property="phoneButton" destination="Ieq-iU-Njk" id="CpJ-Eh-fUC"/>
+            </connections>
+            <point key="canvasLocation" x="828" y="328.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="InfoTabIcon" width="32" height="32"/>
+        <image name="telephone" width="24" height="24"/>
+    </resources>
+</document>
