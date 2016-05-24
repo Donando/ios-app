@@ -23,6 +23,8 @@ class NGODetailViewController: UIViewController {
     @IBOutlet weak var seeMoreButton: UILabel!
     @IBOutlet weak var openWebsiteButton: UIButton!
     
+    @IBOutlet weak var demandsHeightConstraint: NSLayoutConstraint!
+    
     var ngo: NGO?
     var ngoAnnotation: NGOAnnotation?
     
@@ -55,6 +57,8 @@ class NGODetailViewController: UIViewController {
         telephoneButton.setTitle(ngo.phoneNumber, forState: .Normal)
         
         demandsLabel.text = ngo.demands?.joinWithSeparator("\n")
+        
+        demandsHeightConstraint.constant = demandsLabel.text?.heightWithConstrainedWidth(demandsLabel.frame.width, font: demandsLabel.font) ?? 0
         
         if let openingHours = ngo.openingHours {
             openingHoursButton.setTitle(openingHours, forState: .Normal)
