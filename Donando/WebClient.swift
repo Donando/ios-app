@@ -42,7 +42,7 @@ class WebClient {
         let cachePolicy: NSURLRequestCachePolicy = .ReloadIgnoringLocalCacheData
         
         var request = NSMutableURLRequest(URL: url, cachePolicy: cachePolicy, timeoutInterval: WebClient.RequestTimeOut)
-        // On some devices for some reason the content-type header is not set to "Application/JSON" so a bad request error is returned.
+        // On some devices for some reason the content-type header is not set to "Application/JSON" so a bad request error is returned.e
         // This fixes the header issue
         if let json = json {
             let newRequest = ParameterEncoding.JSON.encode(request, parameters:(try? NSJSONSerialization.JSONObjectWithData(json, options: [])) as? [String: AnyObject]).0
@@ -60,15 +60,11 @@ class WebClient {
      Send a previously created NSURLRequest, through AlamoFire. This method also handles the response, by checking errors and creating a PagedResult, and calls the completion closure
      
      - parameter request:       The NSURLRequest to be sent
-     - parameter numRetries:    Number of tries to be made in case of a 401 error(token expired). If this is 0, the completion closure will be called with an error
-     - parameter cache:         If the response will be cached or not
-     - parameter forceRetrieve: If a the request should be sent even if there is a valid cached response for this request
-     - parameter completion:    A completion closure which expects the response as a PagedResult
      */
     func sendRequest(request: NSURLRequest) -> DataResult {
         let promise = Promise<AnyObject?, DonandoError> ()
         
-        manager.request(request).responseJSON(options: []) { [weak self] response in
+        manager.request(request).responseJSON(options: []) { response in
             guard let _ = response.request else { return }
             
             if response.result.isSuccess {
@@ -77,7 +73,7 @@ class WebClient {
                 promise.failure(DonandoError.GenericError)
             }
             
-            }.validate()
+        }.validate()
         
         return promise.future
     }
@@ -97,10 +93,10 @@ public struct Endpoints {
     
     public static var baseURI: String!
     
-    public static let ngoIdToken: Token = "{ngoId}"
-    public static let demandIdToken: Token = "{demandId}"
-    public static let zipCodeToken: Token = "{address}"
-    public static let searchTextToken: Token = "{filter}"
+    public static let ngoIdToken: Token = "ngoId"
+    public static let demandIdToken: Token = "demandId"
+    public static let zipCodeToken: Token = "address"
+    public static let searchTextToken: Token = "filter"
     
     public static let ngoNear: EndpointPath = ""
     public static let demandSearch: EndpointPath = "search"

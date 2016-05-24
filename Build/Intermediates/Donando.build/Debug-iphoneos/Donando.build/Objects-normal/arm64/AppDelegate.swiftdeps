@@ -6,26 +6,26 @@ provides-nominal:
 provides-member:
 - ["C7Donando11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillResignActive"
-- "application"
-- "applicationWillTerminate"
+- "applicationDidEnterBackground"
 - "applicationWillEnterForeground"
 - "applicationDidBecomeActive"
-- "applicationDidEnterBackground"
 - "window"
+- "application"
+- "applicationWillTerminate"
+- "applicationWillResignActive"
 depends-top-level:
-- "NSObject"
-- "AnyObject"
-- "UIApplication"
-- !private "StringLiteralType"
-- "AppDelegate"
-- !private "UIColor"
-- "UIResponder"
 - "Bool"
-- "UIApplicationDelegate"
+- "AppDelegate"
+- "UIApplication"
 - !private "Endpoints"
+- "UIApplicationDelegate"
+- "AnyObject"
 - "UIWindow"
+- !private "StringLiteralType"
+- "UIResponder"
+- !private "UIColor"
 - !private "BooleanLiteralType"
+- "NSObject"
 depends-member:
 - !private ["Ps9AnyObject", "Endpoints"]
 - !private ["Ps9AnyObject", "UIColor"]

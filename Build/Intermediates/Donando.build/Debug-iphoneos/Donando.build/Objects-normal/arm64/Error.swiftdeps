@@ -7,9 +7,9 @@ provides-member:
 - ["O7Donando12DonandoError", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "DonandoError"
 - "=="
 - "ErrorType"
+- "DonandoError"
 depends-member:
 - !private ["Ps22BidirectionalIndexType", "hashValue"]
 - !private ["Ps21BitwiseOperationsType", "hashValue"]

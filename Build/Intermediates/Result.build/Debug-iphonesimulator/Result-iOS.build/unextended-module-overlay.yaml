@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': '/Users/hgursoy/Donando/Build/Products/Debug-iphonesimulator/Result.framework/Modules'
+    'name': '/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphonesimulator/Result.framework/Modules'
     'contents': [{
       'type': 'file',
       'name': 'module.modulemap',
-      'external-contents': '/Users/hgursoy/Donando/Build/Intermediates/Result.build/Debug-iphonesimulator/Result-iOS.build/unextended-module.modulemap',
+      'external-contents': '/Users/hgursoy/Donando/ios-app/Build/Intermediates/Result.build/Debug-iphonesimulator/Result-iOS.build/unextended-module.modulemap',
     }]
   }]
 }

@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
-options: "fa43054b34eb5800c2b191855e314c54"
-build_time: [515255116, 851962000]
+options: "06a057b60c6233881cc6386953d335f4"
+build_time: [515256330, 415513000]
 inputs:
   "/Users/hgursoy/Donando/ios-app/Donando/DataStore.swift": [9223372036854775807, 0]
   "/Users/hgursoy/Donando/ios-app/Donando/TabBarController.swift": [9223372036854775807, 0]

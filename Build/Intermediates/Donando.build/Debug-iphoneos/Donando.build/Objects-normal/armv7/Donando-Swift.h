@@ -170,10 +170,12 @@ SWIFT_CLASS("_TtC7Donando23NGODetailViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified openingHoursButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified demandsLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified seeMoreButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified openWebsiteButton;
 @property (nonatomic, strong) NGOAnnotation * _Nullable ngoAnnotation;
 - (void)viewDidLoad;
 - (void)setupUI;
 - (void)updateUI;
+- (IBAction)openWebsite;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -186,26 +188,47 @@ SWIFT_CLASS("_TtC7Donando23NGODetailViewController")
 
 @class UIStoryboardSegue;
 @class UITableView;
+@class UITextField;
 @class NSLayoutConstraint;
 
 SWIFT_CLASS("_TtC7Donando20SearchViewController")
 @interface SearchViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified searchView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified searchBox;
 @property (nonatomic, weak) IBOutlet MKMapView * _Null_unspecified mapView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified listContainerView;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified listTitleLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified listButton;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified searchView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified searchButton;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified demandSearchBox;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified zipCodeSearchField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified demandSearchField;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified listViewHeightConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified searchViewHeightConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified searchViewTopConstraint;
 @property (nonatomic, copy) NSArray<NGOAnnotation *> * _Nonnull ngoAnnotations;
+@property (nonatomic) BOOL listViewExpanded;
+@property (nonatomic, readonly) BOOL searchViewShown;
+@property (nonatomic, copy) NSString * _Nonnull zipCodeSearchText;
+@property (nonatomic, copy) NSString * _Nonnull demandSearchText;
 - (void)viewDidLoad;
 - (IBAction)dismissKeyboard;
-- (IBAction)expandListView;
-- (IBAction)contractListView;
-- (void)openNGODetail:(UIButton * _Nonnull)infoButton;
+- (IBAction)toggleListView;
+- (void)openNGODetail:(NSInteger)index;
+- (void)annotationInfoButtonPressed:(UIButton * _Nonnull)infoButton;
 - (void)moveListViewWithUp:(BOOL)up;
+- (void)moveSearchViewWithUp:(BOOL)up;
+- (void)updateSearchBox;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIGestureRecognizer;
+@class UITouch;
+
+@interface SearchViewController (SWIFT_EXTENSION(Donando)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizer:(UIGestureRecognizer * _Nonnull)gestureRecognizer shouldReceiveTouch:(UITouch * _Nonnull)touch;
 @end
 
 
@@ -213,11 +236,24 @@ SWIFT_CLASS("_TtC7Donando20SearchViewController")
 - (MKAnnotationView * _Nullable)mapView:(MKMapView * _Nonnull)mapView viewForAnnotation:(id <MKAnnotation> _Nonnull)annotation;
 @end
 
+
+@interface SearchViewController (SWIFT_EXTENSION(Donando))
+- (void)doSearch;
+- (IBAction)searchButtonPressed;
+@end
+
+
+@interface SearchViewController (SWIFT_EXTENSION(Donando)) <UITextFieldDelegate>
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+@end
+
 @class NSIndexPath;
 
 @interface SearchViewController (SWIFT_EXTENSION(Donando)) <UITableViewDelegate, UIScrollViewDelegate>
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 

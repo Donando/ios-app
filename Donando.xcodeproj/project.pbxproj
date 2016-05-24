@@ -18,6 +18,8 @@
 		248D004F1CCFC141009853D1 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248D004E1CCFC141009853D1 /* BrightFutures.framework */; };
 		248D008C1CD01B8A009853D1 /* NGOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248D008B1CD01B8A009853D1 /* NGOCell.xib */; };
 		248D008F1CD102D5009853D1 /* NGODetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D008E1CD102D5009853D1 /* NGODetailViewController.swift */; };
+		24AE2C0D1CF3001E00CEFBE1 /* NGO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */; };
+		24AE2C211CF327E200CEFBE1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE2C201CF327E200CEFBE1 /* LoadingView.swift */; };
 		24F945961CCE44CD009F479A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F945951CCE44CD009F479A /* AppDelegate.swift */; };
 		24F945981CCE44CD009F479A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F945971CCE44CD009F479A /* SearchViewController.swift */; };
 		24F9459B1CCE44CD009F479A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F945991CCE44CD009F479A /* Main.storyboard */; };
@@ -116,6 +118,8 @@
 		248D005A1CCFC732009853D1 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = "../../Downloads/Result-master/Result.xcodeproj"; sourceTree = "<group>"; };
 		248D008B1CD01B8A009853D1 /* NGOCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NGOCell.xib; sourceTree = "<group>"; };
 		248D008E1CD102D5009853D1 /* NGODetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGODetailViewController.swift; sourceTree = "<group>"; };
+		24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NGO.swift; path = ../NGO.swift; sourceTree = "<group>"; };
+		24AE2C201CF327E200CEFBE1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		24F945921CCE44CD009F479A /* Donando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F945951CCE44CD009F479A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F945971CCE44CD009F479A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +164,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		24AE2C161CF300CA00CEFBE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		24AE2C1F1CF327DB00CEFBE1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24AE2C201CF327E200CEFBE1 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		24F945891CCE44CD009F479A = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +203,8 @@
 		24F945941CCE44CD009F479A /* Donando */ = {
 			isa = PBXGroup;
 			children = (
+				24AE2C1F1CF327DB00CEFBE1 /* Views */,
+				24AE2C161CF300CA00CEFBE1 /* Models */,
 				24F945BE1CCE7BAC009F479A /* Info */,
 				24F945B11CCE7ADA009F479A /* Search */,
 				24F945951CCE44CD009F479A /* AppDelegate.swift */,
@@ -393,6 +415,8 @@
 				24F945A81CCE453B009F479A /* TabBarController.swift in Sources */,
 				2450DC6F1CD350F300EA359D /* WebClient.swift in Sources */,
 				2470EFA11CD38FF100971D0D /* ModelFactory.swift in Sources */,
+				24AE2C0D1CF3001E00CEFBE1 /* NGO.swift in Sources */,
+				24AE2C211CF327E200CEFBE1 /* LoadingView.swift in Sources */,
 				248D00451CCF7869009853D1 /* NGOAnnotation.swift in Sources */,
 				24F945981CCE44CD009F479A /* SearchViewController.swift in Sources */,
 				2470EF9D1CD37E0000971D0D /* DataClient.swift in Sources */,
@@ -524,6 +548,7 @@
 				);
 				INFOPLIST_FILE = Donando/Info.plist;
 				INSTALL_GROUP = admin;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.zalando.donando.adhoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +568,7 @@
 				);
 				INFOPLIST_FILE = Donando/Info.plist;
 				INSTALL_GROUP = admin;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.zalando.donando.adhoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";

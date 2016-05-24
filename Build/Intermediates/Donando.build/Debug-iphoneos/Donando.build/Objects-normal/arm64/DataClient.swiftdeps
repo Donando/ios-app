@@ -8,12 +8,12 @@ provides-member:
 - ["P7Donando10DataClient", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "DataClient"
+- "Future"
 - "DonandoError"
 - "DataResult"
-- "String"
-- "DataClient"
 - "AnyObject"
-- "Future"
+- "String"
 depends-member:
 - ["P7Donando10DataClient", "DataResult"]
 - ["P7Donando10DataClient", "String"]

@@ -34,6 +34,7 @@ class SearchViewController: UIViewController {
     let dataStore = DataStore(dataClient: APIClient())
     
     var listViewExpanded = false
+    var loadingView: LoadingView?
     
     var searchViewShown: Bool {
         return searchViewHeightConstraint.constant != 0
@@ -54,20 +55,38 @@ class SearchViewController: UIViewController {
         searchViewTopConstraint.constant = -view.frame.height
     }
     
-    private func loadData() {
-        let ngoFuture = dataStore.getAllNGOs()
+    private func loadData(searchText: String = "", zipcode: String = "") {
+        loadingView = LoadingView.show(inView: view)
+        
+        let ngoFuture = dataStore.getNGOs(zipcode, searchText: searchText)
         ngoFuture.onSuccess(callback: handleNGOsLoaded)
+        ngoFuture.onFailure(callback: handleNGOError)
+        
+    }
+    
+    private func removeLoadingView() {
+        loadingView?.stopAnimating()
+        loadingView?.remove()
+        loadingView = nil
     }
     
     private func handleNGOsLoaded(ngos: [NGO]) {
+        removeLoadingView()
         self.ngos = ngos
+        
+        mapView.removeAnnotations(ngoAnnotations)
         
         for (index, ngo) in ngos.enumerate() {
             let annotation = NGOAnnotation(ngo: ngo, index: index)
+            ngoAnnotations.append(annotation)
             mapView.addAnnotation(annotation)
         }
         
         tableView.reloadData()
+    }
+    
+    private func handleNGOError(error: DonandoError) {
+        removeLoadingView()
     }
 
     private func setupUI() {
@@ -133,7 +152,7 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func moveSearchView(up up: Bool) {
+    private func moveSearchView(up up: Bool) {
         let heightConstraint = up ? 0 : view.frame.height
         let topConstraint = up ? -view.frame.height : 0
         
@@ -154,11 +173,11 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func updateSearchBox() {
+    private func updateSearchBox() {
         var searchBoxTitle = zipCodeSearchText + ", " + demandSearchText
         
-        if zipCodeSearchText.characters.isEmpty && demandSearchText.characters.isEmpty {
-            searchBoxTitle = ""
+        if zipCodeSearchText.characters.isEmpty || demandSearchText.characters.isEmpty {
+            searchBoxTitle = searchBoxTitle.stringByReplacingOccurrencesOfString(", ", withString: "")
         }
         
         zipCodeSearchField.text = searchBoxTitle
@@ -180,6 +199,7 @@ extension SearchViewController {
         zipCodeSearchText = zipCodeSearchField.text ?? ""
         demandSearchText = demandSearchField.text ?? ""
         
+        loadData(demandSearchText, zipcode: zipCodeSearchText)
         updateSearchBox()
     }
     

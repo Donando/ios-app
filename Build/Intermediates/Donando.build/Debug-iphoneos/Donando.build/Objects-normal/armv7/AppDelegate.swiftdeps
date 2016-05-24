@@ -6,25 +6,28 @@ provides-nominal:
 provides-member:
 - ["C7Donando11AppDelegate", ""]
 provides-dynamic-lookup:
-- "window"
-- "applicationWillResignActive"
-- "applicationDidBecomeActive"
-- "applicationWillEnterForeground"
 - "applicationDidEnterBackground"
 - "application"
+- "applicationWillResignActive"
 - "applicationWillTerminate"
+- "window"
+- "applicationDidBecomeActive"
+- "applicationWillEnterForeground"
 depends-top-level:
-- "UIApplicationDelegate"
-- "NSObject"
-- !private "BooleanLiteralType"
-- "UIWindow"
-- "AnyObject"
-- "AppDelegate"
 - "UIApplication"
+- "AppDelegate"
+- !private "BooleanLiteralType"
+- !private "Endpoints"
 - "Bool"
-- "UIResponder"
 - !private "UIColor"
+- "NSObject"
+- "UIResponder"
+- "AnyObject"
+- !private "StringLiteralType"
+- "UIApplicationDelegate"
+- "UIWindow"
 depends-member:
+- !private ["Ps9AnyObject", "Endpoints"]
 - !private ["Ps9AnyObject", "UIColor"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
@@ -45,6 +48,7 @@ depends-member:
 - ["Ps9AnyObject", ""]
 - ["C7Donando11AppDelegate", "AnyObject"]
 - ["C7Donando11AppDelegate", "Bool"]
+- !private ["C7Donando11AppDelegate", "Endpoints"]
 - ["C7Donando11AppDelegate", "NSObject"]
 - ["C7Donando11AppDelegate", "UIApplication"]
 - !private ["C7Donando11AppDelegate", "UIColor"]
@@ -64,6 +68,7 @@ depends-member:
 - ["C7Donando11AppDelegate", "deinit"]
 - ["C7Donando11AppDelegate", "init"]
 - ["C7Donando11AppDelegate", "window"]
+- !private ["Ps11CVarArgType", "Endpoints"]
 - !private ["Ps11CVarArgType", "UIColor"]
 - ["Ps11CVarArgType", "application"]
 - ["Ps11CVarArgType", "applicationDidBecomeActive"]
@@ -82,6 +87,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "tintColor"]
 - ["Ps11CVarArgType", "window"]
 - ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "Endpoints"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
@@ -100,6 +106,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Endpoints"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
@@ -118,6 +125,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "tintColor"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["V7Donando9Endpoints", "baseURI"]
+- !private ["Ps9Equatable", "Endpoints"]
 - !private ["Ps9Equatable", "UIColor"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
@@ -136,6 +145,7 @@ depends-member:
 - !private ["Ps9Equatable", "tintColor"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "Endpoints"]
 - !private ["Ps8Hashable", "UIColor"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
@@ -154,11 +164,13 @@ depends-member:
 - !private ["Ps8Hashable", "tintColor"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
 - !private ["PSo8NSCoding", "mainTintColor"]
 - !private ["PSo8NSCoding", "tintColor"]
 - !private ["PSo9NSCopying", "mainTintColor"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "Endpoints"]
 - ["CSo8NSObject", "NSObject"]
 - ["CSo8NSObject", "UIApplication"]
 - !private ["CSo8NSObject", "UIColor"]
@@ -179,6 +191,7 @@ depends-member:
 - !private ["CSo8NSObject", "mainTintColor"]
 - !private ["CSo8NSObject", "tintColor"]
 - ["CSo8NSObject", "window"]
+- !private ["PSo16NSObjectProtocol", "Endpoints"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
@@ -201,6 +214,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "tintColor"]
 - !private ["PSo12UIAppearance", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "tintColor"]
+- !private ["PSo21UIApplicationDelegate", "Endpoints"]
 - !private ["PSo21UIApplicationDelegate", "UIColor"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
@@ -222,6 +236,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "tintColor"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "Endpoints"]
 - ["CSo11UIResponder", "NSObject"]
 - ["CSo11UIResponder", "UIApplication"]
 - !private ["CSo11UIResponder", "UIColor"]
@@ -253,8 +268,10 @@ depends-nominal:
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- !private "V7Donando9Endpoints"
 - "Ps9Equatable"
 - "Ps8Hashable"
+- !private "SQ"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "CSo8NSObject"
@@ -285,9 +302,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
-- "/Users/hgursoy/Donando/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/arm.swiftmodule"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/Result.swiftmodule/arm.swiftmodule"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result-Swift.h"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result.h"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/module.modulemap"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/arm.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Modules/Result.swiftmodule/arm.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Headers/Result-Swift.h"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Headers/Result.h"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Modules/module.modulemap"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/Alamofire.swiftmodule/arm.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
 interface-hash: "eb6deb7e97b205db2b1f8c4c6c87743c"

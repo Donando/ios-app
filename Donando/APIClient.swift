@@ -14,8 +14,30 @@ public class APIClient: DataClient {
     let webClient = WebClient()
     
     public func getNGOs(zipCode: String, searchText: String) -> DataResult {
-        let request = webClient.createRequest(API: APIName.NGOs, endpointPath: Endpoints.ngoNear, ids: [Endpoints.zipCodeToken: zipCode, Endpoints.searchTextToken: searchText])
+        var tokens = [String: String]()
+        
+        if zipCode.characters.count > 0 {
+            tokens[Endpoints.zipCodeToken] = zipCode
+        }
+        if searchText.characters.count > 0 {
+            tokens[Endpoints.searchTextToken] = searchText
+        }
+        
+        let queryItems = createQueryItems(tokens)
+        
+        let request = webClient.createRequest(API: APIName.Demands, endpointPath: Endpoints.demandSearch, queryItems: queryItems)
         return webClient.sendRequest(request)
+    }
+    
+    private func createQueryItems(items: [String: String]) -> [NSURLQueryItem] {
+        var queryItems = [NSURLQueryItem]()
+        
+        for key in items.keys {
+            let queryItem = NSURLQueryItem(name: key, value: items[key])
+            queryItems.append(queryItem)
+        }
+        
+        return queryItems
     }
     
 }

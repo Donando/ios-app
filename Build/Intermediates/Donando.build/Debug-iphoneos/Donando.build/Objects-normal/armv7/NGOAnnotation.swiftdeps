@@ -9,22 +9,22 @@ provides-member:
 - ["V7Donando3NGO", ""]
 - ["C7Donando13NGOAnnotation", ""]
 provides-dynamic-lookup:
-- "reuseIdentifier"
-- "coordinate"
 - "ngoIndex"
-- "phoneNumber"
-- "address"
 - "name"
+- "phoneNumber"
+- "reuseIdentifier"
 - "title"
+- "coordinate"
+- "address"
 depends-top-level:
+- "Int"
+- "NGOAnnotation"
+- "String"
+- "CLLocationCoordinate2D"
+- "MKAnnotation"
 - "StringLiteralType"
 - "NSObject"
-- "Int"
 - "NGO"
-- "MKAnnotation"
-- "NGOAnnotation"
-- "CLLocationCoordinate2D"
-- "String"
 depends-member:
 - ["Ps9AnyObject", "address"]
 - ["Ps9AnyObject", "coordinate"]
@@ -36,6 +36,7 @@ depends-member:
 - ["Ps9AnyObject", "subtitle"]
 - ["Ps9AnyObject", "title"]
 - ["Ps9AnyObject", ""]
+- ["VSC22CLLocationCoordinate2D", "init"]
 - ["Ps11CVarArgType", "address"]
 - ["Ps11CVarArgType", "coordinate"]
 - ["Ps11CVarArgType", "init"]
@@ -86,6 +87,15 @@ depends-member:
 - ["Ps8Hashable", "subtitle"]
 - ["Ps8Hashable", "title"]
 - ["Ps8Hashable", ""]
+- ["P7Donando16JSONDictInitable", "CLLocationCoordinate2D"]
+- !private ["P7Donando16JSONDictInitable", "address"]
+- !private ["P7Donando16JSONDictInitable", "coordinate"]
+- !private ["P7Donando16JSONDictInitable", "demandText"]
+- !private ["P7Donando16JSONDictInitable", "name"]
+- !private ["P7Donando16JSONDictInitable", "ngoId"]
+- !private ["P7Donando16JSONDictInitable", "openingHours"]
+- !private ["P7Donando16JSONDictInitable", "phoneNumber"]
+- !private ["P7Donando16JSONDictInitable", "websiteURL"]
 - !private ["PSo12MKAnnotation", "address"]
 - ["PSo12MKAnnotation", "coordinate"]
 - !private ["PSo12MKAnnotation", "name"]
@@ -95,14 +105,17 @@ depends-member:
 - ["PSo12MKAnnotation", "title"]
 - ["PSo12MKAnnotation", ""]
 - ["V7Donando3NGO", "CLLocationCoordinate2D"]
+- ["V7Donando3NGO", "Int"]
 - ["V7Donando3NGO", "String"]
 - ["V7Donando3NGO", "address"]
 - ["V7Donando3NGO", "coordinate"]
 - ["V7Donando3NGO", "demandText"]
 - ["V7Donando3NGO", "init"]
 - ["V7Donando3NGO", "name"]
+- ["V7Donando3NGO", "ngoId"]
 - ["V7Donando3NGO", "openingHours"]
 - ["V7Donando3NGO", "phoneNumber"]
+- ["V7Donando3NGO", "websiteURL"]
 - ["C7Donando13NGOAnnotation", "CLLocationCoordinate2D"]
 - ["C7Donando13NGOAnnotation", "Int"]
 - ["C7Donando13NGOAnnotation", "NGO"]
@@ -145,11 +158,13 @@ depends-member:
 - !private ["Vs12StaticString", "deinit"]
 depends-nominal:
 - "Ps9AnyObject"
+- "VSC22CLLocationCoordinate2D"
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
+- "P7Donando16JSONDictInitable"
 - "PSo12MKAnnotation"
 - "V7Donando3NGO"
 - "C7Donando13NGOAnnotation"
@@ -168,9 +183,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
-- "/Users/hgursoy/Donando/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/arm.swiftmodule"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/Result.swiftmodule/arm.swiftmodule"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result-Swift.h"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Headers/Result.h"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphoneos/Result.framework/Modules/module.modulemap"
-interface-hash: "4b78a8dfeb4e85ff6010934874425143"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/arm.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Modules/Result.swiftmodule/arm.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Headers/Result-Swift.h"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Headers/Result.h"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphoneos/Result.framework/Modules/module.modulemap"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/Alamofire.swiftmodule/arm.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
+interface-hash: "556b2e08107e4db0e5dc0b541344ad91"

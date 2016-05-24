@@ -1,30 +1,27 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "NGO"
 - "NGOAnnotation"
 provides-nominal:
-- "V7Donando3NGO"
 - "C7Donando13NGOAnnotation"
 provides-member:
-- ["V7Donando3NGO", ""]
 - ["C7Donando13NGOAnnotation", ""]
 provides-dynamic-lookup:
+- "coordinate"
 - "address"
-- "phoneNumber"
-- "ngoIndex"
 - "name"
 - "reuseIdentifier"
-- "coordinate"
+- "ngoIndex"
+- "phoneNumber"
 - "title"
 depends-top-level:
-- "Int"
-- "String"
-- "StringLiteralType"
-- "NGO"
-- "MKAnnotation"
-- "NSObject"
-- "CLLocationCoordinate2D"
 - "NGOAnnotation"
+- "StringLiteralType"
+- "String"
+- "Int"
+- "MKAnnotation"
+- "NGO"
+- "CLLocationCoordinate2D"
+- "NSObject"
 depends-member:
 - ["Ps9AnyObject", "address"]
 - ["Ps9AnyObject", "coordinate"]
@@ -86,6 +83,10 @@ depends-member:
 - ["Ps8Hashable", "subtitle"]
 - ["Ps8Hashable", "title"]
 - ["Ps8Hashable", ""]
+- !private ["P7Donando16JSONDictInitable", "address"]
+- !private ["P7Donando16JSONDictInitable", "coordinate"]
+- !private ["P7Donando16JSONDictInitable", "name"]
+- !private ["P7Donando16JSONDictInitable", "phoneNumber"]
 - !private ["PSo12MKAnnotation", "address"]
 - ["PSo12MKAnnotation", "coordinate"]
 - !private ["PSo12MKAnnotation", "name"]
@@ -94,16 +95,10 @@ depends-member:
 - ["PSo12MKAnnotation", "subtitle"]
 - ["PSo12MKAnnotation", "title"]
 - ["PSo12MKAnnotation", ""]
-- ["V7Donando3NGO", "CLLocationCoordinate2D"]
-- ["V7Donando3NGO", "String"]
-- ["V7Donando3NGO", "address"]
-- ["V7Donando3NGO", "coordinate"]
-- ["V7Donando3NGO", "demandText"]
-- ["V7Donando3NGO", "init"]
-- ["V7Donando3NGO", "name"]
-- ["V7Donando3NGO", "openingHours"]
-- ["V7Donando3NGO", "phoneNumber"]
-- ["V7Donando3NGO", "websiteURL"]
+- !private ["V7Donando3NGO", "address"]
+- !private ["V7Donando3NGO", "coordinate"]
+- !private ["V7Donando3NGO", "name"]
+- !private ["V7Donando3NGO", "phoneNumber"]
 - ["C7Donando13NGOAnnotation", "CLLocationCoordinate2D"]
 - ["C7Donando13NGOAnnotation", "Int"]
 - ["C7Donando13NGOAnnotation", "NGO"]
@@ -142,7 +137,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "subtitle"]
 - ["PSo16NSObjectProtocol", "title"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["Sq", "deinit"]
 - !private ["Vs12StaticString", "deinit"]
 depends-nominal:
 - "Ps9AnyObject"
@@ -151,12 +145,12 @@ depends-nominal:
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
+- !private "P7Donando16JSONDictInitable"
 - "PSo12MKAnnotation"
-- "V7Donando3NGO"
+- !private "V7Donando3NGO"
 - "C7Donando13NGOAnnotation"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "Sq"
 - !private "Vs12StaticString"
 depends-dynamic-lookup:
 depends-external:
@@ -169,13 +163,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
-- "/Users/hgursoy/Donando/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/x86_64.swiftmodule"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphonesimulator/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphonesimulator/Result.framework/Headers/Result-Swift.h"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphonesimulator/Result.framework/Headers/Result.h"
-- "/Users/hgursoy/Donando/Build/Products/Debug-iphonesimulator/Result.framework/Modules/module.modulemap"
-- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
-- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
-- "/Users/hgursoy/Donando/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "741f3de9f7b3cf358b16c01e4edc130f"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/BrightFutures.framework/Modules/BrightFutures.swiftmodule/x86_64.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphonesimulator/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphonesimulator/Result.framework/Headers/Result-Swift.h"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphonesimulator/Result.framework/Headers/Result.h"
+- "/Users/hgursoy/Donando/ios-app/Build/Products/Debug-iphonesimulator/Result.framework/Modules/module.modulemap"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
+- "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
+interface-hash: "0173b066c484790fb2df80669e51f0fd"

@@ -6,37 +6,39 @@ provides-nominal:
 provides-member:
 - ["C7Donando23NGODetailViewController", ""]
 provides-dynamic-lookup:
-- "demandsLabel"
-- "containerView"
-- "openWebsiteButton"
-- "addressLabel"
-- "openWebsite"
-- "viewDidLoad"
-- "openingHoursButton"
-- "seeMoreButton"
-- "ngoAnnotation"
 - "setupUI"
-- "telephoneButton"
-- "updateUI"
+- "demandsLabel"
+- "openWebsiteButton"
+- "openingHoursButton"
+- "addressLabel"
 - "nameLabel"
+- "viewDidLoad"
+- "updateUI"
+- "ngoAnnotation"
+- "seeMoreButton"
+- "containerView"
+- "openWebsite"
 - "mapView"
 - "mapView"
+- "telephoneButton"
 depends-top-level:
-- "UIView"
-- "NGO"
-- "UIViewController"
-- "MKAnnotation"
-- "MKMapViewDelegate"
-- "UILabel"
-- !private "UIColor"
+- "MKAnnotationView"
 - !private "BooleanLiteralType"
+- "MKMapViewDelegate"
+- !private "UIApplication"
+- !private "MKPinAnnotationView"
+- "UIViewController"
+- "UIButton"
+- !private "UnicodeScalarType"
+- "UILabel"
+- "MKAnnotation"
+- !private "UIColor"
+- !private "NSURL"
+- !private "StringLiteralType"
+- "NGO"
+- "UIView"
 - "NGODetailViewController"
 - "MKMapView"
-- !private "NSURL"
-- "MKAnnotationView"
-- !private "MKPinAnnotationView"
-- "UIButton"
-- !private "UIApplication"
 - "NGOAnnotation"
 depends-member:
 - !private ["Ps9AnyObject", "MKPinAnnotationView"]
@@ -84,10 +86,24 @@ depends-member:
 - ["Ps9AnyObject", "updateUI"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "joinWithSeparator"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
 - !private ["Ps23ArrayLiteralConvertible", "Normal"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "joinWithSeparator"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "MKPinAnnotationView"]
 - !private ["Ps11CVarArgType", "NGOAnnotation"]
 - !private ["Ps11CVarArgType", "NSURL"]
@@ -133,12 +149,21 @@ depends-member:
 - ["Ps11CVarArgType", "updateUI"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "joinWithSeparator"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "MKPinAnnotationView"]
 - !private ["Ps28CustomDebugStringConvertible", "NGOAnnotation"]
 - !private ["Ps28CustomDebugStringConvertible", "NSURL"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "UIApplication"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addAnnotation"]
 - ["Ps28CustomDebugStringConvertible", "addressLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "animatesDrop"]
@@ -149,6 +174,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableAnnotationViewWithIdentifier"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "joinWithSeparator"]
 - !private ["Ps28CustomDebugStringConvertible", "mainTintColor"]
 - ["Ps28CustomDebugStringConvertible", "mapView"]
 - ["Ps28CustomDebugStringConvertible", "mapViewDidFailLoadingMap"]
@@ -179,11 +205,16 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "updateUI"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "MKPinAnnotationView"]
 - !private ["Ps23CustomStringConvertible", "NGOAnnotation"]
 - !private ["Ps23CustomStringConvertible", "NSURL"]
 - !private ["Ps23CustomStringConvertible", "UIApplication"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addAnnotation"]
 - ["Ps23CustomStringConvertible", "addressLabel"]
@@ -195,6 +226,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "dequeueReusableAnnotationViewWithIdentifier"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "joinWithSeparator"]
 - !private ["Ps23CustomStringConvertible", "mainTintColor"]
 - ["Ps23CustomStringConvertible", "mapView"]
 - ["Ps23CustomStringConvertible", "mapViewDidFailLoadingMap"]
@@ -225,6 +257,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "updateUI"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "MKPinAnnotationView"]
 - !private ["Ps9Equatable", "NGOAnnotation"]
 - !private ["Ps9Equatable", "NSURL"]
@@ -272,6 +306,11 @@ depends-member:
 - ["Ps9Equatable", "updateUI"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "MKPinAnnotationView"]
 - !private ["Ps8Hashable", "NGOAnnotation"]
 - !private ["Ps8Hashable", "NSURL"]
@@ -318,7 +357,21 @@ depends-member:
 - ["Ps8Hashable", "updateUI"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "joinWithSeparator"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
 - !private ["P7Donando16JSONDictInitable", "address"]
+- !private ["P7Donando16JSONDictInitable", "demands"]
 - !private ["P7Donando16JSONDictInitable", "name"]
 - !private ["P7Donando16JSONDictInitable", "openingHours"]
 - !private ["P7Donando16JSONDictInitable", "phoneNumber"]
@@ -340,6 +393,7 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "UIApplication"]
 - !private ["PSo17MKMapViewDelegate", "UIColor"]
 - !private ["PSo17MKMapViewDelegate", "addressLabel"]
+- !private ["PSo17MKMapViewDelegate", "demandsLabel"]
 - ["PSo17MKMapViewDelegate", "mapView"]
 - ["PSo17MKMapViewDelegate", "mapViewDidFailLoadingMap"]
 - ["PSo17MKMapViewDelegate", "mapViewDidFinishLoadingMap"]
@@ -362,7 +416,22 @@ depends-member:
 - !private ["CSo19MKPinAnnotationView", "canShowCallout"]
 - !private ["CSo19MKPinAnnotationView", "init"]
 - !private ["CSo19MKPinAnnotationView", "pinTintColor"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "joinWithSeparator"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "joinWithSeparator"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "joinWithSeparator"]
 - !private ["V7Donando3NGO", "address"]
+- !private ["V7Donando3NGO", "demands"]
 - !private ["V7Donando3NGO", "name"]
 - !private ["V7Donando3NGO", "openingHours"]
 - !private ["V7Donando3NGO", "phoneNumber"]
@@ -583,8 +652,26 @@ depends-member:
 - !private ["Ps13OptionSetType", "Normal"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "joinWithSeparator"]
 - !private ["Ps16RawRepresentable", "Normal"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "joinWithSeparator"]
 - !private ["Ps14SetAlgebraType", "Normal"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["SS", "deinit"]
 - !private ["PSo29UIAccessibilityIdentification", "addAnnotation"]
 - !private ["PSo29UIAccessibilityIdentification", "animatesDrop"]
 - !private ["PSo29UIAccessibilityIdentification", "annotation"]
@@ -930,11 +1017,40 @@ depends-member:
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 - !private ["P9Alamofire20URLStringConvertible", "init"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "joinWithSeparator"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps24_ColorLiteralConvertible", "mainTintColor"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "joinWithSeparator"]
 - !private ["Ps32_FileReferenceLiteralConvertible", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "joinWithSeparator"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_Element"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "addAnnotation"]
 - !private ["Ps12_Reflectable", "animatesDrop"]
@@ -943,29 +1059,49 @@ depends-member:
 - !private ["Ps12_Reflectable", "dequeueReusableAnnotationViewWithIdentifier"]
 - !private ["Ps12_Reflectable", "hidden"]
 - !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "joinWithSeparator"]
 - !private ["Ps12_Reflectable", "pinTintColor"]
 - !private ["Ps12_Reflectable", "removeAnnotation"]
 - !private ["Ps12_Reflectable", "setTitle"]
 - !private ["Ps12_Reflectable", "setTitleColor"]
 - !private ["Ps12_Reflectable", "text"]
 - !private ["Ps12_Reflectable", "tintColor"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
 depends-nominal:
 - "Ps9AnyObject"
+- !private "Sa"
 - !private "Ps23ArrayLiteralConvertible"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
 - "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
 - "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
 - !private "P7Donando16JSONDictInitable"
 - !private "PSo12MKAnnotation"
 - !private "CSo16MKAnnotationView"
 - !private "CSo9MKMapView"
 - "PSo17MKMapViewDelegate"
 - !private "CSo19MKPinAnnotationView"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - !private "V7Donando3NGO"
 - !private "C7Donando13NGOAnnotation"
 - "C7Donando23NGODetailViewController"
@@ -979,8 +1115,15 @@ depends-nominal:
 - "Ps21NilLiteralConvertible"
 - !private "Ps13OptionSetType"
 - "Sq"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
 - !private "Ps14SetAlgebraType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- !private "SS"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -1000,11 +1143,19 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - !private "P9Alamofire20URLStringConvertible"
+- !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps24_ColorLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
 - !private "Ps32_FileReferenceLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
 - !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
 - "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"

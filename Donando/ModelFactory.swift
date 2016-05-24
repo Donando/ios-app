@@ -36,15 +36,17 @@ public protocol JSONDictConvertable {
     func asDictionary() -> JSONDictionary
 }
 
-
 extension NGO: JSONDictInitable {
     public init?(dict: JSONDictionary) {
         guard let id = dict["id"] as? Int,
             name = dict["name"] as? String,
-            address = dict["address"] as? String,
-            phone = dict["phone"] as? String else { return nil }
+            address = dict["address"] as? String
+            else { return nil }
         
-        self.init(ngoId: id, name: name, phoneNumber: phone, address: address, openingHours: "10.00 Uhr - 18.30 Uhr", demandText: "type: shoe -  kinder - size : 43 - gender : male  ", websiteURL: "http://wwww.google.com")
+        let url = dict["url"] as? String
+        let phoneNumber = dict["phone"] as? String
+        
+        self.init(ngoId: id, name: name, phoneNumber: phoneNumber, address: address, openingHours: "10.00 Uhr - 18.30 Uhr", websiteURL: url)
     }
 }
 

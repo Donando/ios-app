@@ -93,10 +93,10 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
 @import ObjectiveC;
 @import MapKit;
 @import CoreLocation;
-@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -128,12 +128,29 @@ SWIFT_CLASS("_TtC7Donando18InfoViewController")
 @end
 
 
+
+/// A view that include activity to display user while some time consuming process is taking place. It allows
+///
+/// <ul><li>strt/end animation</li><li>show/hide itself</li></ul>
+SWIFT_CLASS("_TtC7Donando11LoadingView")
+@interface LoadingView : UIView
+@property (nonatomic) NSInteger counter;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (LoadingView * _Nonnull)startAnimating;
+- (LoadingView * _Nonnull)stopAnimating;
++ (LoadingView * _Nonnull)showInView:(UIView * _Nonnull)view;
+- (void)increaseCounter;
+- (void)remove;
+@end
+
+
 SWIFT_CLASS("_TtC7Donando13NGOAnnotation")
 @interface NGOAnnotation : NSObject <MKAnnotation>
 + (NSString * _Nonnull)reuseIdentifier;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
-@property (nonatomic, readonly, copy) NSString * _Nonnull phoneNumber;
+@property (nonatomic, readonly, copy) NSString * _Nullable phoneNumber;
 @property (nonatomic, readonly, copy) NSString * _Nonnull address;
 @property (nonatomic, readonly, copy) NSString * _Nullable title;
 @property (nonatomic, readonly) NSInteger ngoIndex;
@@ -158,7 +175,6 @@ SWIFT_CLASS("_TtC7Donando7NGOCell")
 @end
 
 @class MKMapView;
-@class UIView;
 
 SWIFT_CLASS("_TtC7Donando23NGODetailViewController")
 @interface NGODetailViewController : UIViewController
@@ -208,6 +224,7 @@ SWIFT_CLASS("_TtC7Donando20SearchViewController")
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified searchViewTopConstraint;
 @property (nonatomic, copy) NSArray<NGOAnnotation *> * _Nonnull ngoAnnotations;
 @property (nonatomic) BOOL listViewExpanded;
+@property (nonatomic, strong) LoadingView * _Nullable loadingView;
 @property (nonatomic, readonly) BOOL searchViewShown;
 @property (nonatomic, copy) NSString * _Nonnull zipCodeSearchText;
 @property (nonatomic, copy) NSString * _Nonnull demandSearchText;
@@ -217,8 +234,6 @@ SWIFT_CLASS("_TtC7Donando20SearchViewController")
 - (void)openNGODetail:(NSInteger)index;
 - (void)annotationInfoButtonPressed:(UIButton * _Nonnull)infoButton;
 - (void)moveListViewWithUp:(BOOL)up;
-- (void)moveSearchViewWithUp:(BOOL)up;
-- (void)updateSearchBox;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

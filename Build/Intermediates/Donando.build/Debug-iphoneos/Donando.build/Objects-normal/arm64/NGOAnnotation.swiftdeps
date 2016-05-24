@@ -1,30 +1,27 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "NGO"
 - "NGOAnnotation"
 provides-nominal:
-- "V7Donando3NGO"
 - "C7Donando13NGOAnnotation"
 provides-member:
-- ["V7Donando3NGO", ""]
 - ["C7Donando13NGOAnnotation", ""]
 provides-dynamic-lookup:
 - "phoneNumber"
-- "name"
+- "ngoIndex"
 - "address"
+- "title"
+- "name"
 - "reuseIdentifier"
 - "coordinate"
-- "ngoIndex"
-- "title"
 depends-top-level:
-- "MKAnnotation"
-- "NSObject"
-- "NGO"
-- "CLLocationCoordinate2D"
-- "StringLiteralType"
 - "String"
 - "Int"
+- "MKAnnotation"
 - "NGOAnnotation"
+- "NGO"
+- "NSObject"
+- "StringLiteralType"
+- "CLLocationCoordinate2D"
 depends-member:
 - ["Ps9AnyObject", "address"]
 - ["Ps9AnyObject", "coordinate"]
@@ -36,7 +33,6 @@ depends-member:
 - ["Ps9AnyObject", "subtitle"]
 - ["Ps9AnyObject", "title"]
 - ["Ps9AnyObject", ""]
-- ["VSC22CLLocationCoordinate2D", "init"]
 - ["Ps11CVarArgType", "address"]
 - ["Ps11CVarArgType", "coordinate"]
 - ["Ps11CVarArgType", "init"]
@@ -87,15 +83,10 @@ depends-member:
 - ["Ps8Hashable", "subtitle"]
 - ["Ps8Hashable", "title"]
 - ["Ps8Hashable", ""]
-- ["P7Donando16JSONDictInitable", "CLLocationCoordinate2D"]
 - !private ["P7Donando16JSONDictInitable", "address"]
 - !private ["P7Donando16JSONDictInitable", "coordinate"]
-- !private ["P7Donando16JSONDictInitable", "demandText"]
 - !private ["P7Donando16JSONDictInitable", "name"]
-- !private ["P7Donando16JSONDictInitable", "ngoId"]
-- !private ["P7Donando16JSONDictInitable", "openingHours"]
 - !private ["P7Donando16JSONDictInitable", "phoneNumber"]
-- !private ["P7Donando16JSONDictInitable", "websiteURL"]
 - !private ["PSo12MKAnnotation", "address"]
 - ["PSo12MKAnnotation", "coordinate"]
 - !private ["PSo12MKAnnotation", "name"]
@@ -104,18 +95,10 @@ depends-member:
 - ["PSo12MKAnnotation", "subtitle"]
 - ["PSo12MKAnnotation", "title"]
 - ["PSo12MKAnnotation", ""]
-- ["V7Donando3NGO", "CLLocationCoordinate2D"]
-- ["V7Donando3NGO", "Int"]
-- ["V7Donando3NGO", "String"]
-- ["V7Donando3NGO", "address"]
-- ["V7Donando3NGO", "coordinate"]
-- ["V7Donando3NGO", "demandText"]
-- ["V7Donando3NGO", "init"]
-- ["V7Donando3NGO", "name"]
-- ["V7Donando3NGO", "ngoId"]
-- ["V7Donando3NGO", "openingHours"]
-- ["V7Donando3NGO", "phoneNumber"]
-- ["V7Donando3NGO", "websiteURL"]
+- !private ["V7Donando3NGO", "address"]
+- !private ["V7Donando3NGO", "coordinate"]
+- !private ["V7Donando3NGO", "name"]
+- !private ["V7Donando3NGO", "phoneNumber"]
 - ["C7Donando13NGOAnnotation", "CLLocationCoordinate2D"]
 - ["C7Donando13NGOAnnotation", "Int"]
 - ["C7Donando13NGOAnnotation", "NGO"]
@@ -154,23 +137,20 @@ depends-member:
 - ["PSo16NSObjectProtocol", "subtitle"]
 - ["PSo16NSObjectProtocol", "title"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["Sq", "deinit"]
 - !private ["Vs12StaticString", "deinit"]
 depends-nominal:
 - "Ps9AnyObject"
-- "VSC22CLLocationCoordinate2D"
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
-- "P7Donando16JSONDictInitable"
+- !private "P7Donando16JSONDictInitable"
 - "PSo12MKAnnotation"
-- "V7Donando3NGO"
+- !private "V7Donando3NGO"
 - "C7Donando13NGOAnnotation"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "Sq"
 - !private "Vs12StaticString"
 depends-dynamic-lookup:
 depends-external:
@@ -192,4 +172,4 @@ depends-external:
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "556b2e08107e4db0e5dc0b541344ad91"
+interface-hash: "0173b066c484790fb2df80669e51f0fd"

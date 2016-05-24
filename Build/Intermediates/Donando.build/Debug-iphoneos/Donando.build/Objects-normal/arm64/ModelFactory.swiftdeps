@@ -18,23 +18,23 @@ provides-member:
 - ["SS", "findCoordinates"]
 provides-dynamic-lookup:
 depends-top-level:
-- "JSONDictInitable"
-- "JSONDictConvertable"
-- "JSONDictionary"
-- !private "StringLiteralType"
-- !private "Int"
-- !private "Promise"
-- !private "CLGeocoder"
-- "AnyObject"
-- "Future"
-- "JSONString"
 - "NGO"
-- "CLLocationCoordinate2D"
-- "Double"
-- "JSONNumber"
-- "DonandoError"
+- "Future"
 - "JSONArray"
+- !private "CLGeocoder"
+- "JSONString"
+- !private "Int"
+- "JSONDictConvertable"
+- "JSONDictInitable"
+- "AnyObject"
+- !private "Promise"
+- "JSONDictionary"
+- "CLLocationCoordinate2D"
+- !private "StringLiteralType"
 - "String"
+- "DonandoError"
+- "JSONNumber"
+- "Double"
 depends-member:
 - !private ["Ps9AnyObject", "coordinate"]
 - !private ["Ps9AnyObject", "failure"]

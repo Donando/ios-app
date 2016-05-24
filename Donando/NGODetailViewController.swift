@@ -54,6 +54,8 @@ class NGODetailViewController: UIViewController {
         addressLabel.text = ngo.address
         telephoneButton.setTitle(ngo.phoneNumber, forState: .Normal)
         
+        demandsLabel.text = ngo.demands?.joinWithSeparator("\n")
+        
         if let openingHours = ngo.openingHours {
             openingHoursButton.setTitle(openingHours, forState: .Normal)
             openingHoursButton.hidden = false
