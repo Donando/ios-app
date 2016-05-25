@@ -22,8 +22,11 @@ class NGODetailViewController: UIViewController {
     @IBOutlet weak var demandsLabel: UILabel!
     @IBOutlet weak var seeMoreButton: UILabel!
     @IBOutlet weak var openWebsiteButton: UIButton!
+    @IBOutlet weak var detailContainerView: UIView!
     
     @IBOutlet weak var demandsHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var ngo: NGO?
     var ngoAnnotation: NGOAnnotation?
@@ -34,13 +37,26 @@ class NGODetailViewController: UIViewController {
         updateUI()
     }
     
-    func setupUI() {
+    private func setupUI() {
+        navigationController?.navigationBarHidden = false
+        navigationController?.navigationBar.translucent = true
+        
+        setNavigationBarAlpha(0)
+        
         telephoneButton.tintColor = UIColor.mainTintColor()
         openingHoursButton.tintColor = UIColor.mainTintColor()
         openWebsiteButton.setTitleColor(UIColor.mainTintColor(), forState: .Normal)
+        zoomMapIntoDefaultLocation()
     }
     
-    func updateUI() {
+    private func zoomMapIntoDefaultLocation() {
+        guard let ngo = ngo else { return }
+        let defaultRegion = MKCoordinateRegionMakeWithDistance(ngo.coordinate, 9000, 9000)
+        mapView.region = defaultRegion
+    }
+ 
+    
+    private func updateUI() {
         guard let ngo = ngo else { return }
         
         if let annotation = ngoAnnotation {
@@ -51,6 +67,8 @@ class NGODetailViewController: UIViewController {
         mapView.addAnnotation(annotation)
         
         ngoAnnotation = annotation
+        
+        title = ngo.name
         
         nameLabel.text = ngo.name
         addressLabel.text = ngo.address
@@ -68,11 +86,29 @@ class NGODetailViewController: UIViewController {
         }
     }
     
+    private func setNavigationBarAlpha(alpha: CGFloat) {
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(white: 0, alpha: alpha)]
+        
+        let color = UIColor(white: 1, alpha: alpha)
+        let image = UIImage.imageFromColor(color, size: CGSizeMake(1, 1))
+        
+        navigationController?.navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
+    }
+    
     @IBAction func openWebsite() {
         guard let websiteURLString = ngo?.websiteURL,
             websiteURL = NSURL(string: websiteURLString)
             else { return }
         UIApplication.sharedApplication().openURL(websiteURL)
+    }
+}
+
+extension NGODetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetRate = max(scrollView.contentOffset.y, 0) / (nameLabel.frame.origin.y + detailContainerView.frame.origin.y + nameLabel.frame.height)
+        let navigationBarAlpha = min(1, offsetRate)
+
+        setNavigationBarAlpha(navigationBarAlpha)
     }
 }
 

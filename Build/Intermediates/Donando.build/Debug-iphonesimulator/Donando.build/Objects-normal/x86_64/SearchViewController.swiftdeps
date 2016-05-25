@@ -13,30 +13,9 @@ provides-member:
 - ["C7Donando20SearchViewController", "doSearch"]
 - ["C7Donando20SearchViewController", "searchButtonPressed"]
 provides-dynamic-lookup:
-- "searchBox"
-- "awakeFromNib"
-- "searchView"
-- "searchButtonPressed"
-- "viewDidLoad"
-- "listViewExpanded"
-- "listViewHeightConstraint"
-- "demandSearchText"
-- "reuseIdentifier"
-- "addressLabel"
-- "textFieldDidEndEditing"
-- "textFieldDidBeginEditing"
-- "demandSearchField"
-- "ngoAnnotations"
-- "listButton"
-- "openNGODetail"
-- "doSearch"
-- "searchViewShown"
-- "nib"
-- "gestureRecognizer"
 - "registerNibs"
-- "phoneButton"
 - "moveListView"
-- "zipCodeSearchField"
+- "demandSearchField"
 - "tableView"
 - "tableView"
 - "tableView"
@@ -45,79 +24,101 @@ provides-dynamic-lookup:
 - "tableView"
 - "tableView"
 - "tableView"
-- "loadingView"
-- "listContainerView"
+- "gestureRecognizer"
+- "textFieldDidEndEditing"
+- "ngoAnnotations"
+- "phoneButton"
+- "openNGODetail"
 - "dismissKeyboard"
-- "demandSearchBox"
-- "prepareForSegue"
-- "searchViewTopConstraint"
+- "listButton"
+- "zipCodeSearchField"
+- "textFieldDidBeginEditing"
+- "addressLabel"
+- "listViewHeightConstraint"
+- "nib"
+- "searchBox"
 - "setupUI"
-- "toggleListView"
-- "annotationInfoButtonPressed"
-- "nameLabel"
-- "searchButton"
+- "prepareForSegue"
+- "searchView"
+- "loadingView"
+- "listViewExpanded"
+- "viewWillAppear"
 - "searchViewHeightConstraint"
-- "mapView"
-- "mapView"
-- "infoButton"
+- "viewDidLoad"
+- "reuseIdentifier"
 - "zipCodeSearchText"
+- "annotationInfoButtonPressed"
+- "mapView"
+- "mapView"
+- "searchButton"
+- "awakeFromNib"
+- "searchViewShown"
+- "listContainerView"
+- "doSearch"
+- "infoButton"
+- "toggleListView"
+- "searchButtonPressed"
+- "nameLabel"
+- "demandSearchBox"
+- "searchViewTopConstraint"
+- "demandSearchText"
 depends-top-level:
-- "UILabel"
-- "Int"
-- "APIClient"
-- "NSIndexPath"
-- !private "??"
-- !private "MKCoordinateRegionMakeWithDistance"
-- !private "DonandoError"
-- !private "CLLocationCoordinate2D"
-- "NSLayoutConstraint"
-- "AnyObject"
-- "MKAnnotation"
 - "UITextFieldDelegate"
-- "UITableView"
-- !private "CGPointZero"
-- !private "-"
-- "UITextField"
-- "UIGestureRecognizerDelegate"
-- !private "UIColor"
-- !private "=="
-- !private "UIImage"
-- !private "CGRect"
-- "SearchViewController"
-- "UITableViewDelegate"
-- "NGOAnnotation"
-- !private "UINib"
-- "UIViewController"
-- !private "NGODetailViewController"
-- !private "UITableViewHeaderFooterView"
-- "NGOCell"
-- "MKAnnotationView"
-- !private "!"
-- "UITouch"
-- "UIImageView"
-- !private "MKPinAnnotationView"
-- "MKMapViewDelegate"
-- "BooleanLiteralType"
-- "DataStore"
-- "String"
 - "UIView"
-- "LoadingView"
-- "UITableViewCell"
-- "CGFloat"
-- "UIButton"
-- "MKMapView"
-- !private "&&"
-- !private "!="
-- !private "CGSize"
-- "UIStoryboardSegue"
-- !private "NSBundle"
-- "Bool"
-- "UIGestureRecognizer"
-- !private "||"
+- !private "CGRect"
+- !private "!"
+- "MKAnnotation"
+- "NSIndexPath"
+- "MKMapViewDelegate"
 - "NGO"
-- "UITableViewDataSource"
+- "Bool"
+- "MKMapView"
+- "CGFloat"
+- "BooleanLiteralType"
+- !private "??"
+- "SearchViewController"
+- "UITouch"
+- !private "UIImage"
+- !private "MKPinAnnotationView"
+- !private "NGODetailViewController"
+- "Int"
+- "NGOCell"
+- !private "!="
+- !private "CLLocationCoordinate2D"
+- !private "UINib"
+- !private "UIColor"
 - "StringLiteralType"
+- "DataStore"
+- "UILabel"
+- "UIViewController"
+- "String"
+- !private "UITableViewHeaderFooterView"
+- "MKAnnotationView"
+- "UITableViewDelegate"
 - !private "+"
+- !private "MKCoordinateRegionMakeWithDistance"
+- !private "CGPointZero"
+- "AnyObject"
+- "NSLayoutConstraint"
+- !private "CGSize"
+- "APIClient"
+- "UITableViewDataSource"
+- "UITextField"
+- !private "=="
+- "NGOAnnotation"
+- "UIButton"
+- "UIGestureRecognizer"
+- "UIStoryboardSegue"
+- !private "||"
+- "UITableView"
+- !private "DonandoError"
+- !private "-"
+- !private "NSBundle"
+- "UIGestureRecognizerDelegate"
+- "LoadingView"
+- !private "&&"
+- "UITableViewCell"
+- "UIImageView"
 depends-member:
 - ["C7Donando9APIClient", "deinit"]
 - ["C7Donando9APIClient", "init"]
@@ -279,9 +280,11 @@ depends-member:
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
+- ["Ps9AnyObject", "viewWillAppear"]
 - !private ["Ps9AnyObject", "whiteColor"]
 - ["Ps9AnyObject", "zipCodeSearchField"]
 - ["Ps9AnyObject", "zipCodeSearchText"]
+- ["Ps9AnyObject", "zoomMapIntoDefaultLocation"]
 - ["Ps9AnyObject", ""]
 - ["Sa", "Generator"]
 - ["Sa", "Index"]
@@ -486,9 +489,11 @@ depends-member:
 - !private ["Ps11CVarArgType", "view"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
+- ["Ps11CVarArgType", "viewWillAppear"]
 - !private ["Ps11CVarArgType", "whiteColor"]
 - ["Ps11CVarArgType", "zipCodeSearchField"]
 - ["Ps11CVarArgType", "zipCodeSearchText"]
+- ["Ps11CVarArgType", "zoomMapIntoDefaultLocation"]
 - ["Ps11CVarArgType", ""]
 - !private ["VSS13CharacterView", "Generator"]
 - !private ["VSS13CharacterView", "Index"]
@@ -675,9 +680,11 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewForZoomingInScrollView"]
+- ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
 - ["Ps28CustomDebugStringConvertible", "zipCodeSearchField"]
 - ["Ps28CustomDebugStringConvertible", "zipCodeSearchText"]
+- ["Ps28CustomDebugStringConvertible", "zoomMapIntoDefaultLocation"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "APIClient"]
 - !private ["Ps23CustomStringConvertible", "CGColor"]
@@ -848,9 +855,11 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
+- ["Ps23CustomStringConvertible", "viewWillAppear"]
 - !private ["Ps23CustomStringConvertible", "whiteColor"]
 - ["Ps23CustomStringConvertible", "zipCodeSearchField"]
 - ["Ps23CustomStringConvertible", "zipCodeSearchText"]
+- ["Ps23CustomStringConvertible", "zoomMapIntoDefaultLocation"]
 - ["Ps23CustomStringConvertible", ""]
 - ["P7Donando10DataClient", "init"]
 - !private ["C7Donando9DataStore", "getNGOs"]
@@ -1022,9 +1031,11 @@ depends-member:
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
+- ["Ps9Equatable", "viewWillAppear"]
 - !private ["Ps9Equatable", "whiteColor"]
 - ["Ps9Equatable", "zipCodeSearchField"]
 - ["Ps9Equatable", "zipCodeSearchText"]
+- ["Ps9Equatable", "zoomMapIntoDefaultLocation"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "characters"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "stringByReplacingOccurrencesOfString"]
@@ -1195,9 +1206,11 @@ depends-member:
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewForZoomingInScrollView"]
+- ["Ps8Hashable", "viewWillAppear"]
 - !private ["Ps8Hashable", "whiteColor"]
 - ["Ps8Hashable", "zipCodeSearchField"]
 - ["Ps8Hashable", "zipCodeSearchText"]
+- ["Ps8Hashable", "zoomMapIntoDefaultLocation"]
 - ["Ps8Hashable", ""]
 - !private ["VVSS13CharacterView5Index", "Distance"]
 - ["Ps9Indexable", "Generator"]
@@ -1328,6 +1341,7 @@ depends-member:
 - ["PSo17MKMapViewDelegate", "viewForZoomingInScrollView"]
 - !private ["PSo17MKMapViewDelegate", "zipCodeSearchField"]
 - !private ["PSo17MKMapViewDelegate", "zipCodeSearchText"]
+- !private ["PSo17MKMapViewDelegate", "zoomMapIntoDefaultLocation"]
 - ["PSo17MKMapViewDelegate", ""]
 - !private ["CSo19MKPinAnnotationView", "animatesDrop"]
 - !private ["CSo19MKPinAnnotationView", "annotation"]
@@ -1547,9 +1561,11 @@ depends-member:
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
+- ["PSo8NSCoding", "viewWillAppear"]
 - !private ["PSo8NSCoding", "whiteColor"]
 - ["PSo8NSCoding", "zipCodeSearchField"]
 - ["PSo8NSCoding", "zipCodeSearchText"]
+- ["PSo8NSCoding", "zoomMapIntoDefaultLocation"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGColor"]
 - !private ["PSo9NSCopying", "borderLightGrayColor"]
@@ -1654,8 +1670,10 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
+- ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", "zipCodeSearchField"]
 - ["PSo26NSExtensionRequestHandling", "zipCodeSearchText"]
+- ["PSo26NSExtensionRequestHandling", "zoomMapIntoDefaultLocation"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["CSo11NSIndexPath", "row"]
 - !private ["CSo18NSLayoutConstraint", "constant"]
@@ -1835,9 +1853,11 @@ depends-member:
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
+- ["CSo8NSObject", "viewWillAppear"]
 - !private ["CSo8NSObject", "whiteColor"]
 - ["CSo8NSObject", "zipCodeSearchField"]
 - ["CSo8NSObject", "zipCodeSearchText"]
+- ["CSo8NSObject", "zoomMapIntoDefaultLocation"]
 - ["PSo16NSObjectProtocol", "APIClient"]
 - !private ["PSo16NSObjectProtocol", "CGColor"]
 - !private ["PSo16NSObjectProtocol", "CGPointZero"]
@@ -1992,9 +2012,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
+- ["PSo16NSObjectProtocol", "viewWillAppear"]
 - !private ["PSo16NSObjectProtocol", "whiteColor"]
 - ["PSo16NSObjectProtocol", "zipCodeSearchField"]
 - ["PSo16NSObjectProtocol", "zipCodeSearchText"]
+- ["PSo16NSObjectProtocol", "zoomMapIntoDefaultLocation"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "CGColor"]
 - !private ["PSo14NSSecureCoding", "borderLightGrayColor"]
@@ -2148,8 +2170,10 @@ depends-member:
 - !private ["C7Donando20SearchViewController", "view"]
 - ["C7Donando20SearchViewController", "viewDidLoad"]
 - ["C7Donando20SearchViewController", "viewForZoomingInScrollView"]
+- ["C7Donando20SearchViewController", "viewWillAppear"]
 - ["C7Donando20SearchViewController", "zipCodeSearchField"]
 - ["C7Donando20SearchViewController", "zipCodeSearchText"]
+- !private ["C7Donando20SearchViewController", "zoomMapIntoDefaultLocation"]
 - ["Ps12SequenceType", "Element"]
 - ["Ps12SequenceType", "Generator"]
 - ["Ps12SequenceType", "Index"]
@@ -2419,8 +2443,10 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewForZoomingInScrollView"]
+- ["PSo21UIAppearanceContainer", "viewWillAppear"]
 - ["PSo21UIAppearanceContainer", "zipCodeSearchField"]
 - ["PSo21UIAppearanceContainer", "zipCodeSearchText"]
+- ["PSo21UIAppearanceContainer", "zoomMapIntoDefaultLocation"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["CSo8UIButton", "addTarget"]
 - !private ["CSo8UIButton", "alpha"]
@@ -2535,8 +2561,10 @@ depends-member:
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "viewForZoomingInScrollView"]
+- ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", "zipCodeSearchField"]
 - ["PSo18UIContentContainer", "zipCodeSearchText"]
+- ["PSo18UIContentContainer", "zoomMapIntoDefaultLocation"]
 - ["PSo18UIContentContainer", ""]
 - !private ["CSo9UIControl", "addTarget"]
 - !private ["CSo9UIControl", "alpha"]
@@ -2790,8 +2818,10 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewForZoomingInScrollView"]
+- ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - ["PSo18UIFocusEnvironment", "zipCodeSearchField"]
 - ["PSo18UIFocusEnvironment", "zipCodeSearchText"]
+- ["PSo18UIFocusEnvironment", "zoomMapIntoDefaultLocation"]
 - ["PSo18UIFocusEnvironment", ""]
 - ["PSo27UIGestureRecognizerDelegate", "APIClient"]
 - !private ["PSo27UIGestureRecognizerDelegate", "CGPointZero"]
@@ -2891,6 +2921,7 @@ depends-member:
 - ["PSo27UIGestureRecognizerDelegate", "viewForZoomingInScrollView"]
 - !private ["PSo27UIGestureRecognizerDelegate", "zipCodeSearchField"]
 - !private ["PSo27UIGestureRecognizerDelegate", "zipCodeSearchText"]
+- !private ["PSo27UIGestureRecognizerDelegate", "zoomMapIntoDefaultLocation"]
 - ["PSo27UIGestureRecognizerDelegate", ""]
 - !private ["CSo7UIImage", "init"]
 - !private ["CSo11UIImageView", "tintColor"]
@@ -3059,8 +3090,10 @@ depends-member:
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewForZoomingInScrollView"]
+- ["CSo11UIResponder", "viewWillAppear"]
 - ["CSo11UIResponder", "zipCodeSearchField"]
 - ["CSo11UIResponder", "zipCodeSearchText"]
+- ["CSo11UIResponder", "zoomMapIntoDefaultLocation"]
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo12UIScrollView", "registerNib"]
 - !private ["CSo12UIScrollView", "reloadData"]
@@ -3112,6 +3145,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "moveListView"]
 - !private ["PSo20UIScrollViewDelegate", "moveSearchView"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
+- !private ["PSo20UIScrollViewDelegate", "ngo"]
 - !private ["PSo20UIScrollViewDelegate", "ngoAnnotations"]
 - !private ["PSo20UIScrollViewDelegate", "ngos"]
 - ["PSo20UIScrollViewDelegate", "numberOfSectionsInTableView"]
@@ -3152,6 +3186,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - !private ["PSo20UIScrollViewDelegate", "zipCodeSearchField"]
 - !private ["PSo20UIScrollViewDelegate", "zipCodeSearchText"]
+- !private ["PSo20UIScrollViewDelegate", "zoomMapIntoDefaultLocation"]
 - ["PSo20UIScrollViewDelegate", ""]
 - ["PSo16UIStateRestoring", "APIClient"]
 - !private ["PSo16UIStateRestoring", "CGPointZero"]
@@ -3247,8 +3282,10 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "viewForZoomingInScrollView"]
+- ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", "zipCodeSearchField"]
 - ["PSo16UIStateRestoring", "zipCodeSearchText"]
+- ["PSo16UIStateRestoring", "zoomMapIntoDefaultLocation"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo17UIStoryboardSegue", "destinationViewController"]
 - !private ["CSo17UIStoryboardSegue", "identifier"]
@@ -3362,6 +3399,7 @@ depends-member:
 - ["PSo21UITableViewDataSource", "viewForZoomingInScrollView"]
 - !private ["PSo21UITableViewDataSource", "zipCodeSearchField"]
 - !private ["PSo21UITableViewDataSource", "zipCodeSearchText"]
+- !private ["PSo21UITableViewDataSource", "zoomMapIntoDefaultLocation"]
 - ["PSo21UITableViewDataSource", ""]
 - ["PSo19UITableViewDelegate", "APIClient"]
 - !private ["PSo19UITableViewDelegate", "CGPointZero"]
@@ -3450,6 +3488,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "viewForZoomingInScrollView"]
 - !private ["PSo19UITableViewDelegate", "zipCodeSearchField"]
 - !private ["PSo19UITableViewDelegate", "zipCodeSearchText"]
+- !private ["PSo19UITableViewDelegate", "zoomMapIntoDefaultLocation"]
 - ["PSo19UITableViewDelegate", ""]
 - !private ["CSo27UITableViewHeaderFooterView", "textLabel"]
 - !private ["CSo11UITextField", "placeholder"]
@@ -3541,6 +3580,7 @@ depends-member:
 - ["PSo19UITextFieldDelegate", "viewForZoomingInScrollView"]
 - !private ["PSo19UITextFieldDelegate", "zipCodeSearchField"]
 - !private ["PSo19UITextFieldDelegate", "zipCodeSearchText"]
+- !private ["PSo19UITextFieldDelegate", "zoomMapIntoDefaultLocation"]
 - ["PSo19UITextFieldDelegate", ""]
 - !private ["PSo11UITextInput", "placeholder"]
 - !private ["PSo11UITextInput", "text"]
@@ -3686,8 +3726,10 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewForZoomingInScrollView"]
+- ["PSo18UITraitEnvironment", "viewWillAppear"]
 - ["PSo18UITraitEnvironment", "zipCodeSearchField"]
 - ["PSo18UITraitEnvironment", "zipCodeSearchText"]
+- ["PSo18UITraitEnvironment", "zoomMapIntoDefaultLocation"]
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo6UIView", "String"]
 - ["CSo6UIView", "UIButton"]
@@ -3855,8 +3897,10 @@ depends-member:
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
+- ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", "zipCodeSearchField"]
 - ["CSo16UIViewController", "zipCodeSearchText"]
+- ["CSo16UIViewController", "zoomMapIntoDefaultLocation"]
 - ["CSo16UIViewController", ""]
 - !private ["P9Alamofire20URLStringConvertible", "characters"]
 - !private ["P9Alamofire20URLStringConvertible", "stringByReplacingOccurrencesOfString"]
@@ -4163,4 +4207,4 @@ depends-external:
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "7df94c5520beadc812c91f8969c02574"
+interface-hash: "3c5b9d0e292eb12ecb13c8cdac79c9f0"

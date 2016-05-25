@@ -6,6 +6,8 @@ provides-member:
 - ["Sd", ""]
 - ["CSo7UIColor", ""]
 - ["CSo16UIViewController", ""]
+- ["SS", ""]
+- ["CSo7UIImage", ""]
 - ["Si", "second"]
 - ["Si", "seconds"]
 - ["Si", "minute"]
@@ -26,55 +28,82 @@ provides-member:
 - ["CSo16UIViewController", "addCloseButton"]
 - ["CSo16UIViewController", "dismiss"]
 - ["CSo16UIViewController", "back"]
+- ["SS", "heightWithConstrainedWidth"]
+- ["CSo7UIImage", "imageFromColor"]
 provides-dynamic-lookup:
-- "dismiss"
-- "addCloseButton"
-- "back"
-- "secondaryTintColor"
-- "borderLightGrayColor"
-- "lightTintColor"
+- "imageFromColor"
 - "mainTintColor"
+- "lightTintColor"
 - "configureNavBar"
+- "back"
+- "addCloseButton"
+- "borderLightGrayColor"
+- "secondaryTintColor"
+- "dismiss"
 depends-top-level:
-- !private "Dictionary"
-- !private "UIBarButtonItemStyle"
-- "Int"
-- !private "UIFont"
-- "Bool"
-- !private "/"
-- !private "DBL_MAX"
-- !private "<<"
-- "NSTimeInterval"
-- !private "*"
 - !private "StringLiteralType"
+- "Bool"
+- "Int"
+- "UIColor"
 - "UIViewController"
 - !private "UIBarButtonItem"
-- "UIColor"
-- "Double"
+- "String"
 - !private "UnicodeScalarType"
-- !private "UIOffsetMake"
-- !private "&"
-- !private "NSForegroundColorAttributeName"
-- !private "!="
+- !private "UIGraphicsGetCurrentContext"
+- "UIImage"
+- !private "*"
+- !private "UIGraphicsGetImageFromCurrentImageContext"
+- !private "<<"
+- "CGSize"
 - !private "NSFontAttributeName"
+- !private "&"
+- "Double"
+- "CGFloat"
+- !private "CGRectMake"
+- !private "UIBarButtonItemStyle"
+- !private "UIGraphicsBeginImageContext"
+- !private "!="
+- "UIFont"
+- !private "UIOffsetMake"
+- !private "CGContextFillRect"
+- "NSTimeInterval"
+- !private "Dictionary"
 - !private "BooleanLiteralType"
+- !private "UIGraphicsEndImageContext"
+- !private "NSStringDrawingOptions"
+- !private "NSForegroundColorAttributeName"
+- !private "CGContextSetFillColorWithColor"
+- !private "/"
+- !private "DBL_MAX"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "DBL_MAX"]
 - !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps16AbsoluteValuable", "max"]
+- !private ["Ps9AnyObject", "CGColor"]
+- !private ["Ps9AnyObject", "CGContextFillRect"]
+- !private ["Ps9AnyObject", "CGContextSetFillColorWithColor"]
+- !private ["Ps9AnyObject", "CGRectMake"]
 - !private ["Ps9AnyObject", "NSFontAttributeName"]
 - !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
 - !private ["Ps9AnyObject", "UIBarButtonItemStyle"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIFont"]
+- !private ["Ps9AnyObject", "UIGraphicsBeginImageContext"]
+- !private ["Ps9AnyObject", "UIGraphicsEndImageContext"]
+- !private ["Ps9AnyObject", "UIGraphicsGetCurrentContext"]
+- !private ["Ps9AnyObject", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["Ps9AnyObject", "UIOffsetMake"]
 - ["Ps9AnyObject", "addCloseButton"]
 - ["Ps9AnyObject", "back"]
 - !private ["Ps9AnyObject", "backBarButtonItem"]
 - ["Ps9AnyObject", "borderLightGrayColor"]
+- !private ["Ps9AnyObject", "boundingRectWithSize"]
 - ["Ps9AnyObject", "configureNavBar"]
 - ["Ps9AnyObject", "dismiss"]
 - !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- !private ["Ps9AnyObject", "drawInRect"]
+- ["Ps9AnyObject", "imageFromColor"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "leftBarButtonItem"]
 - ["Ps9AnyObject", "lightTintColor"]
@@ -90,6 +119,7 @@ depends-member:
 - !private ["Ps9AnyObject", "tintColor"]
 - !private ["Ps9AnyObject", "whiteColor"]
 - !private ["Ps23ArrayLiteralConvertible", "Normal"]
+- !private ["Ps23ArrayLiteralConvertible", "UsesLineFragmentOrigin"]
 - !private ["Ps22BidirectionalIndexType", "NSTimeInterval"]
 - !private ["Ps22BidirectionalIndexType", "day"]
 - !private ["Ps22BidirectionalIndexType", "hour"]
@@ -101,6 +131,16 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "minute"]
 - !private ["Ps21BitwiseOperationsType", "week"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["V12CoreGraphics7CGFloat", "max"]
+- !private ["VSC6CGRect", "height"]
+- !private ["VSC6CGRect", "size"]
+- !private ["VSC6CGSize", "height"]
+- !private ["VSC6CGSize", "init"]
+- !private ["VSC6CGSize", "width"]
+- !private ["Ps11CVarArgType", "CGColor"]
+- !private ["Ps11CVarArgType", "CGContextFillRect"]
+- !private ["Ps11CVarArgType", "CGContextSetFillColorWithColor"]
+- !private ["Ps11CVarArgType", "CGRectMake"]
 - !private ["Ps11CVarArgType", "DBL_MAX"]
 - !private ["Ps11CVarArgType", "NSFontAttributeName"]
 - !private ["Ps11CVarArgType", "NSForegroundColorAttributeName"]
@@ -109,20 +149,28 @@ depends-member:
 - !private ["Ps11CVarArgType", "UIBarButtonItemStyle"]
 - !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UIFont"]
+- !private ["Ps11CVarArgType", "UIGraphicsBeginImageContext"]
+- !private ["Ps11CVarArgType", "UIGraphicsEndImageContext"]
+- !private ["Ps11CVarArgType", "UIGraphicsGetCurrentContext"]
+- !private ["Ps11CVarArgType", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["Ps11CVarArgType", "UIOffsetMake"]
 - ["Ps11CVarArgType", "addCloseButton"]
 - ["Ps11CVarArgType", "back"]
 - !private ["Ps11CVarArgType", "backBarButtonItem"]
 - ["Ps11CVarArgType", "borderLightGrayColor"]
+- !private ["Ps11CVarArgType", "boundingRectWithSize"]
 - ["Ps11CVarArgType", "configureNavBar"]
 - !private ["Ps11CVarArgType", "day"]
 - ["Ps11CVarArgType", "dismiss"]
 - !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- !private ["Ps11CVarArgType", "drawInRect"]
 - !private ["Ps11CVarArgType", "hour"]
+- ["Ps11CVarArgType", "imageFromColor"]
 - !private ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "leftBarButtonItem"]
 - ["Ps11CVarArgType", "lightTintColor"]
 - ["Ps11CVarArgType", "mainTintColor"]
+- !private ["Ps11CVarArgType", "max"]
 - !private ["Ps11CVarArgType", "minute"]
 - !private ["Ps11CVarArgType", "navigationBar"]
 - !private ["Ps11CVarArgType", "navigationController"]
@@ -137,30 +185,50 @@ depends-member:
 - !private ["Ps11CVarArgType", "whiteColor"]
 - !private ["Ps14CollectionType", "Key"]
 - !private ["Ps14CollectionType", "Value"]
+- !private ["Ps10Comparable", "CGFloat"]
+- !private ["Ps10Comparable", "CGSize"]
 - !private ["Ps10Comparable", "DBL_MAX"]
+- !private ["Ps10Comparable", "NSFontAttributeName"]
+- !private ["Ps10Comparable", "NSStringDrawingOptions"]
 - !private ["Ps10Comparable", "NSTimeInterval"]
+- !private ["Ps10Comparable", "boundingRectWithSize"]
 - !private ["Ps10Comparable", "day"]
 - !private ["Ps10Comparable", "hour"]
 - !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "max"]
 - !private ["Ps10Comparable", "minute"]
 - !private ["Ps10Comparable", "week"]
+- !private ["Ps28CustomDebugStringConvertible", "CGColor"]
+- !private ["Ps28CustomDebugStringConvertible", "CGContextFillRect"]
+- !private ["Ps28CustomDebugStringConvertible", "CGContextSetFillColorWithColor"]
+- !private ["Ps28CustomDebugStringConvertible", "CGFloat"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRectMake"]
+- !private ["Ps28CustomDebugStringConvertible", "CGSize"]
 - !private ["Ps28CustomDebugStringConvertible", "DBL_MAX"]
 - !private ["Ps28CustomDebugStringConvertible", "Key"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFontAttributeName"]
 - !private ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps28CustomDebugStringConvertible", "NSStringDrawingOptions"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIFont"]
+- !private ["Ps28CustomDebugStringConvertible", "UIGraphicsBeginImageContext"]
+- !private ["Ps28CustomDebugStringConvertible", "UIGraphicsEndImageContext"]
+- !private ["Ps28CustomDebugStringConvertible", "UIGraphicsGetCurrentContext"]
+- !private ["Ps28CustomDebugStringConvertible", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["Ps28CustomDebugStringConvertible", "UIOffsetMake"]
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
 - ["Ps28CustomDebugStringConvertible", "addCloseButton"]
 - ["Ps28CustomDebugStringConvertible", "back"]
 - !private ["Ps28CustomDebugStringConvertible", "backBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "borderLightGrayColor"]
+- !private ["Ps28CustomDebugStringConvertible", "boundingRectWithSize"]
 - ["Ps28CustomDebugStringConvertible", "configureNavBar"]
 - ["Ps28CustomDebugStringConvertible", "dismiss"]
 - !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- !private ["Ps28CustomDebugStringConvertible", "drawInRect"]
+- ["Ps28CustomDebugStringConvertible", "imageFromColor"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "leftBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "lightTintColor"]
@@ -175,6 +243,10 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "systemFontOfSize"]
 - !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
+- !private ["Ps23CustomStringConvertible", "CGColor"]
+- !private ["Ps23CustomStringConvertible", "CGContextFillRect"]
+- !private ["Ps23CustomStringConvertible", "CGContextSetFillColorWithColor"]
+- !private ["Ps23CustomStringConvertible", "CGRectMake"]
 - !private ["Ps23CustomStringConvertible", "DBL_MAX"]
 - !private ["Ps23CustomStringConvertible", "Key"]
 - !private ["Ps23CustomStringConvertible", "NSFontAttributeName"]
@@ -184,21 +256,29 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItemStyle"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIFont"]
+- !private ["Ps23CustomStringConvertible", "UIGraphicsBeginImageContext"]
+- !private ["Ps23CustomStringConvertible", "UIGraphicsEndImageContext"]
+- !private ["Ps23CustomStringConvertible", "UIGraphicsGetCurrentContext"]
+- !private ["Ps23CustomStringConvertible", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["Ps23CustomStringConvertible", "UIOffsetMake"]
 - !private ["Ps23CustomStringConvertible", "Value"]
 - ["Ps23CustomStringConvertible", "addCloseButton"]
 - ["Ps23CustomStringConvertible", "back"]
 - !private ["Ps23CustomStringConvertible", "backBarButtonItem"]
 - ["Ps23CustomStringConvertible", "borderLightGrayColor"]
+- !private ["Ps23CustomStringConvertible", "boundingRectWithSize"]
 - ["Ps23CustomStringConvertible", "configureNavBar"]
 - !private ["Ps23CustomStringConvertible", "day"]
 - ["Ps23CustomStringConvertible", "dismiss"]
 - !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- !private ["Ps23CustomStringConvertible", "drawInRect"]
 - !private ["Ps23CustomStringConvertible", "hour"]
+- ["Ps23CustomStringConvertible", "imageFromColor"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "leftBarButtonItem"]
 - ["Ps23CustomStringConvertible", "lightTintColor"]
 - ["Ps23CustomStringConvertible", "mainTintColor"]
+- !private ["Ps23CustomStringConvertible", "max"]
 - !private ["Ps23CustomStringConvertible", "minute"]
 - !private ["Ps23CustomStringConvertible", "navigationBar"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
@@ -219,10 +299,17 @@ depends-member:
 - ["Sd", "Double"]
 - !private ["Sd", "init"]
 - ["Sd", "max"]
+- !private ["Ps9Equatable", "CGColor"]
+- !private ["Ps9Equatable", "CGContextFillRect"]
+- !private ["Ps9Equatable", "CGContextSetFillColorWithColor"]
+- !private ["Ps9Equatable", "CGFloat"]
+- !private ["Ps9Equatable", "CGRectMake"]
+- !private ["Ps9Equatable", "CGSize"]
 - !private ["Ps9Equatable", "DBL_MAX"]
 - !private ["Ps9Equatable", "Default"]
 - !private ["Ps9Equatable", "NSFontAttributeName"]
 - !private ["Ps9Equatable", "NSForegroundColorAttributeName"]
+- !private ["Ps9Equatable", "NSStringDrawingOptions"]
 - !private ["Ps9Equatable", "NSTimeInterval"]
 - !private ["Ps9Equatable", "Normal"]
 - !private ["Ps9Equatable", "Plain"]
@@ -230,20 +317,30 @@ depends-member:
 - !private ["Ps9Equatable", "UIBarButtonItemStyle"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIFont"]
+- !private ["Ps9Equatable", "UIGraphicsBeginImageContext"]
+- !private ["Ps9Equatable", "UIGraphicsEndImageContext"]
+- !private ["Ps9Equatable", "UIGraphicsGetCurrentContext"]
+- !private ["Ps9Equatable", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["Ps9Equatable", "UIOffsetMake"]
+- !private ["Ps9Equatable", "UsesLineFragmentOrigin"]
 - ["Ps9Equatable", "addCloseButton"]
 - ["Ps9Equatable", "back"]
 - !private ["Ps9Equatable", "backBarButtonItem"]
 - ["Ps9Equatable", "borderLightGrayColor"]
+- !private ["Ps9Equatable", "boundingRectWithSize"]
 - ["Ps9Equatable", "configureNavBar"]
 - !private ["Ps9Equatable", "day"]
 - ["Ps9Equatable", "dismiss"]
 - !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- !private ["Ps9Equatable", "drawInRect"]
+- !private ["Ps9Equatable", "height"]
 - !private ["Ps9Equatable", "hour"]
+- ["Ps9Equatable", "imageFromColor"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "leftBarButtonItem"]
 - ["Ps9Equatable", "lightTintColor"]
 - ["Ps9Equatable", "mainTintColor"]
+- !private ["Ps9Equatable", "max"]
 - !private ["Ps9Equatable", "minute"]
 - !private ["Ps9Equatable", "navigationBar"]
 - !private ["Ps9Equatable", "navigationController"]
@@ -252,43 +349,67 @@ depends-member:
 - ["Ps9Equatable", "secondaryTintColor"]
 - !private ["Ps9Equatable", "setTitlePositionAdjustment"]
 - !private ["Ps9Equatable", "setTitleTextAttributes"]
+- !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "systemFontOfSize"]
 - !private ["Ps9Equatable", "tintColor"]
 - !private ["Ps9Equatable", "week"]
 - !private ["Ps9Equatable", "whiteColor"]
+- !private ["Ps9Equatable", "width"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "CGFloat"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "CGSize"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "NSFontAttributeName"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "NSStringDrawingOptions"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "boundingRectWithSize"]
 - !private ["Ps23FloatLiteralConvertible", "DBL_MAX"]
 - !private ["Ps23FloatLiteralConvertible", "init"]
+- !private ["Ps23FloatLiteralConvertible", "max"]
 - !private ["Ps17FloatingPointType", "DBL_MAX"]
 - !private ["Ps17FloatingPointType", "init"]
+- !private ["Ps17FloatingPointType", "max"]
 - !private ["Ps16ForwardIndexType", "NSTimeInterval"]
 - !private ["Ps16ForwardIndexType", "day"]
 - !private ["Ps16ForwardIndexType", "hour"]
 - !private ["Ps16ForwardIndexType", "minute"]
 - !private ["Ps16ForwardIndexType", "week"]
+- !private ["Ps8Hashable", "CGColor"]
+- !private ["Ps8Hashable", "CGContextFillRect"]
+- !private ["Ps8Hashable", "CGContextSetFillColorWithColor"]
+- !private ["Ps8Hashable", "CGFloat"]
+- !private ["Ps8Hashable", "CGRectMake"]
+- !private ["Ps8Hashable", "CGSize"]
 - !private ["Ps8Hashable", "DBL_MAX"]
 - !private ["Ps8Hashable", "Default"]
 - !private ["Ps8Hashable", "NSFontAttributeName"]
 - !private ["Ps8Hashable", "NSForegroundColorAttributeName"]
+- !private ["Ps8Hashable", "NSStringDrawingOptions"]
 - !private ["Ps8Hashable", "NSTimeInterval"]
 - !private ["Ps8Hashable", "Plain"]
 - !private ["Ps8Hashable", "UIBarButtonItem"]
 - !private ["Ps8Hashable", "UIBarButtonItemStyle"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIFont"]
+- !private ["Ps8Hashable", "UIGraphicsBeginImageContext"]
+- !private ["Ps8Hashable", "UIGraphicsEndImageContext"]
+- !private ["Ps8Hashable", "UIGraphicsGetCurrentContext"]
+- !private ["Ps8Hashable", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["Ps8Hashable", "UIOffsetMake"]
 - ["Ps8Hashable", "addCloseButton"]
 - ["Ps8Hashable", "back"]
 - !private ["Ps8Hashable", "backBarButtonItem"]
 - ["Ps8Hashable", "borderLightGrayColor"]
+- !private ["Ps8Hashable", "boundingRectWithSize"]
 - ["Ps8Hashable", "configureNavBar"]
 - !private ["Ps8Hashable", "day"]
 - ["Ps8Hashable", "dismiss"]
 - !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- !private ["Ps8Hashable", "drawInRect"]
 - !private ["Ps8Hashable", "hour"]
+- ["Ps8Hashable", "imageFromColor"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "leftBarButtonItem"]
 - ["Ps8Hashable", "lightTintColor"]
 - ["Ps8Hashable", "mainTintColor"]
+- !private ["Ps8Hashable", "max"]
 - !private ["Ps8Hashable", "minute"]
 - !private ["Ps8Hashable", "navigationBar"]
 - !private ["Ps8Hashable", "navigationController"]
@@ -327,6 +448,7 @@ depends-member:
 - !private ["Ps25IntegerLiteralConvertible", "day"]
 - !private ["Ps25IntegerLiteralConvertible", "hour"]
 - !private ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps25IntegerLiteralConvertible", "max"]
 - !private ["Ps25IntegerLiteralConvertible", "minute"]
 - !private ["Ps25IntegerLiteralConvertible", "week"]
 - !private ["Ps11IntegerType", "NSTimeInterval"]
@@ -334,21 +456,36 @@ depends-member:
 - !private ["Ps11IntegerType", "hour"]
 - !private ["Ps11IntegerType", "minute"]
 - !private ["Ps11IntegerType", "week"]
+- !private ["Ps14MirrorPathType", "CGFloat"]
+- !private ["Ps14MirrorPathType", "CGSize"]
+- !private ["Ps14MirrorPathType", "NSFontAttributeName"]
+- !private ["Ps14MirrorPathType", "NSStringDrawingOptions"]
 - !private ["Ps14MirrorPathType", "NSTimeInterval"]
+- !private ["Ps14MirrorPathType", "boundingRectWithSize"]
 - !private ["Ps14MirrorPathType", "day"]
 - !private ["Ps14MirrorPathType", "hour"]
 - !private ["Ps14MirrorPathType", "minute"]
 - !private ["Ps14MirrorPathType", "week"]
+- !private ["PSo8NSCoding", "CGColor"]
+- !private ["PSo8NSCoding", "CGContextFillRect"]
+- !private ["PSo8NSCoding", "CGContextSetFillColorWithColor"]
+- !private ["PSo8NSCoding", "CGRectMake"]
 - !private ["PSo8NSCoding", "NSFontAttributeName"]
 - !private ["PSo8NSCoding", "NSForegroundColorAttributeName"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
 - !private ["PSo8NSCoding", "UIBarButtonItemStyle"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIFont"]
+- !private ["PSo8NSCoding", "UIGraphicsBeginImageContext"]
+- !private ["PSo8NSCoding", "UIGraphicsEndImageContext"]
+- !private ["PSo8NSCoding", "UIGraphicsGetCurrentContext"]
+- !private ["PSo8NSCoding", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["PSo8NSCoding", "UIOffsetMake"]
 - !private ["PSo8NSCoding", "backBarButtonItem"]
+- !private ["PSo8NSCoding", "boundingRectWithSize"]
 - !private ["PSo8NSCoding", "dismiss"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
+- !private ["PSo8NSCoding", "drawInRect"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "leftBarButtonItem"]
 - !private ["PSo8NSCoding", "navigationBar"]
@@ -359,7 +496,9 @@ depends-member:
 - !private ["PSo8NSCoding", "setTitleTextAttributes"]
 - !private ["PSo8NSCoding", "tintColor"]
 - !private ["PSo8NSCoding", "whiteColor"]
+- !private ["PSo9NSCopying", "CGColor"]
 - !private ["PSo9NSCopying", "UIColor"]
+- !private ["PSo9NSCopying", "boundingRectWithSize"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "systemFontOfSize"]
 - !private ["PSo9NSCopying", "whiteColor"]
@@ -376,20 +515,34 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - !private ["PSo26NSExtensionRequestHandling", "popViewControllerAnimated"]
+- !private ["PSo16NSMutableCopying", "boundingRectWithSize"]
+- !private ["CSo8NSObject", "CGColor"]
+- !private ["CSo8NSObject", "CGContextFillRect"]
+- !private ["CSo8NSObject", "CGContextSetFillColorWithColor"]
+- !private ["CSo8NSObject", "CGRectMake"]
+- ["CSo8NSObject", "CGSize"]
 - !private ["CSo8NSObject", "NSFontAttributeName"]
 - !private ["CSo8NSObject", "NSForegroundColorAttributeName"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
 - !private ["CSo8NSObject", "UIBarButtonItemStyle"]
 - ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "UIFont"]
+- !private ["CSo8NSObject", "UIGraphicsBeginImageContext"]
+- !private ["CSo8NSObject", "UIGraphicsEndImageContext"]
+- !private ["CSo8NSObject", "UIGraphicsGetCurrentContext"]
+- !private ["CSo8NSObject", "UIGraphicsGetImageFromCurrentImageContext"]
+- ["CSo8NSObject", "UIImage"]
 - !private ["CSo8NSObject", "UIOffsetMake"]
 - ["CSo8NSObject", "addCloseButton"]
 - ["CSo8NSObject", "back"]
 - !private ["CSo8NSObject", "backBarButtonItem"]
 - ["CSo8NSObject", "borderLightGrayColor"]
+- !private ["CSo8NSObject", "boundingRectWithSize"]
 - ["CSo8NSObject", "configureNavBar"]
 - ["CSo8NSObject", "dismiss"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
+- !private ["CSo8NSObject", "drawInRect"]
+- ["CSo8NSObject", "imageFromColor"]
 - !private ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "leftBarButtonItem"]
 - ["CSo8NSObject", "lightTintColor"]
@@ -404,20 +557,31 @@ depends-member:
 - !private ["CSo8NSObject", "systemFontOfSize"]
 - !private ["CSo8NSObject", "tintColor"]
 - !private ["CSo8NSObject", "whiteColor"]
+- !private ["PSo16NSObjectProtocol", "CGColor"]
+- !private ["PSo16NSObjectProtocol", "CGContextFillRect"]
+- !private ["PSo16NSObjectProtocol", "CGContextSetFillColorWithColor"]
+- !private ["PSo16NSObjectProtocol", "CGRectMake"]
 - !private ["PSo16NSObjectProtocol", "NSFontAttributeName"]
 - !private ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItemStyle"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIFont"]
+- !private ["PSo16NSObjectProtocol", "UIGraphicsBeginImageContext"]
+- !private ["PSo16NSObjectProtocol", "UIGraphicsEndImageContext"]
+- !private ["PSo16NSObjectProtocol", "UIGraphicsGetCurrentContext"]
+- !private ["PSo16NSObjectProtocol", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["PSo16NSObjectProtocol", "UIOffsetMake"]
 - ["PSo16NSObjectProtocol", "addCloseButton"]
 - ["PSo16NSObjectProtocol", "back"]
 - !private ["PSo16NSObjectProtocol", "backBarButtonItem"]
 - ["PSo16NSObjectProtocol", "borderLightGrayColor"]
+- !private ["PSo16NSObjectProtocol", "boundingRectWithSize"]
 - ["PSo16NSObjectProtocol", "configureNavBar"]
 - ["PSo16NSObjectProtocol", "dismiss"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
+- !private ["PSo16NSObjectProtocol", "drawInRect"]
+- ["PSo16NSObjectProtocol", "imageFromColor"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "leftBarButtonItem"]
 - ["PSo16NSObjectProtocol", "lightTintColor"]
@@ -432,11 +596,29 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "systemFontOfSize"]
 - !private ["PSo16NSObjectProtocol", "tintColor"]
 - !private ["PSo16NSObjectProtocol", "whiteColor"]
+- !private ["PSo14NSSecureCoding", "CGColor"]
+- !private ["PSo14NSSecureCoding", "CGContextFillRect"]
+- !private ["PSo14NSSecureCoding", "CGContextSetFillColorWithColor"]
+- !private ["PSo14NSSecureCoding", "CGRectMake"]
 - !private ["PSo14NSSecureCoding", "UIColor"]
+- !private ["PSo14NSSecureCoding", "UIGraphicsBeginImageContext"]
+- !private ["PSo14NSSecureCoding", "UIGraphicsEndImageContext"]
+- !private ["PSo14NSSecureCoding", "UIGraphicsGetCurrentContext"]
+- !private ["PSo14NSSecureCoding", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["PSo14NSSecureCoding", "boundingRectWithSize"]
+- !private ["PSo14NSSecureCoding", "drawInRect"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "whiteColor"]
+- !private ["CSo8NSString", "boundingRectWithSize"]
+- !private ["VSC22NSStringDrawingOptions", "UsesLineFragmentOrigin"]
 - !private ["Ps13OptionSetType", "Normal"]
+- !private ["Ps13OptionSetType", "UsesLineFragmentOrigin"]
 - !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "CGFloat"]
+- !private ["Ps16OutputStreamType", "CGSize"]
+- !private ["Ps16OutputStreamType", "NSFontAttributeName"]
+- !private ["Ps16OutputStreamType", "NSStringDrawingOptions"]
+- !private ["Ps16OutputStreamType", "boundingRectWithSize"]
 - !private ["Ps21RandomAccessIndexType", "NSTimeInterval"]
 - !private ["Ps21RandomAccessIndexType", "day"]
 - !private ["Ps21RandomAccessIndexType", "hour"]
@@ -445,9 +627,11 @@ depends-member:
 - !private ["Ps16RawRepresentable", "Default"]
 - !private ["Ps16RawRepresentable", "Normal"]
 - !private ["Ps16RawRepresentable", "Plain"]
+- !private ["Ps16RawRepresentable", "UsesLineFragmentOrigin"]
 - !private ["Ps12SequenceType", "Key"]
 - !private ["Ps12SequenceType", "Value"]
 - !private ["Ps14SetAlgebraType", "Normal"]
+- !private ["Ps14SetAlgebraType", "UsesLineFragmentOrigin"]
 - !private ["Ps17SignedIntegerType", "NSTimeInterval"]
 - !private ["Ps17SignedIntegerType", "day"]
 - !private ["Ps17SignedIntegerType", "hour"]
@@ -458,15 +642,47 @@ depends-member:
 - !private ["Ps16SignedNumberType", "day"]
 - !private ["Ps16SignedNumberType", "hour"]
 - !private ["Ps16SignedNumberType", "init"]
+- !private ["Ps16SignedNumberType", "max"]
 - !private ["Ps16SignedNumberType", "minute"]
 - !private ["Ps16SignedNumberType", "week"]
+- !private ["Ps10Streamable", "CGFloat"]
+- !private ["Ps10Streamable", "CGSize"]
+- !private ["Ps10Streamable", "NSFontAttributeName"]
+- !private ["Ps10Streamable", "NSStringDrawingOptions"]
+- !private ["Ps10Streamable", "boundingRectWithSize"]
 - !private ["Ps10Strideable", "DBL_MAX"]
 - !private ["Ps10Strideable", "NSTimeInterval"]
 - !private ["Ps10Strideable", "day"]
 - !private ["Ps10Strideable", "hour"]
 - !private ["Ps10Strideable", "init"]
+- !private ["Ps10Strideable", "max"]
 - !private ["Ps10Strideable", "minute"]
 - !private ["Ps10Strideable", "week"]
+- ["SS", "CGFloat"]
+- !private ["SS", "CGSize"]
+- !private ["SS", "NSFontAttributeName"]
+- !private ["SS", "NSStringDrawingOptions"]
+- ["SS", "UIFont"]
+- !private ["SS", "boundingRectWithSize"]
+- ["SS", "heightWithConstrainedWidth"]
+- !private ["Ps30StringInterpolationConvertible", "CGFloat"]
+- !private ["Ps30StringInterpolationConvertible", "CGSize"]
+- !private ["Ps30StringInterpolationConvertible", "NSFontAttributeName"]
+- !private ["Ps30StringInterpolationConvertible", "NSStringDrawingOptions"]
+- !private ["Ps30StringInterpolationConvertible", "boundingRectWithSize"]
+- !private ["Ps24StringLiteralConvertible", "CGFloat"]
+- !private ["Ps24StringLiteralConvertible", "CGSize"]
+- !private ["Ps24StringLiteralConvertible", "NSFontAttributeName"]
+- !private ["Ps24StringLiteralConvertible", "NSStringDrawingOptions"]
+- !private ["Ps24StringLiteralConvertible", "boundingRectWithSize"]
+- !private ["PSo29UIAccessibilityIdentification", "CGContextFillRect"]
+- !private ["PSo29UIAccessibilityIdentification", "CGContextSetFillColorWithColor"]
+- !private ["PSo29UIAccessibilityIdentification", "CGRectMake"]
+- !private ["PSo29UIAccessibilityIdentification", "UIGraphicsBeginImageContext"]
+- !private ["PSo29UIAccessibilityIdentification", "UIGraphicsEndImageContext"]
+- !private ["PSo29UIAccessibilityIdentification", "UIGraphicsGetCurrentContext"]
+- !private ["PSo29UIAccessibilityIdentification", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["PSo29UIAccessibilityIdentification", "drawInRect"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "setTitlePositionAdjustment"]
 - !private ["PSo29UIAccessibilityIdentification", "setTitleTextAttributes"]
@@ -498,6 +714,7 @@ depends-member:
 - !private ["CSo9UIBarItem", "setTitleTextAttributes"]
 - !private ["OSC12UIBarMetrics", "Default"]
 - !private ["PSo16UIBarPositioning", "tintColor"]
+- !private ["CSo7UIColor", "CGColor"]
 - ["CSo7UIColor", "UIColor"]
 - ["CSo7UIColor", "borderLightGrayColor"]
 - !private ["CSo7UIColor", "init"]
@@ -536,6 +753,18 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "popViewControllerAnimated"]
 - !private ["PSo18UIFocusEnvironment", "tintColor"]
 - !private ["CSo6UIFont", "systemFontOfSize"]
+- !private ["CSo7UIImage", "CGContextFillRect"]
+- !private ["CSo7UIImage", "CGContextSetFillColorWithColor"]
+- !private ["CSo7UIImage", "CGRectMake"]
+- ["CSo7UIImage", "CGSize"]
+- ["CSo7UIImage", "UIColor"]
+- !private ["CSo7UIImage", "UIGraphicsBeginImageContext"]
+- !private ["CSo7UIImage", "UIGraphicsEndImageContext"]
+- !private ["CSo7UIImage", "UIGraphicsGetCurrentContext"]
+- !private ["CSo7UIImage", "UIGraphicsGetImageFromCurrentImageContext"]
+- ["CSo7UIImage", "UIImage"]
+- !private ["CSo7UIImage", "drawInRect"]
+- ["CSo7UIImage", "imageFromColor"]
 - !private ["CSo15UINavigationBar", "tintColor"]
 - !private ["CSo22UINavigationController", "navigationBar"]
 - !private ["CSo22UINavigationController", "popViewControllerAnimated"]
@@ -602,6 +831,21 @@ depends-member:
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "navigationItem"]
 - !private ["CSo16UIViewController", "popViewControllerAnimated"]
+- !private ["P9Alamofire20URLStringConvertible", "CGFloat"]
+- !private ["P9Alamofire20URLStringConvertible", "CGSize"]
+- !private ["P9Alamofire20URLStringConvertible", "NSFontAttributeName"]
+- !private ["P9Alamofire20URLStringConvertible", "NSStringDrawingOptions"]
+- !private ["P9Alamofire20URLStringConvertible", "boundingRectWithSize"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "CGFloat"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "CGSize"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "NSFontAttributeName"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "NSStringDrawingOptions"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "boundingRectWithSize"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "CGFloat"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "CGSize"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "NSFontAttributeName"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "NSStringDrawingOptions"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "boundingRectWithSize"]
 - !private ["Ps31_BuiltinFloatLiteralConvertible", "DBL_MAX"]
 - !private ["Ps31_BuiltinFloatLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "DBL_MAX"]
@@ -611,13 +855,39 @@ depends-member:
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "minute"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "week"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "CGFloat"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "CGSize"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "NSFontAttributeName"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "NSStringDrawingOptions"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "boundingRectWithSize"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "CGFloat"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "CGSize"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "NSFontAttributeName"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "NSStringDrawingOptions"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "boundingRectWithSize"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "CGFloat"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "CGSize"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "NSFontAttributeName"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "NSStringDrawingOptions"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "boundingRectWithSize"]
 - !private ["Ps19_CVarArgAlignedType", "DBL_MAX"]
 - !private ["Ps19_CVarArgAlignedType", "init"]
+- !private ["Ps19_CVarArgAlignedType", "max"]
 - !private ["Ps22_CVarArgPassedAsDouble", "DBL_MAX"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "max"]
+- !private ["Ps24_ColorLiteralConvertible", "CGColor"]
 - !private ["Ps24_ColorLiteralConvertible", "UIColor"]
 - !private ["Ps24_ColorLiteralConvertible", "init"]
 - !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
+- !private ["Ps24_ImageLiteralConvertible", "CGContextFillRect"]
+- !private ["Ps24_ImageLiteralConvertible", "CGContextSetFillColorWithColor"]
+- !private ["Ps24_ImageLiteralConvertible", "CGRectMake"]
+- !private ["Ps24_ImageLiteralConvertible", "UIGraphicsBeginImageContext"]
+- !private ["Ps24_ImageLiteralConvertible", "UIGraphicsEndImageContext"]
+- !private ["Ps24_ImageLiteralConvertible", "UIGraphicsGetCurrentContext"]
+- !private ["Ps24_ImageLiteralConvertible", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["Ps24_ImageLiteralConvertible", "drawInRect"]
 - !private ["Ps14_Incrementable", "NSTimeInterval"]
 - !private ["Ps14_Incrementable", "day"]
 - !private ["Ps14_Incrementable", "hour"]
@@ -633,13 +903,19 @@ depends-member:
 - !private ["Ps12_IntegerType", "hour"]
 - !private ["Ps12_IntegerType", "minute"]
 - !private ["Ps12_IntegerType", "week"]
+- !private ["Ps21_ObjectiveCBridgeable", "CGFloat"]
+- !private ["Ps21_ObjectiveCBridgeable", "CGSize"]
 - !private ["Ps21_ObjectiveCBridgeable", "DBL_MAX"]
 - !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "NSFontAttributeName"]
+- !private ["Ps21_ObjectiveCBridgeable", "NSStringDrawingOptions"]
 - !private ["Ps21_ObjectiveCBridgeable", "NSTimeInterval"]
 - !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "boundingRectWithSize"]
 - !private ["Ps21_ObjectiveCBridgeable", "day"]
 - !private ["Ps21_ObjectiveCBridgeable", "hour"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "max"]
 - !private ["Ps21_ObjectiveCBridgeable", "minute"]
 - !private ["Ps21_ObjectiveCBridgeable", "week"]
 - !private ["Ps22_RandomAccessAmbiguity", "NSTimeInterval"]
@@ -647,16 +923,25 @@ depends-member:
 - !private ["Ps22_RandomAccessAmbiguity", "hour"]
 - !private ["Ps22_RandomAccessAmbiguity", "minute"]
 - !private ["Ps22_RandomAccessAmbiguity", "week"]
+- !private ["Ps12_Reflectable", "CGFloat"]
+- !private ["Ps12_Reflectable", "CGSize"]
 - !private ["Ps12_Reflectable", "DBL_MAX"]
 - !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "NSFontAttributeName"]
+- !private ["Ps12_Reflectable", "NSStringDrawingOptions"]
 - !private ["Ps12_Reflectable", "NSTimeInterval"]
 - !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "boundingRectWithSize"]
 - !private ["Ps12_Reflectable", "day"]
+- !private ["Ps12_Reflectable", "height"]
 - !private ["Ps12_Reflectable", "hour"]
 - !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "max"]
 - !private ["Ps12_Reflectable", "minute"]
+- !private ["Ps12_Reflectable", "size"]
 - !private ["Ps12_Reflectable", "tintColor"]
 - !private ["Ps12_Reflectable", "week"]
+- !private ["Ps12_Reflectable", "width"]
 - !private ["Ps18_SignedIntegerType", "NSTimeInterval"]
 - !private ["Ps18_SignedIntegerType", "day"]
 - !private ["Ps18_SignedIntegerType", "hour"]
@@ -669,6 +954,8 @@ depends-nominal:
 - !private "Ps22BidirectionalIndexType"
 - !private "Ps21BitwiseOperationsType"
 - !private "V12CoreGraphics7CGFloat"
+- !private "VSC6CGRect"
+- !private "VSC6CGSize"
 - "Ps11CVarArgType"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
@@ -678,6 +965,7 @@ depends-nominal:
 - !private "Ps28DictionaryLiteralConvertible"
 - "Sd"
 - "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps23FloatLiteralConvertible"
 - !private "Ps17FloatingPointType"
 - !private "Ps16ForwardIndexType"
@@ -691,18 +979,26 @@ depends-nominal:
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "VSC22NSStringDrawingOptions"
 - !private "Ps13OptionSetType"
 - !private "Sq"
+- !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"
 - !private "Ps16RawRepresentable"
 - !private "Ps12SequenceType"
 - !private "Ps14SetAlgebraType"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
+- !private "Ps10Streamable"
 - !private "Ps10Strideable"
+- "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - !private "PSo21UIAppearanceContainer"
@@ -718,6 +1014,7 @@ depends-nominal:
 - !private "PSo13UIDynamicItem"
 - !private "PSo18UIFocusEnvironment"
 - !private "CSo6UIFont"
+- "CSo7UIImage"
 - !private "CSo15UINavigationBar"
 - !private "CSo22UINavigationController"
 - !private "CSo16UINavigationItem"
@@ -726,11 +1023,18 @@ depends-nominal:
 - !private "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "P9Alamofire20URLStringConvertible"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps31_BuiltinFloatLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
 - !private "Ps19_CVarArgAlignedType"
 - !private "Ps22_CVarArgPassedAsDouble"
 - !private "Ps24_ColorLiteralConvertible"
+- !private "Ps24_ImageLiteralConvertible"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
 - !private "Ps12_IntegerType"
@@ -758,4 +1062,4 @@ depends-external:
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Headers/Alamofire.h"
 - "/Users/hgursoy/Donando/ios-app/Carthage/Build/iOS/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "9dc741d3465343acf63853ff39467aa6"
+interface-hash: "001b0029dbf71959b5f331e8c013753a"

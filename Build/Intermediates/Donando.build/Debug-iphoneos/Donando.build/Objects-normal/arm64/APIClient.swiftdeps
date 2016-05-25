@@ -7,15 +7,15 @@ provides-member:
 - ["C7Donando9APIClient", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "Endpoints"
-- "WebClient"
-- "DataResult"
-- !private ">"
-- !private "APIName"
-- "APIClient"
 - !private "NSURLQueryItem"
-- "String"
+- !private ">"
+- "APIClient"
 - "DataClient"
+- "DataResult"
+- "WebClient"
+- "String"
+- !private "APIName"
+- !private "Endpoints"
 depends-member:
 - !private ["C7Donando9APIClient", "APIName"]
 - ["C7Donando9APIClient", "DataResult"]

@@ -6,29 +6,36 @@ provides-nominal:
 provides-member:
 - ["C7Donando11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidEnterBackground"
 - "applicationWillEnterForeground"
-- "applicationDidBecomeActive"
 - "window"
-- "application"
-- "applicationWillTerminate"
+- "applicationDidBecomeActive"
 - "applicationWillResignActive"
+- "applicationWillTerminate"
+- "applicationDidEnterBackground"
+- "application"
 depends-top-level:
-- "Bool"
 - "AppDelegate"
 - "UIApplication"
-- !private "Endpoints"
-- "UIApplicationDelegate"
-- "AnyObject"
-- "UIWindow"
-- !private "StringLiteralType"
+- !private "UIBarButtonItem"
 - "UIResponder"
+- !private "UIOffsetMake"
+- "UIApplicationDelegate"
+- "Bool"
 - !private "UIColor"
+- !private "Endpoints"
 - !private "BooleanLiteralType"
 - "NSObject"
+- !private "UIBarMetrics"
+- !private "StringLiteralType"
+- "AnyObject"
+- "UIWindow"
 depends-member:
 - !private ["Ps9AnyObject", "Endpoints"]
+- !private ["Ps9AnyObject", "UIBarButtonItem"]
+- !private ["Ps9AnyObject", "UIBarMetrics"]
 - !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UIOffsetMake"]
+- !private ["Ps9AnyObject", "appearance"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
 - ["Ps9AnyObject", "applicationDidEnterBackground"]
@@ -43,6 +50,7 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillTerminate"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "mainTintColor"]
+- !private ["Ps9AnyObject", "setBackButtonTitlePositionAdjustment"]
 - !private ["Ps9AnyObject", "tintColor"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
@@ -51,7 +59,10 @@ depends-member:
 - !private ["C7Donando11AppDelegate", "Endpoints"]
 - ["C7Donando11AppDelegate", "NSObject"]
 - ["C7Donando11AppDelegate", "UIApplication"]
+- !private ["C7Donando11AppDelegate", "UIBarButtonItem"]
+- !private ["C7Donando11AppDelegate", "UIBarMetrics"]
 - !private ["C7Donando11AppDelegate", "UIColor"]
+- !private ["C7Donando11AppDelegate", "UIOffsetMake"]
 - ["C7Donando11AppDelegate", "UIWindow"]
 - ["C7Donando11AppDelegate", "application"]
 - ["C7Donando11AppDelegate", "applicationDidBecomeActive"]
@@ -68,8 +79,13 @@ depends-member:
 - ["C7Donando11AppDelegate", "deinit"]
 - ["C7Donando11AppDelegate", "init"]
 - ["C7Donando11AppDelegate", "window"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "Endpoints"]
+- !private ["Ps11CVarArgType", "UIBarButtonItem"]
+- !private ["Ps11CVarArgType", "UIBarMetrics"]
 - !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "UIOffsetMake"]
+- !private ["Ps11CVarArgType", "appearance"]
 - ["Ps11CVarArgType", "application"]
 - ["Ps11CVarArgType", "applicationDidBecomeActive"]
 - ["Ps11CVarArgType", "applicationDidEnterBackground"]
@@ -84,11 +100,16 @@ depends-member:
 - ["Ps11CVarArgType", "applicationWillTerminate"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "mainTintColor"]
+- !private ["Ps11CVarArgType", "setBackButtonTitlePositionAdjustment"]
 - !private ["Ps11CVarArgType", "tintColor"]
 - ["Ps11CVarArgType", "window"]
 - ["Ps11CVarArgType", ""]
 - !private ["Ps28CustomDebugStringConvertible", "Endpoints"]
+- !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
+- !private ["Ps28CustomDebugStringConvertible", "UIBarMetrics"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIOffsetMake"]
+- !private ["Ps28CustomDebugStringConvertible", "appearance"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
@@ -103,11 +124,16 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "mainTintColor"]
+- !private ["Ps28CustomDebugStringConvertible", "setBackButtonTitlePositionAdjustment"]
 - !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Endpoints"]
+- !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
+- !private ["Ps23CustomStringConvertible", "UIBarMetrics"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UIOffsetMake"]
+- !private ["Ps23CustomStringConvertible", "appearance"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
 - ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
@@ -122,12 +148,18 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "mainTintColor"]
+- !private ["Ps23CustomStringConvertible", "setBackButtonTitlePositionAdjustment"]
 - !private ["Ps23CustomStringConvertible", "tintColor"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["V7Donando9Endpoints", "baseURI"]
+- !private ["Ps9Equatable", "Default"]
 - !private ["Ps9Equatable", "Endpoints"]
+- !private ["Ps9Equatable", "UIBarButtonItem"]
+- !private ["Ps9Equatable", "UIBarMetrics"]
 - !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIOffsetMake"]
+- !private ["Ps9Equatable", "appearance"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
 - ["Ps9Equatable", "applicationDidEnterBackground"]
@@ -142,11 +174,17 @@ depends-member:
 - ["Ps9Equatable", "applicationWillTerminate"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "mainTintColor"]
+- !private ["Ps9Equatable", "setBackButtonTitlePositionAdjustment"]
 - !private ["Ps9Equatable", "tintColor"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "Default"]
 - !private ["Ps8Hashable", "Endpoints"]
+- !private ["Ps8Hashable", "UIBarButtonItem"]
+- !private ["Ps8Hashable", "UIBarMetrics"]
 - !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIOffsetMake"]
+- !private ["Ps8Hashable", "appearance"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
 - ["Ps8Hashable", "applicationDidEnterBackground"]
@@ -161,11 +199,14 @@ depends-member:
 - ["Ps8Hashable", "applicationWillTerminate"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "mainTintColor"]
+- !private ["Ps8Hashable", "setBackButtonTitlePositionAdjustment"]
 - !private ["Ps8Hashable", "tintColor"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
+- !private ["PSo8NSCoding", "appearance"]
 - !private ["PSo8NSCoding", "mainTintColor"]
+- !private ["PSo8NSCoding", "setBackButtonTitlePositionAdjustment"]
 - !private ["PSo8NSCoding", "tintColor"]
 - !private ["PSo9NSCopying", "mainTintColor"]
 - ["CSo8NSObject", "AnyObject"]
@@ -173,8 +214,12 @@ depends-member:
 - !private ["CSo8NSObject", "Endpoints"]
 - ["CSo8NSObject", "NSObject"]
 - ["CSo8NSObject", "UIApplication"]
+- !private ["CSo8NSObject", "UIBarButtonItem"]
+- !private ["CSo8NSObject", "UIBarMetrics"]
 - !private ["CSo8NSObject", "UIColor"]
+- !private ["CSo8NSObject", "UIOffsetMake"]
 - ["CSo8NSObject", "UIWindow"]
+- !private ["CSo8NSObject", "appearance"]
 - ["CSo8NSObject", "application"]
 - ["CSo8NSObject", "applicationDidBecomeActive"]
 - ["CSo8NSObject", "applicationDidEnterBackground"]
@@ -189,10 +234,15 @@ depends-member:
 - ["CSo8NSObject", "applicationWillTerminate"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "mainTintColor"]
+- !private ["CSo8NSObject", "setBackButtonTitlePositionAdjustment"]
 - !private ["CSo8NSObject", "tintColor"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "Endpoints"]
+- !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
+- !private ["PSo16NSObjectProtocol", "UIBarMetrics"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UIOffsetMake"]
+- !private ["PSo16NSObjectProtocol", "appearance"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
 - ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
@@ -207,15 +257,24 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "mainTintColor"]
+- !private ["PSo16NSObjectProtocol", "setBackButtonTitlePositionAdjustment"]
 - !private ["PSo16NSObjectProtocol", "tintColor"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "mainTintColor"]
+- !private ["Ps16RawRepresentable", "Default"]
+- !private ["PSo29UIAccessibilityIdentification", "appearance"]
+- !private ["PSo29UIAccessibilityIdentification", "setBackButtonTitlePositionAdjustment"]
 - !private ["PSo29UIAccessibilityIdentification", "tintColor"]
+- !private ["PSo12UIAppearance", "appearance"]
+- !private ["PSo12UIAppearance", "setBackButtonTitlePositionAdjustment"]
 - !private ["PSo12UIAppearance", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "tintColor"]
 - !private ["PSo21UIApplicationDelegate", "Endpoints"]
+- !private ["PSo21UIApplicationDelegate", "UIBarButtonItem"]
+- !private ["PSo21UIApplicationDelegate", "UIBarMetrics"]
 - !private ["PSo21UIApplicationDelegate", "UIColor"]
+- !private ["PSo21UIApplicationDelegate", "UIOffsetMake"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
 - ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
@@ -230,6 +289,11 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
+- !private ["CSo15UIBarButtonItem", "appearance"]
+- !private ["CSo15UIBarButtonItem", "setBackButtonTitlePositionAdjustment"]
+- !private ["CSo9UIBarItem", "appearance"]
+- !private ["CSo9UIBarItem", "setBackButtonTitlePositionAdjustment"]
+- !private ["OSC12UIBarMetrics", "Default"]
 - !private ["CSo7UIColor", "mainTintColor"]
 - !private ["PSo17UICoordinateSpace", "tintColor"]
 - !private ["PSo13UIDynamicItem", "tintColor"]
@@ -239,7 +303,10 @@ depends-member:
 - !private ["CSo11UIResponder", "Endpoints"]
 - ["CSo11UIResponder", "NSObject"]
 - ["CSo11UIResponder", "UIApplication"]
+- !private ["CSo11UIResponder", "UIBarButtonItem"]
+- !private ["CSo11UIResponder", "UIBarMetrics"]
 - !private ["CSo11UIResponder", "UIColor"]
+- !private ["CSo11UIResponder", "UIOffsetMake"]
 - ["CSo11UIResponder", "UIWindow"]
 - ["CSo11UIResponder", "application"]
 - ["CSo11UIResponder", "applicationDidBecomeActive"]
@@ -265,6 +332,7 @@ depends-member:
 depends-nominal:
 - "Ps9AnyObject"
 - "C7Donando11AppDelegate"
+- !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
@@ -277,10 +345,14 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "Ps16RawRepresentable"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - !private "PSo21UIAppearanceContainer"
 - "PSo21UIApplicationDelegate"
+- !private "CSo15UIBarButtonItem"
+- !private "CSo9UIBarItem"
+- !private "OSC12UIBarMetrics"
 - !private "CSo7UIColor"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"

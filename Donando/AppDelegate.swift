@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Endpoints.baseURI = "https://fathomless-ridge-60760.herokuapp.com/"
         window?.tintColor = UIColor.mainTintColor()
+        let barAppearace = UIBarButtonItem.appearance()
+        barAppearace.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics:UIBarMetrics.Default)
         
         return true
     }

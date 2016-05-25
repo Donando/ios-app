@@ -93,6 +93,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import MessageUI;
 @import CoreGraphics;
 @import ObjectiveC;
 @import MapKit;
@@ -117,14 +118,63 @@ SWIFT_CLASS("_TtC7Donando11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
+@class UISwitch;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC7Donando17InfoTableViewCell")
+@interface InfoTableViewCell : UITableViewCell
+@property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic, copy) void (^ _Nullable switchCallback)(BOOL);
+@property (nonatomic, strong) UISwitch * _Nullable accessorySwitch;
+
+/// Updates font and colors
+///
+/// \param cell UITableViewCell - cell to update
+- (void)setupFontsAndColorsInCell:(UITableViewCell * _Nonnull)cell;
+
+/// Adds and setsup call back for an switch as accessory type
+///
+/// \param callback LoungeTableViewCellCallback - callback closure
+- (void)setupAccessorySwitch:(void (^ _Nonnull)(BOOL))callback;
+
+/// Invoked when accesspry switch value is changed.
+///
+/// \param sender UISwitch - accessory switch
+- (void)switchStateChanged:(UISwitch * _Nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+@class NSBundle;
 
 SWIFT_CLASS("_TtC7Donando18InfoViewController")
 @interface InfoViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MFMailComposeViewController;
+@class NSError;
+
+@interface InfoViewController (SWIFT_EXTENSION(Donando)) <MFMailComposeViewControllerDelegate>
+- (void)mailComposeController:(MFMailComposeViewController * _Nonnull)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError * _Nullable)error;
+@end
+
+
+@interface InfoViewController (SWIFT_EXTENSION(Donando)) <UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+@end
+
+@class NSIndexPath;
+
+@interface InfoViewController (SWIFT_EXTENSION(Donando)) <UITableViewDelegate, UIScrollViewDelegate>
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 
@@ -142,6 +192,13 @@ SWIFT_CLASS("_TtC7Donando11LoadingView")
 + (LoadingView * _Nonnull)showInView:(UIView * _Nonnull)view;
 - (void)increaseCounter;
 - (void)remove;
+@end
+
+
+@interface MFMailComposeViewController (SWIFT_EXTENSION(Donando))
+
+/// Prepopulate MFMailComposeViewController fields with appropriate support email data
+- (void)prepopulateSupportEmail;
 @end
 
 
@@ -175,6 +232,8 @@ SWIFT_CLASS("_TtC7Donando7NGOCell")
 @end
 
 @class MKMapView;
+@class NSLayoutConstraint;
+@class UIScrollView;
 
 SWIFT_CLASS("_TtC7Donando23NGODetailViewController")
 @interface NGODetailViewController : UIViewController
@@ -187,10 +246,11 @@ SWIFT_CLASS("_TtC7Donando23NGODetailViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified demandsLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified seeMoreButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified openWebsiteButton;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified detailContainerView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified demandsHeightConstraint;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified scrollView;
 @property (nonatomic, strong) NGOAnnotation * _Nullable ngoAnnotation;
 - (void)viewDidLoad;
-- (void)setupUI;
-- (void)updateUI;
 - (IBAction)openWebsite;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -202,10 +262,13 @@ SWIFT_CLASS("_TtC7Donando23NGODetailViewController")
 - (MKAnnotationView * _Nullable)mapView:(MKMapView * _Nonnull)mapView viewForAnnotation:(id <MKAnnotation> _Nonnull)annotation;
 @end
 
+
+@interface NGODetailViewController (SWIFT_EXTENSION(Donando)) <UIScrollViewDelegate>
+- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
 @class UIStoryboardSegue;
-@class UITableView;
 @class UITextField;
-@class NSLayoutConstraint;
 
 SWIFT_CLASS("_TtC7Donando20SearchViewController")
 @interface SearchViewController : UIViewController
@@ -229,6 +292,7 @@ SWIFT_CLASS("_TtC7Donando20SearchViewController")
 @property (nonatomic, copy) NSString * _Nonnull zipCodeSearchText;
 @property (nonatomic, copy) NSString * _Nonnull demandSearchText;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (IBAction)dismissKeyboard;
 - (IBAction)toggleListView;
 - (void)openNGODetail:(NSInteger)index;
@@ -263,7 +327,6 @@ SWIFT_CLASS("_TtC7Donando20SearchViewController")
 - (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
 @end
 
-@class NSIndexPath;
 
 @interface SearchViewController (SWIFT_EXTENSION(Donando)) <UITableViewDelegate, UIScrollViewDelegate>
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section;
@@ -304,6 +367,11 @@ SWIFT_CLASS("_TtC7Donando26TabBarNavigationController")
 + (UIColor * _Nonnull)secondaryTintColor;
 + (UIColor * _Nonnull)lightTintColor;
 + (UIColor * _Nonnull)borderLightGrayColor;
+@end
+
+
+@interface UIImage (SWIFT_EXTENSION(Donando))
++ (UIImage * _Nonnull)imageFromColor:(UIColor * _Nonnull)color size:(CGSize)size;
 @end
 
 

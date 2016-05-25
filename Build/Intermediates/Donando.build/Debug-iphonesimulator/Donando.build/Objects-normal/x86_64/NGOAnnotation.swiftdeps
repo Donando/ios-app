@@ -6,21 +6,21 @@ provides-nominal:
 provides-member:
 - ["C7Donando13NGOAnnotation", ""]
 provides-dynamic-lookup:
-- "coordinate"
+- "title"
 - "address"
+- "phoneNumber"
 - "name"
 - "reuseIdentifier"
 - "ngoIndex"
-- "phoneNumber"
-- "title"
+- "coordinate"
 depends-top-level:
 - "NGOAnnotation"
-- "StringLiteralType"
-- "String"
-- "Int"
-- "MKAnnotation"
-- "NGO"
 - "CLLocationCoordinate2D"
+- "NGO"
+- "Int"
+- "StringLiteralType"
+- "MKAnnotation"
+- "String"
 - "NSObject"
 depends-member:
 - ["Ps9AnyObject", "address"]

@@ -7,19 +7,19 @@ provides-member:
 - ["C7Donando9DataStore", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "DonandoError"
-- !private "JSONArray"
-- "String"
-- !private "&&"
-- "DataStore"
-- !private "JSONDictionary"
 - "StringLiteralType"
 - !private "Promise"
-- !private "Bool"
-- "BooleanLiteralType"
 - "DataClient"
 - "NGO"
 - "Future"
+- !private "Bool"
+- !private "JSONDictionary"
+- "BooleanLiteralType"
+- "DonandoError"
+- "DataStore"
+- "String"
+- !private "&&"
+- !private "JSONArray"
 depends-member:
 - !private ["Ps9AnyObject", "Bool"]
 - !private ["Ps9AnyObject", "DonandoError"]

@@ -257,7 +257,7 @@
         <!--Detail View Controller-->
         <scene sceneID="0ag-R0-ZJx">
             <objects>
-                <viewController id="c8G-9r-zPk" customClass="NGODetailViewController" customModule="Donando" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="c8G-9r-zPk" customClass="NGODetailViewController" customModule="Donando" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wf0-bl-ZPX"/>
                         <viewControllerLayoutGuide type="bottom" id="3jo-ho-ryl"/>
@@ -399,7 +399,6 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                             <constraint firstItem="LSo-PD-Pkg" firstAttribute="top" secondItem="tCx-nl-zKo" secondAttribute="bottom" constant="7" id="mee-bB-UtK"/>
                                             <constraint firstItem="1dq-7T-QzA" firstAttribute="top" secondItem="Tbx-Mn-f59" secondAttribute="top" constant="8" id="nEf-fy-oBe"/>
                                             <constraint firstAttribute="trailing" secondItem="1dq-7T-QzA" secondAttribute="trailing" constant="8" id="oAM-Va-5FS"/>
-                                            <constraint firstAttribute="height" constant="390" id="pNY-ii-SIx"/>
                                             <constraint firstItem="0Pt-nV-7zQ" firstAttribute="top" secondItem="hi6-wt-7zQ" secondAttribute="bottom" constant="2" id="pZn-p1-j5v"/>
                                             <constraint firstItem="M7m-nk-EmW" firstAttribute="leading" secondItem="Tbx-Mn-f59" secondAttribute="leading" constant="26" id="q34-6W-xzs"/>
                                             <constraint firstAttribute="trailing" secondItem="hi6-wt-7zQ" secondAttribute="trailing" constant="18" id="rYv-uQ-rtd"/>
@@ -414,24 +413,22 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                     <constraint firstAttribute="trailing" secondItem="Lc9-ZJ-WZO" secondAttribute="trailing" id="37F-mL-Gmw"/>
                                     <constraint firstItem="Lc9-ZJ-WZO" firstAttribute="centerX" secondItem="1mX-1F-XEH" secondAttribute="centerX" id="4MV-C7-Jy2"/>
                                     <constraint firstItem="Tbx-Mn-f59" firstAttribute="top" secondItem="Lc9-ZJ-WZO" secondAttribute="bottom" id="8kv-LP-wx6"/>
+                                    <constraint firstAttribute="bottom" secondItem="R2R-Wf-IP8" secondAttribute="bottom" constant="4" id="GPd-8T-YDF"/>
                                     <constraint firstItem="Lc9-ZJ-WZO" firstAttribute="top" secondItem="1mX-1F-XEH" secondAttribute="top" id="HHk-Sb-3e9"/>
                                     <constraint firstAttribute="trailing" secondItem="Tbx-Mn-f59" secondAttribute="trailing" id="MnF-86-c9G"/>
                                     <constraint firstItem="Lc9-ZJ-WZO" firstAttribute="leading" secondItem="1mX-1F-XEH" secondAttribute="leading" id="ahz-jS-CKg"/>
                                     <constraint firstItem="Tbx-Mn-f59" firstAttribute="leading" secondItem="1mX-1F-XEH" secondAttribute="leading" id="yos-uO-eFS"/>
                                 </constraints>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45d-1O-0Zg">
-                                <rect key="frame" x="17" y="18" width="36" height="36"/>
-                                <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="back" destination="c8G-9r-zPk" eventType="touchUpInside" id="ydi-VE-f3F"/>
+                                    <outlet property="delegate" destination="c8G-9r-zPk" id="QHn-0n-UI9"/>
                                 </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="R2R-Wf-IP8" secondAttribute="trailing" constant="8" id="Acz-xO-5yQ"/>
                             <constraint firstItem="1mX-1F-XEH" firstAttribute="top" secondItem="hAV-e9-I8q" secondAttribute="top" id="LCL-2d-51e"/>
+                            <constraint firstItem="3jo-ho-ryl" firstAttribute="top" secondItem="1mX-1F-XEH" secondAttribute="bottom" id="Mp5-xb-MjO"/>
                             <constraint firstItem="1mX-1F-XEH" firstAttribute="leading" secondItem="hAV-e9-I8q" secondAttribute="leading" id="RfO-qN-5n7"/>
                             <constraint firstAttribute="bottom" secondItem="1mX-1F-XEH" secondAttribute="bottom" id="lSw-bQ-Zi4"/>
                             <constraint firstAttribute="trailing" secondItem="1mX-1F-XEH" secondAttribute="trailing" id="mvg-lH-zh4"/>
@@ -440,6 +437,7 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="lSw-bQ-Zi4"/>
                                 <exclude reference="zfY-Qf-6no"/>
                             </mask>
                         </variation>
@@ -450,10 +448,12 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                         <outlet property="addressLabel" destination="Cws-IR-Pgf" id="bOv-iH-Sfg"/>
                         <outlet property="demandsHeightConstraint" destination="W0E-yK-FI3" id="ojU-W9-AlA"/>
                         <outlet property="demandsLabel" destination="R2R-Wf-IP8" id="93p-cR-dgb"/>
+                        <outlet property="detailContainerView" destination="Tbx-Mn-f59" id="99u-wE-a8g"/>
                         <outlet property="mapView" destination="Lc9-ZJ-WZO" id="VQg-jv-vf5"/>
                         <outlet property="nameLabel" destination="1dq-7T-QzA" id="b6c-EA-GD4"/>
                         <outlet property="openWebsiteButton" destination="hi6-wt-7zQ" id="9xf-tT-mVj"/>
                         <outlet property="openingHoursButton" destination="0Pt-nV-7zQ" id="nA9-lx-d6P"/>
+                        <outlet property="scrollView" destination="1mX-1F-XEH" id="cfN-34-dWh"/>
                         <outlet property="telephoneButton" destination="M7m-nk-EmW" id="kvX-qY-hPv"/>
                     </connections>
                 </viewController>
@@ -463,7 +463,6 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="13" height="22"/>
         <image name="clock" width="19" height="19"/>
         <image name="location" width="21" height="21"/>
         <image name="telephone" width="24" height="24"/>

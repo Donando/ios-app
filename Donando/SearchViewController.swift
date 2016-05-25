@@ -55,6 +55,11 @@ class SearchViewController: UIViewController {
         searchViewTopConstraint.constant = -view.frame.height
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBarHidden = true
+    }
+    
     private func loadData(searchText: String = "", zipcode: String = "") {
         loadingView = LoadingView.show(inView: view)
         
@@ -110,6 +115,10 @@ class SearchViewController: UIViewController {
         
         registerNibs()
         
+        zoomMapIntoDefaultLocation()
+    }
+    
+    private func zoomMapIntoDefaultLocation() {
         let defaultRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 52.518076, longitude: 13.403136), 100000, 100000)
         mapView.region = defaultRegion
     }

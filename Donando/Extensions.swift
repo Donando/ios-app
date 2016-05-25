@@ -129,3 +129,24 @@ extension String {
         return boundingBox.height
     }
 }
+
+extension UIImage {
+    static func imageFromColor(color:UIColor,size:CGSize) -> UIImage {
+        let rect = CGRectMake(0, 0, size.width, size.height);
+        UIGraphicsBeginImageContext(rect.size);
+        let context = UIGraphicsGetCurrentContext();
+        
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextFillRect(context, rect);
+        
+        var image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        UIGraphicsBeginImageContext(size)
+        image.drawInRect(rect)
+        image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image;
+    }
+}
