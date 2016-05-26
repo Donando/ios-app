@@ -13,112 +13,113 @@ provides-member:
 - ["C7Donando20SearchViewController", "doSearch"]
 - ["C7Donando20SearchViewController", "searchButtonPressed"]
 provides-dynamic-lookup:
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "gestureRecognizer"
-- "textFieldDidBeginEditing"
-- "searchViewTopConstraint"
-- "toggleListView"
-- "annotationInfoButtonPressed"
-- "doSearch"
-- "listViewExpanded"
-- "listContainerView"
-- "loadingView"
-- "phoneButton"
 - "viewWillAppear"
-- "demandSearchBox"
-- "viewDidLoad"
-- "infoButton"
-- "demandSearchText"
-- "zipCodeSearchText"
-- "searchViewHeightConstraint"
-- "searchBox"
-- "searchView"
-- "mapView"
-- "mapView"
-- "searchButton"
-- "listViewHeightConstraint"
-- "prepareForSegue"
 - "openNGODetail"
-- "listButton"
-- "ngoAnnotations"
-- "registerNibs"
-- "nib"
-- "demandSearchField"
+- "searchBox"
 - "nameLabel"
-- "reuseIdentifier"
-- "addressLabel"
-- "searchButtonPressed"
-- "textFieldDidEndEditing"
-- "awakeFromNib"
-- "setupUI"
-- "moveListView"
-- "searchViewShown"
+- "searchButton"
+- "searchViewHeightConstraint"
+- "searchView"
+- "viewDidLoad"
 - "dismissKeyboard"
+- "prepareForSegue"
+- "listViewExpanded"
+- "demandSearchText"
+- "moveListView"
+- "registerNibs"
+- "searchViewTopConstraint"
+- "addressLabel"
+- "demandSearchBox"
+- "textFieldDidEndEditing"
+- "listButton"
+- "reuseIdentifier"
+- "infoButton"
+- "toggleListView"
 - "zipCodeSearchField"
+- "searchViewShown"
+- "annotationInfoButtonPressed"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "textFieldDidBeginEditing"
+- "gestureRecognizer"
+- "demandSearchField"
+- "ngoAnnotations"
+- "listContainerView"
+- "setupUI"
+- "searchButtonPressed"
+- "loadingView"
+- "mapView"
+- "mapView"
+- "listViewHeightConstraint"
+- "zipCodeSearchText"
+- "awakeFromNib"
+- "doSearch"
+- "nib"
+- "phoneButton"
 depends-top-level:
-- !private "CGPointZero"
+- "UILabel"
+- !private "DonandoError"
+- "UIStoryboardSegue"
+- !private "+"
+- !private "UITableViewHeaderFooterView"
+- "CGFloat"
+- !private "UINib"
+- "UITableView"
+- !private "&&"
+- !private "!"
+- "Bool"
+- !private "CLLocationCoordinate2DIsValid"
+- "LoadingView"
+- "UIView"
+- "DataStore"
+- "SearchViewController"
+- !private "-"
+- "UIButton"
+- "UITableViewCell"
+- "MKMapViewDelegate"
+- "NSLayoutConstraint"
+- "UITableViewDataSource"
+- !private "MKPinAnnotationView"
+- "NGOAnnotation"
+- "MKMapView"
 - !private "UIColor"
+- "UIImageView"
+- !private "||"
+- "UIGestureRecognizer"
+- !private "=="
+- "BooleanLiteralType"
+- !private "CGSize"
+- !private "CGPointZero"
+- !private "MKCoordinateRegionMakeWithDistance"
+- "NSIndexPath"
+- !private "CGRect"
+- "UITableViewDelegate"
+- "UITextFieldDelegate"
+- "String"
+- "UIGestureRecognizerDelegate"
+- "MKAnnotationView"
+- "AnyObject"
+- "Int"
+- "UITouch"
+- "UITextField"
+- !private "??"
+- !private "NSBundle"
+- !private "UIImage"
+- "UIViewController"
 - "StringLiteralType"
 - "MKAnnotation"
-- "UIButton"
-- "LoadingView"
-- "Bool"
-- "UIGestureRecognizer"
-- !private "UINib"
-- "NSLayoutConstraint"
-- !private "&&"
-- !private "NGODetailViewController"
-- !private "CGSize"
-- "UIStoryboardSegue"
-- "UITableViewDataSource"
-- "UITableViewCell"
-- !private "??"
-- "DataStore"
-- "MKMapViewDelegate"
-- "String"
-- "MKAnnotationView"
-- "CGFloat"
-- "UIImageView"
-- !private "MKCoordinateRegionMakeWithDistance"
-- "UIViewController"
-- "Int"
-- "APIClient"
-- "UITableView"
-- !private "CLLocationCoordinate2D"
-- !private "DonandoError"
-- "UITextField"
 - !private "!="
-- !private "-"
-- !private "UIImage"
-- "NSIndexPath"
-- !private "+"
-- !private "CGRect"
-- "SearchViewController"
-- "UIView"
+- !private "CLLocationCoordinate2D"
+- !private "NGODetailViewController"
 - "NGOCell"
-- "UITouch"
-- "AnyObject"
-- !private "=="
-- !private "||"
-- !private "MKPinAnnotationView"
-- "MKMapView"
-- !private "NSBundle"
-- "BooleanLiteralType"
-- !private "UITableViewHeaderFooterView"
-- !private "!"
-- "UITableViewDelegate"
-- "UILabel"
-- "UIGestureRecognizerDelegate"
-- "UITextFieldDelegate"
+- "APIClient"
 - "NGO"
-- "NGOAnnotation"
 depends-member:
 - ["C7Donando9APIClient", "deinit"]
 - ["C7Donando9APIClient", "init"]
@@ -128,6 +129,7 @@ depends-member:
 - !private ["Ps9AnyObject", "CGRect"]
 - !private ["Ps9AnyObject", "CGSize"]
 - !private ["Ps9AnyObject", "CLLocationCoordinate2D"]
+- !private ["Ps9AnyObject", "CLLocationCoordinate2DIsValid"]
 - ["Ps9AnyObject", "DataStore"]
 - !private ["Ps9AnyObject", "LoadingView"]
 - !private ["Ps9AnyObject", "MKCoordinateRegionMakeWithDistance"]
@@ -161,6 +163,7 @@ depends-member:
 - !private ["Ps9AnyObject", "characters"]
 - !private ["Ps9AnyObject", "clearColor"]
 - !private ["Ps9AnyObject", "constant"]
+- !private ["Ps9AnyObject", "coordinate"]
 - !private ["Ps9AnyObject", "cornerRadius"]
 - ["Ps9AnyObject", "dataStore"]
 - ["Ps9AnyObject", "demandSearchBox"]
@@ -295,6 +298,7 @@ depends-member:
 - !private ["Sa", "deinit"]
 - !private ["Sa", "enumerate"]
 - ["Sa", "init"]
+- !private ["Sa", "removeAtIndex"]
 - !private ["Sa", "subscript"]
 - ["Ps23ArrayLiteralConvertible", "Generator"]
 - ["Ps23ArrayLiteralConvertible", "Index"]
@@ -306,6 +310,7 @@ depends-member:
 - !private ["Ps23ArrayLiteralConvertible", "count"]
 - !private ["Ps23ArrayLiteralConvertible", "enumerate"]
 - ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "removeAtIndex"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - ["Vs10ArraySlice", "Generator"]
 - ["Vs10ArraySlice", "Index"]
@@ -339,6 +344,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "CGRect"]
 - !private ["Ps11CVarArgType", "CGSize"]
 - !private ["Ps11CVarArgType", "CLLocationCoordinate2D"]
+- !private ["Ps11CVarArgType", "CLLocationCoordinate2DIsValid"]
 - ["Ps11CVarArgType", "DataStore"]
 - ["Ps11CVarArgType", "Distance"]
 - ["Ps11CVarArgType", "IntegerLiteralType"]
@@ -373,6 +379,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "characters"]
 - !private ["Ps11CVarArgType", "clearColor"]
 - !private ["Ps11CVarArgType", "constant"]
+- !private ["Ps11CVarArgType", "coordinate"]
 - !private ["Ps11CVarArgType", "cornerRadius"]
 - ["Ps11CVarArgType", "dataStore"]
 - ["Ps11CVarArgType", "demandSearchBox"]
@@ -508,6 +515,7 @@ depends-member:
 - !private ["Ps14CollectionType", "enumerate"]
 - ["Ps14CollectionType", "init"]
 - !private ["Ps14CollectionType", "isEmpty"]
+- !private ["Ps14CollectionType", "removeAtIndex"]
 - !private ["Ps14CollectionType", "subscript"]
 - ["Ps10Comparable", "Distance"]
 - ["Ps10Comparable", "IntegerLiteralType"]
@@ -519,6 +527,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGRect"]
 - !private ["Ps28CustomDebugStringConvertible", "CGSize"]
 - !private ["Ps28CustomDebugStringConvertible", "CLLocationCoordinate2D"]
+- !private ["Ps28CustomDebugStringConvertible", "CLLocationCoordinate2DIsValid"]
 - ["Ps28CustomDebugStringConvertible", "DataStore"]
 - !private ["Ps28CustomDebugStringConvertible", "Error"]
 - ["Ps28CustomDebugStringConvertible", "Generator"]
@@ -559,6 +568,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "characters"]
 - !private ["Ps28CustomDebugStringConvertible", "clearColor"]
 - !private ["Ps28CustomDebugStringConvertible", "constant"]
+- !private ["Ps28CustomDebugStringConvertible", "coordinate"]
 - !private ["Ps28CustomDebugStringConvertible", "cornerRadius"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "dataStore"]
@@ -626,6 +636,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
 - !private ["Ps28CustomDebugStringConvertible", "remove"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAnnotations"]
+- !private ["Ps28CustomDebugStringConvertible", "removeAtIndex"]
 - ["Ps28CustomDebugStringConvertible", "removeLoadingView"]
 - ["Ps28CustomDebugStringConvertible", "reuseIdentifier"]
 - !private ["Ps28CustomDebugStringConvertible", "rightCalloutAccessoryView"]
@@ -692,6 +703,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGRect"]
 - !private ["Ps23CustomStringConvertible", "CGSize"]
 - !private ["Ps23CustomStringConvertible", "CLLocationCoordinate2D"]
+- !private ["Ps23CustomStringConvertible", "CLLocationCoordinate2DIsValid"]
 - ["Ps23CustomStringConvertible", "DataStore"]
 - ["Ps23CustomStringConvertible", "Distance"]
 - !private ["Ps23CustomStringConvertible", "Error"]
@@ -734,6 +746,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "characters"]
 - !private ["Ps23CustomStringConvertible", "clearColor"]
 - !private ["Ps23CustomStringConvertible", "constant"]
+- !private ["Ps23CustomStringConvertible", "coordinate"]
 - !private ["Ps23CustomStringConvertible", "cornerRadius"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "dataStore"]
@@ -801,6 +814,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "reloadData"]
 - !private ["Ps23CustomStringConvertible", "remove"]
 - !private ["Ps23CustomStringConvertible", "removeAnnotations"]
+- !private ["Ps23CustomStringConvertible", "removeAtIndex"]
 - ["Ps23CustomStringConvertible", "removeLoadingView"]
 - ["Ps23CustomStringConvertible", "reuseIdentifier"]
 - !private ["Ps23CustomStringConvertible", "rightCalloutAccessoryView"]
@@ -873,6 +887,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGRect"]
 - !private ["Ps9Equatable", "CGSize"]
 - !private ["Ps9Equatable", "CLLocationCoordinate2D"]
+- !private ["Ps9Equatable", "CLLocationCoordinate2DIsValid"]
 - !private ["Ps9Equatable", "Center"]
 - !private ["Ps9Equatable", "Custom"]
 - ["Ps9Equatable", "DataStore"]
@@ -914,6 +929,7 @@ depends-member:
 - !private ["Ps9Equatable", "characters"]
 - !private ["Ps9Equatable", "clearColor"]
 - !private ["Ps9Equatable", "constant"]
+- !private ["Ps9Equatable", "coordinate"]
 - !private ["Ps9Equatable", "cornerRadius"]
 - ["Ps9Equatable", "dataStore"]
 - ["Ps9Equatable", "demandSearchBox"]
@@ -1051,6 +1067,7 @@ depends-member:
 - !private ["Ps8Hashable", "CGRect"]
 - !private ["Ps8Hashable", "CGSize"]
 - !private ["Ps8Hashable", "CLLocationCoordinate2D"]
+- !private ["Ps8Hashable", "CLLocationCoordinate2DIsValid"]
 - !private ["Ps8Hashable", "Center"]
 - !private ["Ps8Hashable", "Custom"]
 - ["Ps8Hashable", "DataStore"]
@@ -1090,6 +1107,7 @@ depends-member:
 - !private ["Ps8Hashable", "characters"]
 - !private ["Ps8Hashable", "clearColor"]
 - !private ["Ps8Hashable", "constant"]
+- !private ["Ps8Hashable", "coordinate"]
 - !private ["Ps8Hashable", "cornerRadius"]
 - ["Ps8Hashable", "dataStore"]
 - ["Ps8Hashable", "demandSearchBox"]
@@ -1222,6 +1240,7 @@ depends-member:
 - !private ["Ps9Indexable", "enumerate"]
 - ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "isEmpty"]
+- !private ["Ps9Indexable", "removeAtIndex"]
 - !private ["Ps9Indexable", "subscript"]
 - ["Vs17IndexingGenerator", "Element"]
 - ["Si", "Distance"]
@@ -1239,6 +1258,7 @@ depends-member:
 - !private ["C7Donando11LoadingView", "remove"]
 - !private ["C7Donando11LoadingView", "show"]
 - !private ["C7Donando11LoadingView", "stopAnimating"]
+- !private ["PSo12MKAnnotation", "coordinate"]
 - !private ["PSo12MKAnnotation", "init"]
 - !private ["PSo12MKAnnotation", "ngoIndex"]
 - !private ["PSo12MKAnnotation", "reuseIdentifier"]
@@ -1258,6 +1278,7 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "CGRect"]
 - !private ["PSo17MKMapViewDelegate", "CGSize"]
 - !private ["PSo17MKMapViewDelegate", "CLLocationCoordinate2D"]
+- !private ["PSo17MKMapViewDelegate", "CLLocationCoordinate2DIsValid"]
 - ["PSo17MKMapViewDelegate", "DataStore"]
 - !private ["PSo17MKMapViewDelegate", "LoadingView"]
 - !private ["PSo17MKMapViewDelegate", "MKCoordinateRegionMakeWithDistance"]
@@ -1365,6 +1386,7 @@ depends-member:
 - !private ["Ps21MutableCollectionType", "count"]
 - !private ["Ps21MutableCollectionType", "enumerate"]
 - ["Ps21MutableCollectionType", "init"]
+- !private ["Ps21MutableCollectionType", "removeAtIndex"]
 - !private ["Ps21MutableCollectionType", "subscript"]
 - ["Ps16MutableIndexable", "Generator"]
 - ["Ps16MutableIndexable", "Index"]
@@ -1374,6 +1396,7 @@ depends-member:
 - !private ["Ps16MutableIndexable", "count"]
 - !private ["Ps16MutableIndexable", "enumerate"]
 - ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "removeAtIndex"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - ["Ps16MutableSliceable", "Generator"]
 - ["Ps16MutableSliceable", "Index"]
@@ -1383,11 +1406,13 @@ depends-member:
 - !private ["Ps16MutableSliceable", "count"]
 - !private ["Ps16MutableSliceable", "enumerate"]
 - ["Ps16MutableSliceable", "init"]
+- !private ["Ps16MutableSliceable", "removeAtIndex"]
 - !private ["Ps16MutableSliceable", "subscript"]
 - !private ["V7Donando3NGO", "address"]
 - ["V7Donando3NGO", "deinit"]
 - !private ["V7Donando3NGO", "name"]
 - !private ["V7Donando3NGO", "phoneNumber"]
+- !private ["C7Donando13NGOAnnotation", "coordinate"]
 - !private ["C7Donando13NGOAnnotation", "deinit"]
 - !private ["C7Donando13NGOAnnotation", "init"]
 - !private ["C7Donando13NGOAnnotation", "ngoIndex"]
@@ -1418,6 +1443,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGRect"]
 - !private ["PSo8NSCoding", "CGSize"]
 - !private ["PSo8NSCoding", "CLLocationCoordinate2D"]
+- !private ["PSo8NSCoding", "CLLocationCoordinate2DIsValid"]
 - ["PSo8NSCoding", "DataStore"]
 - !private ["PSo8NSCoding", "LoadingView"]
 - !private ["PSo8NSCoding", "MKCoordinateRegionMakeWithDistance"]
@@ -1581,6 +1607,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGRect"]
 - !private ["PSo26NSExtensionRequestHandling", "CGSize"]
 - !private ["PSo26NSExtensionRequestHandling", "CLLocationCoordinate2D"]
+- !private ["PSo26NSExtensionRequestHandling", "CLLocationCoordinate2DIsValid"]
 - ["PSo26NSExtensionRequestHandling", "DataStore"]
 - !private ["PSo26NSExtensionRequestHandling", "LoadingView"]
 - !private ["PSo26NSExtensionRequestHandling", "MKCoordinateRegionMakeWithDistance"]
@@ -1688,6 +1715,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGRect"]
 - !private ["CSo8NSObject", "CGSize"]
 - !private ["CSo8NSObject", "CLLocationCoordinate2D"]
+- !private ["CSo8NSObject", "CLLocationCoordinate2DIsValid"]
 - ["CSo8NSObject", "DataStore"]
 - !private ["CSo8NSObject", "DonandoError"]
 - ["CSo8NSObject", "Int"]
@@ -1737,6 +1765,7 @@ depends-member:
 - !private ["CSo8NSObject", "characters"]
 - !private ["CSo8NSObject", "clearColor"]
 - !private ["CSo8NSObject", "constant"]
+- !private ["CSo8NSObject", "coordinate"]
 - !private ["CSo8NSObject", "cornerRadius"]
 - ["CSo8NSObject", "dataStore"]
 - ["CSo8NSObject", "demandSearchBox"]
@@ -1864,6 +1893,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGRect"]
 - !private ["PSo16NSObjectProtocol", "CGSize"]
 - !private ["PSo16NSObjectProtocol", "CLLocationCoordinate2D"]
+- !private ["PSo16NSObjectProtocol", "CLLocationCoordinate2DIsValid"]
 - ["PSo16NSObjectProtocol", "DataStore"]
 - !private ["PSo16NSObjectProtocol", "LoadingView"]
 - !private ["PSo16NSObjectProtocol", "MKCoordinateRegionMakeWithDistance"]
@@ -1896,6 +1926,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "characters"]
 - !private ["PSo16NSObjectProtocol", "clearColor"]
 - !private ["PSo16NSObjectProtocol", "constant"]
+- !private ["PSo16NSObjectProtocol", "coordinate"]
 - !private ["PSo16NSObjectProtocol", "cornerRadius"]
 - ["PSo16NSObjectProtocol", "dataStore"]
 - ["PSo16NSObjectProtocol", "demandSearchBox"]
@@ -2048,6 +2079,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "enumerate"]
 - ["Ps30RangeReplaceableCollectionType", "init"]
 - !private ["Ps30RangeReplaceableCollectionType", "isEmpty"]
+- !private ["Ps30RangeReplaceableCollectionType", "removeAtIndex"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["Ps16RawRepresentable", "Center"]
 - !private ["Ps16RawRepresentable", "Custom"]
@@ -2067,6 +2099,7 @@ depends-member:
 - !private ["C7Donando20SearchViewController", "CGRect"]
 - !private ["C7Donando20SearchViewController", "CGSize"]
 - !private ["C7Donando20SearchViewController", "CLLocationCoordinate2D"]
+- !private ["C7Donando20SearchViewController", "CLLocationCoordinate2DIsValid"]
 - ["C7Donando20SearchViewController", "DataStore"]
 - !private ["C7Donando20SearchViewController", "DonandoError"]
 - ["C7Donando20SearchViewController", "Int"]
@@ -2184,6 +2217,7 @@ depends-member:
 - !private ["Ps12SequenceType", "enumerate"]
 - ["Ps12SequenceType", "init"]
 - !private ["Ps12SequenceType", "isEmpty"]
+- !private ["Ps12SequenceType", "removeAtIndex"]
 - !private ["Ps12SequenceType", "subscript"]
 - !private ["Ps14SetAlgebraType", "Normal"]
 - !private ["Ps14SetAlgebraType", "TouchUpInside"]
@@ -2309,6 +2343,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGRect"]
 - !private ["PSo21UIAppearanceContainer", "CGSize"]
 - !private ["PSo21UIAppearanceContainer", "CLLocationCoordinate2D"]
+- !private ["PSo21UIAppearanceContainer", "CLLocationCoordinate2DIsValid"]
 - ["PSo21UIAppearanceContainer", "DataStore"]
 - !private ["PSo21UIAppearanceContainer", "LoadingView"]
 - !private ["PSo21UIAppearanceContainer", "MKCoordinateRegionMakeWithDistance"]
@@ -2472,6 +2507,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGRect"]
 - !private ["PSo18UIContentContainer", "CGSize"]
 - !private ["PSo18UIContentContainer", "CLLocationCoordinate2D"]
+- !private ["PSo18UIContentContainer", "CLLocationCoordinate2DIsValid"]
 - ["PSo18UIContentContainer", "DataStore"]
 - !private ["PSo18UIContentContainer", "LoadingView"]
 - !private ["PSo18UIContentContainer", "MKCoordinateRegionMakeWithDistance"]
@@ -2684,6 +2720,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGRect"]
 - !private ["PSo18UIFocusEnvironment", "CGSize"]
 - !private ["PSo18UIFocusEnvironment", "CLLocationCoordinate2D"]
+- !private ["PSo18UIFocusEnvironment", "CLLocationCoordinate2DIsValid"]
 - ["PSo18UIFocusEnvironment", "DataStore"]
 - !private ["PSo18UIFocusEnvironment", "LoadingView"]
 - !private ["PSo18UIFocusEnvironment", "MKCoordinateRegionMakeWithDistance"]
@@ -2828,6 +2865,7 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "CGRect"]
 - !private ["PSo27UIGestureRecognizerDelegate", "CGSize"]
 - !private ["PSo27UIGestureRecognizerDelegate", "CLLocationCoordinate2D"]
+- !private ["PSo27UIGestureRecognizerDelegate", "CLLocationCoordinate2DIsValid"]
 - ["PSo27UIGestureRecognizerDelegate", "DataStore"]
 - !private ["PSo27UIGestureRecognizerDelegate", "LoadingView"]
 - !private ["PSo27UIGestureRecognizerDelegate", "MKCoordinateRegionMakeWithDistance"]
@@ -2939,6 +2977,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGRect"]
 - !private ["CSo11UIResponder", "CGSize"]
 - !private ["CSo11UIResponder", "CLLocationCoordinate2D"]
+- !private ["CSo11UIResponder", "CLLocationCoordinate2DIsValid"]
 - ["CSo11UIResponder", "DataStore"]
 - !private ["CSo11UIResponder", "DonandoError"]
 - ["CSo11UIResponder", "Int"]
@@ -3103,6 +3142,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "CGRect"]
 - !private ["PSo20UIScrollViewDelegate", "CGSize"]
 - !private ["PSo20UIScrollViewDelegate", "CLLocationCoordinate2D"]
+- !private ["PSo20UIScrollViewDelegate", "CLLocationCoordinate2DIsValid"]
 - ["PSo20UIScrollViewDelegate", "DataStore"]
 - !private ["PSo20UIScrollViewDelegate", "LoadingView"]
 - !private ["PSo20UIScrollViewDelegate", "MKCoordinateRegionMakeWithDistance"]
@@ -3193,6 +3233,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGRect"]
 - !private ["PSo16UIStateRestoring", "CGSize"]
 - !private ["PSo16UIStateRestoring", "CLLocationCoordinate2D"]
+- !private ["PSo16UIStateRestoring", "CLLocationCoordinate2DIsValid"]
 - ["PSo16UIStateRestoring", "DataStore"]
 - !private ["PSo16UIStateRestoring", "LoadingView"]
 - !private ["PSo16UIStateRestoring", "MKCoordinateRegionMakeWithDistance"]
@@ -3317,6 +3358,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "CGRect"]
 - !private ["PSo21UITableViewDataSource", "CGSize"]
 - !private ["PSo21UITableViewDataSource", "CLLocationCoordinate2D"]
+- !private ["PSo21UITableViewDataSource", "CLLocationCoordinate2DIsValid"]
 - ["PSo21UITableViewDataSource", "DataStore"]
 - !private ["PSo21UITableViewDataSource", "LoadingView"]
 - !private ["PSo21UITableViewDataSource", "MKCoordinateRegionMakeWithDistance"]
@@ -3406,6 +3448,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "CGRect"]
 - !private ["PSo19UITableViewDelegate", "CGSize"]
 - !private ["PSo19UITableViewDelegate", "CLLocationCoordinate2D"]
+- !private ["PSo19UITableViewDelegate", "CLLocationCoordinate2DIsValid"]
 - ["PSo19UITableViewDelegate", "DataStore"]
 - !private ["PSo19UITableViewDelegate", "LoadingView"]
 - !private ["PSo19UITableViewDelegate", "MKCoordinateRegionMakeWithDistance"]
@@ -3498,6 +3541,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "CGRect"]
 - !private ["PSo19UITextFieldDelegate", "CGSize"]
 - !private ["PSo19UITextFieldDelegate", "CLLocationCoordinate2D"]
+- !private ["PSo19UITextFieldDelegate", "CLLocationCoordinate2DIsValid"]
 - ["PSo19UITextFieldDelegate", "DataStore"]
 - !private ["PSo19UITextFieldDelegate", "LoadingView"]
 - !private ["PSo19UITextFieldDelegate", "MKCoordinateRegionMakeWithDistance"]
@@ -3592,6 +3636,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGRect"]
 - !private ["PSo18UITraitEnvironment", "CGSize"]
 - !private ["PSo18UITraitEnvironment", "CLLocationCoordinate2D"]
+- !private ["PSo18UITraitEnvironment", "CLLocationCoordinate2DIsValid"]
 - ["PSo18UITraitEnvironment", "DataStore"]
 - !private ["PSo18UITraitEnvironment", "LoadingView"]
 - !private ["PSo18UITraitEnvironment", "MKCoordinateRegionMakeWithDistance"]
@@ -3792,6 +3837,7 @@ depends-member:
 - !private ["CSo16UIViewController", "CGRect"]
 - !private ["CSo16UIViewController", "CGSize"]
 - !private ["CSo16UIViewController", "CLLocationCoordinate2D"]
+- !private ["CSo16UIViewController", "CLLocationCoordinate2DIsValid"]
 - ["CSo16UIViewController", "DataStore"]
 - !private ["CSo16UIViewController", "DonandoError"]
 - ["CSo16UIViewController", "Int"]
@@ -3919,6 +3965,7 @@ depends-member:
 - !private ["Ps10_ArrayType", "count"]
 - !private ["Ps10_ArrayType", "enumerate"]
 - ["Ps10_ArrayType", "init"]
+- !private ["Ps10_ArrayType", "removeAtIndex"]
 - !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "characters"]
@@ -3945,6 +3992,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "count"]
 - !private ["Ps24_DestructorSafeContainer", "enumerate"]
 - ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "removeAtIndex"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps24_ImageLiteralConvertible", "init"]
 - ["Ps14_Incrementable", "Distance"]
@@ -3965,6 +4013,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "enumerate"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "removeAtIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "stringByReplacingOccurrencesOfString"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
@@ -4015,6 +4064,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "reloadData"]
 - !private ["Ps12_Reflectable", "remove"]
 - !private ["Ps12_Reflectable", "removeAnnotations"]
+- !private ["Ps12_Reflectable", "removeAtIndex"]
 - ["Ps12_Reflectable", "reuseIdentifier"]
 - !private ["Ps12_Reflectable", "rightCalloutAccessoryView"]
 - !private ["Ps12_Reflectable", "selectionStyle"]

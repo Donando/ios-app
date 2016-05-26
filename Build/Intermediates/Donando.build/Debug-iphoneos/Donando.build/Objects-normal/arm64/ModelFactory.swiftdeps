@@ -18,23 +18,25 @@ provides-member:
 - ["SS", "findCoordinates"]
 provides-dynamic-lookup:
 depends-top-level:
-- "NGO"
-- "Future"
-- "JSONArray"
-- !private "CLGeocoder"
-- "JSONString"
-- !private "Int"
-- "JSONDictConvertable"
-- "JSONDictInitable"
-- "AnyObject"
-- !private "Promise"
-- "JSONDictionary"
-- "CLLocationCoordinate2D"
-- !private "StringLiteralType"
-- "String"
 - "DonandoError"
 - "JSONNumber"
 - "Double"
+- "JSONArray"
+- "JSONDictConvertable"
+- !private "??"
+- !private "CLGeocoder"
+- !private "CLLocationDegrees"
+- !private "Int"
+- "JSONDictionary"
+- !private "Promise"
+- "AnyObject"
+- "JSONDictInitable"
+- "String"
+- "JSONString"
+- "CLLocationCoordinate2D"
+- !private "StringLiteralType"
+- "Future"
+- "NGO"
 depends-member:
 - !private ["Ps9AnyObject", "coordinate"]
 - !private ["Ps9AnyObject", "failure"]
@@ -62,6 +64,7 @@ depends-member:
 - !private ["CSo10CLGeocoder", "geocodeAddressString"]
 - !private ["CSo10CLGeocoder", "init"]
 - !private ["CSo10CLLocation", "coordinate"]
+- !private ["VSC22CLLocationCoordinate2D", "init"]
 - !private ["CSo11CLPlacemark", "location"]
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
@@ -157,6 +160,7 @@ depends-member:
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
 - ["P7Donando19JSONDictConvertable", "JSONDictionary"]
 - ["P7Donando19JSONDictConvertable", "asDictionary"]
+- !private ["P7Donando16JSONDictInitable", "CLLocationCoordinate2D"]
 - ["P7Donando16JSONDictInitable", "JSONDictionary"]
 - ["P7Donando16JSONDictInitable", "init"]
 - ["P7Donando16JSONDictInitable", ""]
@@ -180,6 +184,8 @@ depends-member:
 - !private ["Ps16MutableSliceable", "SubSequence"]
 - !private ["Ps16MutableSliceable", "_Element"]
 - !private ["Ps16MutableSliceable", "first"]
+- !private ["V7Donando3NGO", "CLLocationCoordinate2D"]
+- !private ["V7Donando3NGO", "CLLocationDegrees"]
 - !private ["V7Donando3NGO", "Int"]
 - ["V7Donando3NGO", "JSONDictionary"]
 - !private ["V7Donando3NGO", "String"]
@@ -320,6 +326,7 @@ depends-nominal:
 - !private "Ps21BitwiseOperationsType"
 - !private "CSo10CLGeocoder"
 - !private "CSo10CLLocation"
+- !private "VSC22CLLocationCoordinate2D"
 - !private "CSo11CLPlacemark"
 - !private "Ps11CVarArgType"
 - !private "Ps14CollectionType"

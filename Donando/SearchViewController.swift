@@ -85,6 +85,10 @@ class SearchViewController: UIViewController {
             let annotation = NGOAnnotation(ngo: ngo, index: index)
             ngoAnnotations.append(annotation)
             mapView.addAnnotation(annotation)
+            
+            if !CLLocationCoordinate2DIsValid(annotation.coordinate) {
+                self.ngos.removeAtIndex(index)
+            }
         }
         
         tableView.reloadData()

@@ -47,6 +47,7 @@ class NGODetailViewController: UIViewController {
         openingHoursButton.tintColor = UIColor.mainTintColor()
         openWebsiteButton.setTitleColor(UIColor.mainTintColor(), forState: .Normal)
         zoomMapIntoDefaultLocation()
+        
     }
     
     private func zoomMapIntoDefaultLocation() {

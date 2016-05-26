@@ -7,21 +7,17 @@ provides-member:
 - ["C7Donando9DataStore", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "StringLiteralType"
-- !private "Promise"
-- "NGO"
-- "Future"
-- "DataStore"
-- !private "Bool"
-- "BooleanLiteralType"
-- !private "JSONDictionary"
-- "DonandoError"
-- !private "&&"
-- "DataClient"
 - "String"
+- "StringLiteralType"
+- !private "JSONDictionary"
+- "DataStore"
+- "DonandoError"
 - !private "JSONArray"
+- "Future"
+- "NGO"
+- !private "Promise"
+- "DataClient"
 depends-member:
-- !private ["Ps9AnyObject", "Bool"]
 - !private ["Ps9AnyObject", "DonandoError"]
 - !private ["Ps9AnyObject", "NGO"]
 - !private ["Ps9AnyObject", "Promise"]
@@ -30,7 +26,6 @@ depends-member:
 - !private ["Ps9AnyObject", "failure"]
 - !private ["Ps9AnyObject", "future"]
 - !private ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "onComplete"]
 - !private ["Ps9AnyObject", "onFailure"]
 - !private ["Ps9AnyObject", "onSuccess"]
 - !private ["Ps9AnyObject", "success"]
@@ -42,8 +37,6 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "enumerate"]
 - !private ["Sa", "init"]
-- !private ["Sa", "reduce"]
-- !private ["Sa", "subscript"]
 - !private ["Ps23ArrayLiteralConvertible", "Generator"]
 - !private ["Ps23ArrayLiteralConvertible", "Index"]
 - !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
@@ -51,25 +44,18 @@ depends-member:
 - !private ["Ps23ArrayLiteralConvertible", "append"]
 - !private ["Ps23ArrayLiteralConvertible", "enumerate"]
 - !private ["Ps23ArrayLiteralConvertible", "init"]
-- !private ["Ps23ArrayLiteralConvertible", "reduce"]
-- !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Vs10ArraySlice", "Generator"]
 - !private ["Vs10ArraySlice", "Index"]
 - !private ["C13BrightFutures5Async", "Value"]
-- !private ["C13BrightFutures5Async", "onComplete"]
 - !private ["C13BrightFutures5Async", "onFailure"]
 - !private ["C13BrightFutures5Async", "onSuccess"]
 - !private ["P13BrightFutures9AsyncType", "Value"]
-- !private ["P13BrightFutures9AsyncType", "onComplete"]
 - !private ["P13BrightFutures9AsyncType", "onFailure"]
 - !private ["P13BrightFutures9AsyncType", "onSuccess"]
 - !private ["Ps22BidirectionalIndexType", "Distance"]
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
-- !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps14CollectionType", "Generator"]
@@ -79,7 +65,6 @@ depends-member:
 - !private ["Ps14CollectionType", "append"]
 - !private ["Ps14CollectionType", "enumerate"]
 - !private ["Ps14CollectionType", "init"]
-- !private ["Ps14CollectionType", "reduce"]
 - !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
@@ -93,12 +78,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "append"]
 - !private ["Ps28CustomDebugStringConvertible", "enumerate"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "onComplete"]
 - !private ["Ps28CustomDebugStringConvertible", "onFailure"]
 - !private ["Ps28CustomDebugStringConvertible", "onSuccess"]
-- !private ["Ps28CustomDebugStringConvertible", "reduce"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
-- !private ["Ps28CustomDebugStringConvertible", "value"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
 - !private ["Ps23CustomStringConvertible", "Error"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
@@ -107,18 +89,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "Value"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
-- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "append"]
 - !private ["Ps23CustomStringConvertible", "enumerate"]
 - !private ["Ps23CustomStringConvertible", "init"]
-- !private ["Ps23CustomStringConvertible", "onComplete"]
 - !private ["Ps23CustomStringConvertible", "onFailure"]
 - !private ["Ps23CustomStringConvertible", "onSuccess"]
-- !private ["Ps23CustomStringConvertible", "reduce"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
-- !private ["Ps23CustomStringConvertible", "value"]
 - !private ["P7Donando10DataClient", "getNGOs"]
-- !private ["C7Donando9DataStore", "Bool"]
 - ["C7Donando9DataStore", "DataClient"]
 - ["C7Donando9DataStore", "DonandoError"]
 - ["C7Donando9DataStore", "Future"]
@@ -143,19 +120,16 @@ depends-member:
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "GenericError"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
-- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9ErrorType", "GenericError"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["C13BrightFutures6Future", "Value"]
-- !private ["C13BrightFutures6Future", "onComplete"]
 - !private ["C13BrightFutures6Future", "onFailure"]
 - !private ["C13BrightFutures6Future", "onSuccess"]
 - !private ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "GenericError"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
-- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "SubSequence"]
@@ -163,7 +137,6 @@ depends-member:
 - !private ["Ps9Indexable", "append"]
 - !private ["Ps9Indexable", "enumerate"]
 - !private ["Ps9Indexable", "init"]
-- !private ["Ps9Indexable", "reduce"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
@@ -174,14 +147,11 @@ depends-member:
 - !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps11IntegerType", "Distance"]
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
-- !private ["P7Donando16JSONDictInitable", "coordinate"]
 - !private ["P7Donando16JSONDictInitable", "demands"]
-- !private ["P7Donando16JSONDictInitable", "findCoordinates"]
 - !private ["P7Donando16JSONDictInitable", "init"]
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
 - !private ["P13BrightFutures16MutableAsyncType", "Value"]
-- !private ["P13BrightFutures16MutableAsyncType", "onComplete"]
 - !private ["P13BrightFutures16MutableAsyncType", "onFailure"]
 - !private ["P13BrightFutures16MutableAsyncType", "onSuccess"]
 - !private ["Ps21MutableCollectionType", "Generator"]
@@ -191,8 +161,6 @@ depends-member:
 - !private ["Ps21MutableCollectionType", "append"]
 - !private ["Ps21MutableCollectionType", "enumerate"]
 - !private ["Ps21MutableCollectionType", "init"]
-- !private ["Ps21MutableCollectionType", "reduce"]
-- !private ["Ps21MutableCollectionType", "subscript"]
 - !private ["Ps16MutableIndexable", "Generator"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
@@ -200,8 +168,6 @@ depends-member:
 - !private ["Ps16MutableIndexable", "append"]
 - !private ["Ps16MutableIndexable", "enumerate"]
 - !private ["Ps16MutableIndexable", "init"]
-- !private ["Ps16MutableIndexable", "reduce"]
-- !private ["Ps16MutableIndexable", "subscript"]
 - !private ["Ps16MutableSliceable", "Generator"]
 - !private ["Ps16MutableSliceable", "Index"]
 - !private ["Ps16MutableSliceable", "SubSequence"]
@@ -209,12 +175,8 @@ depends-member:
 - !private ["Ps16MutableSliceable", "append"]
 - !private ["Ps16MutableSliceable", "enumerate"]
 - !private ["Ps16MutableSliceable", "init"]
-- !private ["Ps16MutableSliceable", "reduce"]
-- !private ["Ps16MutableSliceable", "subscript"]
-- !private ["V7Donando3NGO", "coordinate"]
 - !private ["V7Donando3NGO", "deinit"]
 - !private ["V7Donando3NGO", "demands"]
-- !private ["V7Donando3NGO", "findCoordinates"]
 - !private ["V7Donando3NGO", "init"]
 - !private ["Ps21NilLiteralConvertible", "Some"]
 - !private ["Sq", "Some"]
@@ -232,14 +194,10 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "append"]
 - !private ["Ps30RangeReplaceableCollectionType", "enumerate"]
 - !private ["Ps30RangeReplaceableCollectionType", "init"]
-- !private ["Ps30RangeReplaceableCollectionType", "reduce"]
-- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["O6Result6Result", "Error"]
 - !private ["O6Result6Result", "Value"]
-- !private ["O6Result6Result", "value"]
 - !private ["P6Result10ResultType", "Error"]
 - !private ["P6Result10ResultType", "Value"]
-- !private ["P6Result10ResultType", "value"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -248,7 +206,6 @@ depends-member:
 - !private ["Ps12SequenceType", "append"]
 - !private ["Ps12SequenceType", "enumerate"]
 - !private ["Ps12SequenceType", "init"]
-- !private ["Ps12SequenceType", "reduce"]
 - !private ["Ps12SequenceType", "subscript"]
 - !private ["Ps17SignedIntegerType", "Distance"]
 - !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
@@ -267,9 +224,6 @@ depends-member:
 - !private ["Ps10_ArrayType", "append"]
 - !private ["Ps10_ArrayType", "enumerate"]
 - !private ["Ps10_ArrayType", "init"]
-- !private ["Ps10_ArrayType", "reduce"]
-- !private ["Ps10_ArrayType", "subscript"]
-- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
@@ -279,8 +233,6 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "append"]
 - !private ["Ps24_DestructorSafeContainer", "enumerate"]
 - !private ["Ps24_DestructorSafeContainer", "init"]
-- !private ["Ps24_DestructorSafeContainer", "reduce"]
-- !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps14_Incrementable", "Distance"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
 - !private ["Ps22_IntegerArithmeticType", "Distance"]
@@ -293,11 +245,9 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
-- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "append"]
 - !private ["Ps21_ObjectiveCBridgeable", "enumerate"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "reduce"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
@@ -308,11 +258,9 @@ depends-member:
 - !private ["Ps12_Reflectable", "Some"]
 - !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "_Element"]
-- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "append"]
 - !private ["Ps12_Reflectable", "enumerate"]
 - !private ["Ps12_Reflectable", "init"]
-- !private ["Ps12_Reflectable", "reduce"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
 - !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
@@ -325,9 +273,6 @@ depends-nominal:
 - !private "P13BrightFutures9AsyncType"
 - !private "Ps22BidirectionalIndexType"
 - !private "Ps21BitwiseOperationsType"
-- !private "Sb"
-- !private "Ps25BooleanLiteralConvertible"
-- !private "Ps11BooleanType"
 - !private "Ps11CVarArgType"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
@@ -372,7 +317,6 @@ depends-nominal:
 - !private "Vs5Slice"
 - !private "Ps10Strideable"
 - !private "Ps10_ArrayType"
-- !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps14_Incrementable"

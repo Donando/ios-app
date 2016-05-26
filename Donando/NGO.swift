@@ -36,7 +36,6 @@ public struct NGO {
     
     public func findCoordinates() -> Future<CLLocationCoordinate2D, DonandoError> {
         let promise = Promise<CLLocationCoordinate2D, DonandoError>()
-        
         let geocoder = CLGeocoder()
         
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in

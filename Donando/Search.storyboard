@@ -270,11 +270,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lc9-ZJ-WZO">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="210"/>
+                                        <rect key="frame" x="0.0" y="-44" width="600" height="254"/>
                                         <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="210" id="Yph-fi-HpQ"/>
-                                        </constraints>
                                         <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                         <connections>
                                             <outlet property="delegate" destination="BwE-ql-CBb" id="xfd-Ir-uOl"/>
@@ -414,9 +411,9 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                     <constraint firstItem="Lc9-ZJ-WZO" firstAttribute="centerX" secondItem="1mX-1F-XEH" secondAttribute="centerX" id="4MV-C7-Jy2"/>
                                     <constraint firstItem="Tbx-Mn-f59" firstAttribute="top" secondItem="Lc9-ZJ-WZO" secondAttribute="bottom" id="8kv-LP-wx6"/>
                                     <constraint firstAttribute="bottom" secondItem="R2R-Wf-IP8" secondAttribute="bottom" constant="4" id="GPd-8T-YDF"/>
-                                    <constraint firstItem="Lc9-ZJ-WZO" firstAttribute="top" secondItem="1mX-1F-XEH" secondAttribute="top" id="HHk-Sb-3e9"/>
                                     <constraint firstAttribute="trailing" secondItem="Tbx-Mn-f59" secondAttribute="trailing" id="MnF-86-c9G"/>
                                     <constraint firstItem="Lc9-ZJ-WZO" firstAttribute="leading" secondItem="1mX-1F-XEH" secondAttribute="leading" id="ahz-jS-CKg"/>
+                                    <constraint firstItem="Tbx-Mn-f59" firstAttribute="top" secondItem="1mX-1F-XEH" secondAttribute="top" constant="210" id="f2d-h0-Qbx"/>
                                     <constraint firstItem="Tbx-Mn-f59" firstAttribute="leading" secondItem="1mX-1F-XEH" secondAttribute="leading" id="yos-uO-eFS"/>
                                 </constraints>
                                 <connections>
@@ -427,6 +424,7 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="R2R-Wf-IP8" secondAttribute="trailing" constant="8" id="Acz-xO-5yQ"/>
+                            <constraint firstItem="Lc9-ZJ-WZO" firstAttribute="top" secondItem="wf0-bl-ZPX" secondAttribute="bottom" constant="-64" id="H8U-8K-9X3"/>
                             <constraint firstItem="1mX-1F-XEH" firstAttribute="top" secondItem="hAV-e9-I8q" secondAttribute="top" id="LCL-2d-51e"/>
                             <constraint firstItem="3jo-ho-ryl" firstAttribute="top" secondItem="1mX-1F-XEH" secondAttribute="bottom" id="Mp5-xb-MjO"/>
                             <constraint firstItem="1mX-1F-XEH" firstAttribute="leading" secondItem="hAV-e9-I8q" secondAttribute="leading" id="RfO-qN-5n7"/>

@@ -46,7 +46,12 @@ extension NGO: JSONDictInitable {
         let url = dict["url"] as? String
         let phoneNumber = dict["phone"] as? String
         
-        self.init(ngoId: id, name: name, phoneNumber: phoneNumber, address: address, openingHours: "10.00 Uhr - 18.30 Uhr", websiteURL: url)
+        let latitude = dict["latitude"] as? CLLocationDegrees ?? 0
+        let longitude = dict["longitude"] as? CLLocationDegrees ?? 0
+        
+        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        self.init(ngoId: id, name: name, phoneNumber: phoneNumber, address: address, openingHours: "10.00 Uhr - 18.30 Uhr", websiteURL: url, coordinate: coordinates)
     }
 }
 
