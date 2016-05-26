@@ -61,7 +61,7 @@ public class InfoViewController: UIViewController {
     private func setupDataSource() {
         infoData = [
             [
-                TableCell(cellType: .Contact, cellTitle: "Kontakt Uns", cellDetailText: nil, cellContent: nil)
+                TableCell(cellType: .Contact, cellTitle: "Feedback Geben", cellDetailText: nil, cellContent: nil)
             ]
         ]
     }

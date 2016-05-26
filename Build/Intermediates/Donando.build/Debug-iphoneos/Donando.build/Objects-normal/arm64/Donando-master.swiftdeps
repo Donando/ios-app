@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "d32f30c434d54af9580f7c0198eb7dfd"
-build_time: [517568262, 166600000]
+build_time: [517582327, 353554000]
 inputs:
   "/Users/hgursoy/Donando/ios-app/Donando/DataStore.swift": [517506260, 0]
   "/Users/hgursoy/Donando/ios-app/Donando/TabBarController.swift": [514919213, 0]
@@ -15,5 +15,5 @@ inputs:
   "/Users/hgursoy/Donando/ios-app/Donando/Error.swift": [517331225, 0]
   "/Users/hgursoy/Donando/ios-app/Donando/Extensions.swift": [517498634, 0]
   "/Users/hgursoy/Donando/ios-app/Donando/NGODetailViewController.swift": [517568166, 0]
-  "/Users/hgursoy/Donando/ios-app/Donando/InfoViewController.swift": [517410770, 0]
+  "/Users/hgursoy/Donando/ios-app/Donando/InfoViewController.swift": [517582325, 0]
   "/Users/hgursoy/Donando/ios-app/Donando/APIClient.swift": [517406655, 0]
