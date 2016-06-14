@@ -1,1 +1,0 @@
-/Users/hgursoy/Donando/ios-app/Build/Intermediates/ArchiveIntermediates/Donando/InstallationBuildProductsLocation/Applications/Donando.app

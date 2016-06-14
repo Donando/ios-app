@@ -1,1 +1,0 @@
- const unsigned char Result_iOSTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Result-iOSTests  PROJECT:Result-1" "\n"; const double Result_iOSTestsVersionNumber __attribute__ ((used)) = (double)1.;

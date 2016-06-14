@@ -1,6 +1,0 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
-options: "8b0a32c940d3e677057de760cb700079"
-build_time: [515021586, 522097000]
-inputs:
-  "/Users/hgursoy/Downloads/Result-master/Result/ResultType.swift": [514197186, 0]
-  "/Users/hgursoy/Downloads/Result-master/Result/Result.swift": [514197186, 0]

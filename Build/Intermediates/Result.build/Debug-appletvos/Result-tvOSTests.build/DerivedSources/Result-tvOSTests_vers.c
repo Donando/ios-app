@@ -1,1 +1,0 @@
- const unsigned char Result_tvOSTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Result-tvOSTests  PROJECT:Result-1" "\n"; const double Result_tvOSTestsVersionNumber __attribute__ ((used)) = (double)1.;

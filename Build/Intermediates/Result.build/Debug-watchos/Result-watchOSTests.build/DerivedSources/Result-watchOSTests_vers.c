@@ -1,1 +1,0 @@
- const unsigned char Result_watchOSTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Result-watchOSTests  PROJECT:Result-1" "\n"; const double Result_watchOSTestsVersionNumber __attribute__ ((used)) = (double)1.;
