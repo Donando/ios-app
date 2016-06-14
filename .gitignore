@@ -181,6 +181,10 @@ xcuserdata/
 
 *.moved-aside
 
+Carthage*
+Cartfile.resolved
+
+
 ####
 # OPTIONAL: Some well-known tools that people use side-by-side with Xcode / iOS development
 #
