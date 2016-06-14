@@ -1,3 +1,4 @@
 github "Thomvis/BrightFutures"
 github "antitypical/Result"
 github "Alamofire/Alamofire" ~> 3.3
+github "marketplacer/Dodo" ~> 2.2
