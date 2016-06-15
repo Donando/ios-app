@@ -77,11 +77,11 @@ public extension Double {
 
 extension UIColor {
     static func mainTintColor() -> UIColor {
-        return UIColor(red: 245/255.0, green: 170/255.0, blue: 47/255.0, alpha: 1.0)
+        return UIColor(red: 219/255.0, green: 131/255.0, blue: 112/255.0, alpha: 1.0)
     }
     
     static func secondaryTintColor() -> UIColor {
-        return UIColor(red: 252/255.0, green: 88/255.0, blue: 48/255.0, alpha: 1.0)
+        return UIColor(red: 114/255.0, green: 154/255.0, blue: 202/255.0, alpha: 1.0)
     }
     
     static func lightTintColor() -> UIColor {
@@ -136,17 +136,17 @@ extension UIImage {
         UIGraphicsBeginImageContext(rect.size);
         let context = UIGraphicsGetCurrentContext();
         
-        CGContextSetFillColorWithColor(context, color.CGColor);
-        CGContextFillRect(context, rect);
+        CGContextSetFillColorWithColor(context!, color.CGColor);
+        CGContextFillRect(context!, rect);
         
         var image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
         UIGraphicsBeginImageContext(size)
-        image.drawInRect(rect)
+        image!.drawInRect(rect)
         image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image;
+        return image!;
     }
 }
