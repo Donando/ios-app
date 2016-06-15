@@ -109,9 +109,9 @@ public struct Endpoints {
         let baseURLString = baseURI == nil ? self.baseURI : baseURI
         var baseURL = NSURL(string: baseURLString)
         // appended path components will be URL encoded automatically:
-        baseURL = baseURL!.URLByAppendingPathComponent(name.rawValue).URLByAppendingPathComponent(path)
+        baseURL = baseURL!.URLByAppendingPathComponent(name.rawValue)!.URLByAppendingPathComponent(path)
         // re-decode URL components so token placeholders can be replaced later:
-        var populatedEndPoint: String = baseURL!.absoluteString.stringByRemovingPercentEncoding!
+        var populatedEndPoint: String = baseURL!.absoluteString!.stringByRemovingPercentEncoding!
         
         if let replacements = ids {
             for (token, value) in replacements {
