@@ -91,11 +91,28 @@ class NGODetailViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
     }
     
+    
+}
+
+
+// MARK: - NGO Actions
+extension NGODetailViewController {
     @IBAction func openWebsite() {
         guard let websiteURLString = ngo?.websiteURL,
             websiteURL = NSURL(string: websiteURLString)
             else { return }
         UIApplication.sharedApplication().openURL(websiteURL)
+    }
+    
+    @IBAction func openDirections() {
+        guard let ngoAnnotation = ngoAnnotation else { return }
+        
+        let placemark = MKPlacemark(coordinate: ngoAnnotation.coordinate, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = ngoAnnotation.name
+        
+        let routingOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+        mapItem.openInMapsWithLaunchOptions(routingOptions)
     }
 }
 
