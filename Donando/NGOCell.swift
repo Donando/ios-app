@@ -38,5 +38,7 @@ class NGOCell: UITableViewCell {
         nameLabel.text = viewModel.name
         addressLabel.text = viewModel.address
         phoneButton.setTitle(viewModel.telephone, forState: .Normal)
+        
+        phoneButton.hidden = viewModel.telephone?.isEmpty ?? true
     }
 }
