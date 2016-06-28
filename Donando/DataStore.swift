@@ -31,31 +31,15 @@ public class DataStore {
             }
             
             var ngos = [NGO]()
-//            var coordinatesFetched = [Bool]()
-            
-            for (index, dict) in resultArray.enumerate() {
+            for dict in resultArray {
                 guard let dict = dict as? JSONDictionary,
                     ngoDict = dict["ngo"] as? JSONDictionary,
                     var ngo = NGO(dict: ngoDict)
+                    where CLLocationCoordinate2DIsValid(ngo.coordinate)
                     else { continue }
                 
-//                coordinatesFetched.append(false)
                 ngo.demands = dict["demands"] as? [String]
-                
-                
-//                let coordinateFuture = ngo.findCoordinates()
-//                coordinateFuture.onComplete { result in
-//                    if let coordinates = result.value {
-//                        ngo.coordinate = coordinates
-//                    }
-//                    
                 ngos.append(ngo)
-//
-//                    coordinatesFetched[index] = true
-//                    if coordinatesFetched.reduce(true, combine: { fetched, thisFetched in return fetched && thisFetched}) {
-//                        promise.success(ngos)
-//                    }
-//                }
             }
             promise.success(ngos)
         }

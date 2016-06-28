@@ -32,6 +32,8 @@ class SearchViewController: UIViewController {
     var ngoAnnotations = [NGOAnnotation]()
     
     let dataStore = DataStore(dataClient: APIClient())
+    let ngoDataSource = NgoDataSource()
+    var mapViewDataSource: NgoMapDataSource?
     
     var listViewExpanded = false
     var loadingView: LoadingView?
@@ -50,7 +52,8 @@ class SearchViewController: UIViewController {
         title = "Suche"
         
         setupUI()
-        loadData()
+        setupDataSources()
+        loadInitialData()
         
         searchViewTopConstraint.constant = -view.frame.height
     }
@@ -60,13 +63,16 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBarHidden = true
     }
     
-    private func loadData(searchText: String = "", zipcode: String = "") {
+    private func setupDataSources() {
+        mapViewDataSource = NgoMapDataSource(mapView: mapView, annotationInfoButtonPressed: annotationInfoButtonPressed)
+        mapView.delegate = mapViewDataSource
+        ngoDataSource.add(self)
+        ngoDataSource.add(mapViewDataSource!)
+    }
+    
+    private func loadInitialData() {
         loadingView = LoadingView.show(inView: view)
-        
-        let ngoFuture = dataStore.getNGOs(zipcode, searchText: searchText)
-        ngoFuture.onSuccess(callback: handleNGOsLoaded)
-        ngoFuture.onFailure(callback: handleNGOError)
-        
+        ngoDataSource.loadData()
     }
     
     private func removeLoadingView() {
@@ -74,30 +80,6 @@ class SearchViewController: UIViewController {
         loadingView?.remove()
         loadingView = nil
     }
-    
-    private func handleNGOsLoaded(ngos: [NGO]) {
-        removeLoadingView()
-        self.ngos = ngos
-        
-        mapView.removeAnnotations(ngoAnnotations)
-        
-        for (index, ngo) in ngos.enumerate() {
-            let annotation = NGOAnnotation(ngo: ngo, index: index)
-            ngoAnnotations.append(annotation)
-            mapView.addAnnotation(annotation)
-            
-            if !CLLocationCoordinate2DIsValid(annotation.coordinate) {
-                self.ngos.removeAtIndex(index)
-            }
-        }
-        
-        tableView.reloadData()
-    }
-    
-    private func handleNGOError(error: DonandoError) {
-        removeLoadingView()
-    }
-
     private func setupUI() {
         navigationController?.navigationBarHidden = true
         
@@ -123,7 +105,7 @@ class SearchViewController: UIViewController {
     }
     
     private func zoomMapIntoDefaultLocation() {
-        let defaultRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 52.518076, longitude: 13.403136), 100000, 100000)
+        let defaultRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 52.510076, longitude: 13.403136), 10000, 10000)
         mapView.region = defaultRegion
     }
     
@@ -153,7 +135,6 @@ class SearchViewController: UIViewController {
         listViewExpanded = up
         
         listViewHeightConstraint.constant = heightConstraint
-        listButton.alpha = 0
         
         
         UIView.animateWithDuration(0.4, animations: {
@@ -161,7 +142,6 @@ class SearchViewController: UIViewController {
             }) { _ in
                 self.listButton.setTitle(listButtonTitle, forState: .Normal)
                 self.listButton.setImage(UIImage(named: listButtonImage), forState: .Normal)
-                self.listButton.alpha = 1
         }
     }
     
@@ -206,13 +186,26 @@ class SearchViewController: UIViewController {
     }
 }
 
+extension SearchViewController: NgoDataSourceConsumer {
+    func handle(ngos: [NGO]) {
+        removeLoadingView()
+        self.ngos = ngos
+        tableView.reloadData()
+    }
+    
+    func handle(error: DonandoError) {
+        removeLoadingView()
+    }
+}
+
 extension SearchViewController {
     
     func doSearch() {
         zipCodeSearchText = zipCodeSearchField.text ?? ""
         demandSearchText = demandSearchField.text ?? ""
         
-        loadData(demandSearchText, zipcode: zipCodeSearchText)
+        loadingView = LoadingView.show(inView: view)
+        ngoDataSource.loadData(demandSearchText, zipcode: zipCodeSearchText)
         updateSearchBox()
     }
     
@@ -220,40 +213,6 @@ extension SearchViewController {
         doSearch()
         moveSearchView(up: true)
         view.endEditing(true)
-    }
-}
-
-extension SearchViewController: MKMapViewDelegate {
-
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? NGOAnnotation {
-            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(NGOAnnotation.reuseIdentifier) as? MKPinAnnotationView
-            
-            if let annotationView = annotationView {
-                annotationView.annotation = annotation
-            } else {
-                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: NGOAnnotation.reuseIdentifier)
-                annotationView?.pinTintColor = UIColor.mainTintColor()
-                annotationView?.animatesDrop = true
-                annotationView?.canShowCallout = true
-                
-                let infoButton = UIButton(type: .InfoDark)
-                infoButton.tag = annotation.ngoIndex
-                infoButton.addTarget(self, action: #selector(annotationInfoButtonPressed(_:)), forControlEvents: .TouchUpInside)
-                
-                annotationView?.rightCalloutAccessoryView = infoButton
-                
-                let callButton = UIButton(type: .Custom)
-                callButton.setImage(UIImage(named: "telephone"), forState: .Normal)
-                callButton.frame = CGRect(origin: CGPointZero, size: CGSize(width: 51, height: 51))
-                callButton.backgroundColor = UIColor.mainTintColor()
-                callButton.tintColor = UIColor.whiteColor()
-                
-                annotationView?.leftCalloutAccessoryView = callButton
-            }
-            return annotationView
-        }
-        return nil
     }
 }
 
@@ -325,35 +284,4 @@ extension SearchViewController: UITextFieldDelegate {
     }
 }
 
- class NGOCell: UITableViewCell {
-    static let reuseIdentifier = "NGOCell"
-    static let nib = "NGOCell"
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var phoneButton: UIButton!
-    @IBOutlet weak var infoButton: UIImageView!
-    
-    struct ViewModel {
-        let name: String
-        let telephone: String?
-        let address: String
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupUI()
-    }
-    
-    func setupUI() {
-        infoButton.tintColor = UIColor.mainTintColor()
-        phoneButton.tintColor = UIColor.mainTintColor()
-        selectionStyle = .None
-    }
-    
-    func updateWithViewModel(viewModel: ViewModel) {
-        nameLabel.text = viewModel.name
-        addressLabel.text = viewModel.address
-        phoneButton.setTitle(viewModel.telephone, forState: .Normal)
-    }
-}
+ 

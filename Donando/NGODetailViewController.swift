@@ -17,11 +17,11 @@ class NGODetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var telephoneButton: UIButton!
-    @IBOutlet weak var openingHoursButton: UIButton!
+    
+    @IBOutlet var actionButtons: [UIButton]!
     
     @IBOutlet weak var demandsLabel: UILabel!
     @IBOutlet weak var seeMoreButton: UILabel!
-    @IBOutlet weak var openWebsiteButton: UIButton!
     @IBOutlet weak var detailContainerView: UIView!
     
     @IBOutlet weak var demandsHeightConstraint: NSLayoutConstraint!
@@ -43,9 +43,11 @@ class NGODetailViewController: UIViewController {
         
         setNavigationBarAlpha(0)
         
-        telephoneButton.tintColor = UIColor.mainTintColor()
-        openingHoursButton.tintColor = UIColor.mainTintColor()
-        openWebsiteButton.setTitleColor(UIColor.mainTintColor(), forState: .Normal)
+        for button in actionButtons {
+            button.backgroundColor = UIColor.mainTintColor()
+            button.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        }
+        
         zoomMapIntoDefaultLocation()
         
     }
@@ -73,18 +75,10 @@ class NGODetailViewController: UIViewController {
         
         nameLabel.text = ngo.name
         addressLabel.text = ngo.address
-        telephoneButton.setTitle(ngo.phoneNumber, forState: .Normal)
         
         demandsLabel.text = ngo.demands?.joinWithSeparator("\n")
         
         demandsHeightConstraint.constant = demandsLabel.text?.heightWithConstrainedWidth(demandsLabel.frame.width, font: demandsLabel.font) ?? 0
-        
-        if let openingHours = ngo.openingHours {
-            openingHoursButton.setTitle(openingHours, forState: .Normal)
-            openingHoursButton.hidden = false
-        } else {
-            openingHoursButton.hidden = true
-        }
     }
     
     private func setNavigationBarAlpha(alpha: CGFloat) {

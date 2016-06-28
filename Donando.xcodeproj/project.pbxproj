@@ -21,6 +21,9 @@
 		24757BB41D120F0D004D4D84 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2407DC871CD3A1AF00F582E0 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24757BBF1D120FB3004D4D84 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757B9D1D120D39004D4D84 /* BrightFutures.framework */; };
 		24757BC01D120FB3004D4D84 /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24757B9D1D120D39004D4D84 /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		247FF4FC1D131375002808A3 /* NGOCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FF4FB1D131375002808A3 /* NGOCell.swift */; };
+		247FF4FE1D13139A002808A3 /* NGOMapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FF4FD1D13139A002808A3 /* NGOMapDataSource.swift */; };
+		247FF5001D1315AA002808A3 /* NGODataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FF4FF1D1315AA002808A3 /* NGODataSource.swift */; };
 		248D00451CCF7869009853D1 /* NGOAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D00441CCF7869009853D1 /* NGOAnnotation.swift */; };
 		248D00471CCFB109009853D1 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D00461CCFB109009853D1 /* DataStore.swift */; };
 		248D008C1CD01B8A009853D1 /* NGOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248D008B1CD01B8A009853D1 /* NGOCell.xib */; };
@@ -246,6 +249,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2460E78A1D121DBA00A3E421 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24757B751D120C83004D4D84 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +277,7 @@
 
 /* Begin PBXFileReference section */
 		2450DC6E1CD350F300EA359D /* WebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
+		2460E7651D121DBA00A3E421 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		2470EF931CD37AB000971D0D /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		2470EF9C1CD37E0000971D0D /* DataClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataClient.swift; sourceTree = "<group>"; };
 		2470EF9E1CD37EDE00971D0D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -271,6 +285,9 @@
 		24757B3D1D120C15004D4D84 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		24757B551D120C1B004D4D84 /* Dodo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dodo.xcodeproj; path = Carthage/Checkouts/Dodo/Dodo.xcodeproj; sourceTree = "<group>"; };
 		24757B921D120D39004D4D84 /* BrightFutures.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BrightFutures.xcodeproj; path = Carthage/Checkouts/BrightFutures/BrightFutures.xcodeproj; sourceTree = "<group>"; };
+		247FF4FB1D131375002808A3 /* NGOCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGOCell.swift; sourceTree = "<group>"; };
+		247FF4FD1D13139A002808A3 /* NGOMapDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGOMapDataSource.swift; sourceTree = "<group>"; };
+		247FF4FF1D1315AA002808A3 /* NGODataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGODataSource.swift; sourceTree = "<group>"; };
 		248D00441CCF7869009853D1 /* NGOAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGOAnnotation.swift; sourceTree = "<group>"; };
 		248D00461CCFB109009853D1 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		248D005A1CCFC732009853D1 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = "../../Downloads/Result-master/Result.xcodeproj"; sourceTree = "<group>"; };
@@ -322,6 +339,14 @@
 				2407DC911CD3A1AF00F582E0 /* Result-watchOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2460E7641D121DBA00A3E421 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2460E7651D121DBA00A3E421 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		24757B3E1D120C15004D4D84 /* Products */ = {
@@ -387,6 +412,7 @@
 				248D005A1CCFC732009853D1 /* Result.xcodeproj */,
 				24F945C31CCE8658009F479A /* MapKit.framework */,
 				24F945941CCE44CD009F479A /* Donando */,
+				2460E7641D121DBA00A3E421 /* Frameworks */,
 				24F945931CCE44CD009F479A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -431,6 +457,9 @@
 				248D00441CCF7869009853D1 /* NGOAnnotation.swift */,
 				248D008E1CD102D5009853D1 /* NGODetailViewController.swift */,
 				248D008B1CD01B8A009853D1 /* NGOCell.xib */,
+				247FF4FB1D131375002808A3 /* NGOCell.swift */,
+				247FF4FD1D13139A002808A3 /* NGOMapDataSource.swift */,
+				247FF4FF1D1315AA002808A3 /* NGODataSource.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -455,6 +484,7 @@
 				24F9458F1CCE44CD009F479A /* Frameworks */,
 				24F945901CCE44CD009F479A /* Resources */,
 				24757B751D120C83004D4D84 /* Embed Frameworks */,
+				2460E78A1D121DBA00A3E421 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -475,7 +505,7 @@
 		24F9458A1CCE44CD009F479A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Donando;
 				TargetAttributes = {
@@ -735,9 +765,12 @@
 				248D00451CCF7869009853D1 /* NGOAnnotation.swift in Sources */,
 				24F945981CCE44CD009F479A /* SearchViewController.swift in Sources */,
 				2470EF9D1CD37E0000971D0D /* DataClient.swift in Sources */,
+				247FF5001D1315AA002808A3 /* NGODataSource.swift in Sources */,
 				24F945961CCE44CD009F479A /* AppDelegate.swift in Sources */,
+				247FF4FE1D13139A002808A3 /* NGOMapDataSource.swift in Sources */,
 				2470EF941CD37AB000971D0D /* Error.swift in Sources */,
 				24F945B51CCE7B56009F479A /* Extensions.swift in Sources */,
+				247FF4FC1D131375002808A3 /* NGOCell.swift in Sources */,
 				248D008F1CD102D5009853D1 /* NGODetailViewController.swift in Sources */,
 				24F945C21CCE7C1E009F479A /* InfoViewController.swift in Sources */,
 				2470EF9F1CD37EDE00971D0D /* APIClient.swift in Sources */,

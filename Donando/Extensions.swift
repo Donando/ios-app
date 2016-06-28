@@ -76,16 +76,16 @@ public extension Double {
 
 
 extension UIColor {
-    static func mainTintColor() -> UIColor {
-        return UIColor(red: 219/255.0, green: 131/255.0, blue: 112/255.0, alpha: 1.0)
+    static func mainTintColor(withAlpha alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(red: 219/255.0, green: 131/255.0, blue: 112/255.0, alpha: alpha)
     }
     
-    static func secondaryTintColor() -> UIColor {
-        return UIColor(red: 114/255.0, green: 154/255.0, blue: 202/255.0, alpha: 1.0)
+    static func secondaryTintColor(withAlpha alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(red: 114/255.0, green: 154/255.0, blue: 202/255.0, alpha: alpha)
     }
     
-    static func lightTintColor() -> UIColor {
-        return UIColor(colorLiteralRed: 91, green: 208, blue: 97, alpha: 1.0)
+    static func lightTintColor(withAlpha alpha: Float = 1.0) -> UIColor {
+        return UIColor(colorLiteralRed: 91, green: 208, blue: 97, alpha: alpha)
     }
     
     static func borderLightGrayColor() -> UIColor {
