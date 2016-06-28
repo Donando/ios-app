@@ -31,6 +31,8 @@ class NGODetailViewController: UIViewController {
     var ngo: NGO?
     var ngoAnnotation: NGOAnnotation?
     
+    var alertHandler: AlertHandler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -48,6 +50,8 @@ class NGODetailViewController: UIViewController {
             button.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
             button.layer.cornerRadius = button.frame.width / 2
         }
+        
+        alertHandler = AlertHandler(view: view, topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
         
         zoomMapIntoDefaultLocation()
         
@@ -113,6 +117,28 @@ extension NGODetailViewController {
         
         let routingOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
         mapItem.openInMapsWithLaunchOptions(routingOptions)
+    }
+    
+    @IBAction func callNgo() {
+        guard let phoneNumber = ngo?.phoneNumber,
+            phoneUrl = NSURL(string: "tel://\(phoneNumber)")
+            else {
+                alertHandler?.showError("Diese Organisation hat leider keine Telefonnumer")
+                return
+        }
+        
+        UIApplication.sharedApplication().openURL(phoneUrl)
+    }
+    
+    @IBAction func shareNgo() {
+        guard let websiteUrlString = ngo?.websiteURL,
+            websiteUrl = NSURL(string: websiteUrlString)
+            else {
+                return
+        }
+        
+        let vc = UIActivityViewController(activityItems: [websiteUrl], applicationActivities: [])
+        presentViewController(vc, animated: true, completion: nil)
     }
 }
 

@@ -339,6 +339,9 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                                                 </constraints>
                                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" image="telephone"/>
+                                                                <connections>
+                                                                    <action selector="callNgo" destination="c8G-9r-zPk" eventType="touchUpInside" id="Fbw-kt-dSv"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anrufen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFM-pF-h3n">
                                                                 <rect key="frame" x="5" y="45" width="51" height="21"/>
@@ -426,6 +429,9 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                                                 <color key="backgroundColor" red="0.99751919507980347" green="0.34239256381988525" blue="0.13810202479362488" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" image="share"/>
+                                                                <connections>
+                                                                    <action selector="shareNgo" destination="c8G-9r-zPk" eventType="touchUpInside" id="6L1-S1-pS7"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teilen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtT-ux-6Oq">
                                                                 <rect key="frame" x="4" y="45" width="51" height="21"/>
