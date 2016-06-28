@@ -28,6 +28,7 @@
 		248D00471CCFB109009853D1 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D00461CCFB109009853D1 /* DataStore.swift */; };
 		248D008C1CD01B8A009853D1 /* NGOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248D008B1CD01B8A009853D1 /* NGOCell.xib */; };
 		248D008F1CD102D5009853D1 /* NGODetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D008E1CD102D5009853D1 /* NGODetailViewController.swift */; };
+		24A7D4011D229A8700ABC5D9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D4001D229A8700ABC5D9 /* AlertHandler.swift */; };
 		24AE2C0D1CF3001E00CEFBE1 /* NGO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */; };
 		24AE2C211CF327E200CEFBE1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE2C201CF327E200CEFBE1 /* LoadingView.swift */; };
 		24F945961CCE44CD009F479A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F945951CCE44CD009F479A /* AppDelegate.swift */; };
@@ -293,6 +294,7 @@
 		248D005A1CCFC732009853D1 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = "../../Downloads/Result-master/Result.xcodeproj"; sourceTree = "<group>"; };
 		248D008B1CD01B8A009853D1 /* NGOCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NGOCell.xib; sourceTree = "<group>"; };
 		248D008E1CD102D5009853D1 /* NGODetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGODetailViewController.swift; sourceTree = "<group>"; };
+		24A7D4001D229A8700ABC5D9 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NGO.swift; path = ../NGO.swift; sourceTree = "<group>"; };
 		24AE2C201CF327E200CEFBE1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		24F945921CCE44CD009F479A /* Donando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -445,6 +447,7 @@
 				2450DC6E1CD350F300EA359D /* WebClient.swift */,
 				2470EF9E1CD37EDE00971D0D /* APIClient.swift */,
 				2470EF931CD37AB000971D0D /* Error.swift */,
+				24A7D4001D229A8700ABC5D9 /* AlertHandler.swift */,
 			);
 			path = Donando;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				24F945B51CCE7B56009F479A /* Extensions.swift in Sources */,
 				247FF4FC1D131375002808A3 /* NGOCell.swift in Sources */,
 				248D008F1CD102D5009853D1 /* NGODetailViewController.swift in Sources */,
+				24A7D4011D229A8700ABC5D9 /* AlertHandler.swift in Sources */,
 				24F945C21CCE7C1E009F479A /* InfoViewController.swift in Sources */,
 				2470EF9F1CD37EDE00971D0D /* APIClient.swift in Sources */,
 			);

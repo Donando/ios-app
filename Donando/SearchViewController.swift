@@ -69,6 +69,7 @@ class SearchViewController: UIViewController {
         mapView.delegate = mapViewDataSource
         ngoDataSource.add(self)
         ngoDataSource.add(mapViewDataSource!)
+        zoomMapIntoDefaultLocation()
     }
     
     private func loadInitialData() {
@@ -100,14 +101,13 @@ class SearchViewController: UIViewController {
         
         tableView.tableFooterView = UIView()
         
-        registerNibs()
+        alertHandler = AlertHandler(view: view, topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
         
-        zoomMapIntoDefaultLocation()
+        registerNibs()
     }
     
     private func zoomMapIntoDefaultLocation() {
-        let defaultRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 52.510076, longitude: 13.403136), 10000, 10000)
-        mapView.region = defaultRegion
+        mapViewDataSource?.zoomMapInto(CLLocationCoordinate2D(latitude: 52.670076, longitude: 13.413136))
     }
     
     @IBAction func dismissKeyboard() {

@@ -25,6 +25,11 @@ class NgoMapDataSource: NSObject {
     func handleInfoButtonPressed(button: UIButton) {
         annotationInfoButtonPressed(button)
     }
+    
+    func zoomMapInto(coordinate: CLLocationCoordinate2D, distance: CLLocationDistance = 80000) {
+        let region = MKCoordinateRegionMakeWithDistance(coordinate, distance, distance)
+        mapView.region = region
+    }
 }
 
 extension NgoMapDataSource: NgoDataSourceConsumer {
@@ -34,6 +39,10 @@ extension NgoMapDataSource: NgoDataSourceConsumer {
             let annotation = NGOAnnotation(ngo: ngo, index: index)
             ngoAnnotations.append(annotation)
             mapView.addAnnotation(annotation)
+        }
+        
+        if let coordinate = ngos.first?.coordinate {
+            zoomMapInto(coordinate)
         }
     }
 }
