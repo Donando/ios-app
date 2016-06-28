@@ -46,6 +46,7 @@ class NGODetailViewController: UIViewController {
         for button in actionButtons {
             button.backgroundColor = UIColor.mainTintColor()
             button.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+            button.layer.cornerRadius = button.frame.width / 2
         }
         
         zoomMapIntoDefaultLocation()
@@ -102,8 +103,10 @@ extension NGODetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offsetRate = max(scrollView.contentOffset.y, 0) / (nameLabel.frame.origin.y + detailContainerView.frame.origin.y + nameLabel.frame.height)
         let navigationBarAlpha = min(1, offsetRate)
-
-        setNavigationBarAlpha(navigationBarAlpha)
+        
+        if navigationBarAlpha == 0 || navigationBarAlpha == 1 {
+            setNavigationBarAlpha(navigationBarAlpha)
+        }
     }
 }
 
