@@ -37,6 +37,7 @@ class SearchViewController: UIViewController {
     
     var listViewExpanded = false
     var loadingView: LoadingView?
+    var alertHandler: AlertHandler?
     
     var searchViewShown: Bool {
         return searchViewHeightConstraint.constant != 0
@@ -191,10 +192,16 @@ extension SearchViewController: NgoDataSourceConsumer {
         removeLoadingView()
         self.ngos = ngos
         tableView.reloadData()
+        
+        if ngos.isEmpty {
+            alertHandler?.showError("Keine Ergebnisse gefunden. Bitte versuchen Sie erneut.")
+        }
     }
     
     func handle(error: DonandoError) {
         removeLoadingView()
+        alertHandler?.showError("Es gab einen Fehler. Bitte versuchen Sie erneut.")
+        
     }
 }
 
