@@ -29,6 +29,8 @@
 		248D008C1CD01B8A009853D1 /* NGOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248D008B1CD01B8A009853D1 /* NGOCell.xib */; };
 		248D008F1CD102D5009853D1 /* NGODetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D008E1CD102D5009853D1 /* NGODetailViewController.swift */; };
 		24A7D4011D229A8700ABC5D9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D4001D229A8700ABC5D9 /* AlertHandler.swift */; };
+		24A7D41B1D22A66000ABC5D9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7D4191D22A66000ABC5D9 /* Fabric.framework */; };
+		24A7D41C1D22A66000ABC5D9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7D41A1D22A66000ABC5D9 /* Crashlytics.framework */; };
 		24AE2C0D1CF3001E00CEFBE1 /* NGO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */; };
 		24AE2C211CF327E200CEFBE1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE2C201CF327E200CEFBE1 /* LoadingView.swift */; };
 		24F945961CCE44CD009F479A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F945951CCE44CD009F479A /* AppDelegate.swift */; };
@@ -295,6 +297,8 @@
 		248D008B1CD01B8A009853D1 /* NGOCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NGOCell.xib; sourceTree = "<group>"; };
 		248D008E1CD102D5009853D1 /* NGODetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGODetailViewController.swift; sourceTree = "<group>"; };
 		24A7D4001D229A8700ABC5D9 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		24A7D4191D22A66000ABC5D9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		24A7D41A1D22A66000ABC5D9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NGO.swift; path = ../NGO.swift; sourceTree = "<group>"; };
 		24AE2C201CF327E200CEFBE1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		24F945921CCE44CD009F479A /* Donando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +326,8 @@
 				24757BAF1D120EFB004D4D84 /* Alamofire.framework in Frameworks */,
 				24757B711D120C83004D4D84 /* Dodo.framework in Frameworks */,
 				24757BB31D120F0D004D4D84 /* Result.framework in Frameworks */,
+				24A7D41B1D22A66000ABC5D9 /* Fabric.framework in Frameworks */,
+				24A7D41C1D22A66000ABC5D9 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +352,8 @@
 		2460E7641D121DBA00A3E421 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24A7D4191D22A66000ABC5D9 /* Fabric.framework */,
+				24A7D41A1D22A66000ABC5D9 /* Crashlytics.framework */,
 				2460E7651D121DBA00A3E421 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -488,6 +496,7 @@
 				24F945901CCE44CD009F479A /* Resources */,
 				24757B751D120C83004D4D84 /* Embed Frameworks */,
 				2460E78A1D121DBA00A3E421 /* Embed App Extensions */,
+				24A7D4181D22A64300ABC5D9 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -754,6 +763,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24A7D4181D22A64300ABC5D9 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 59f82d97aacc6c234b9b965c11b3556f72bf55ca 9ef9bea7bde025565267d3724ea179fb8961d7da676b0b74abd13c06074e3c19";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24F9458E1CCE44CD009F479A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -921,6 +947,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Donando/Info.plist;
 				INSTALL_GROUP = admin;
@@ -943,6 +970,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Donando/Info.plist;
 				INSTALL_GROUP = admin;
