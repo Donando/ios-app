@@ -52,6 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func setupFabric() {
+        #if DEBUG
+            Fabric.sharedSDK().debug = true
+        #endif
+        
         Fabric.with([Crashlytics.self])
     }
 
