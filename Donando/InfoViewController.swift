@@ -12,8 +12,10 @@ import MessageUI
 public class InfoViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var versionLabel: UILabel!
     
     enum CellType {
+        case Info
         case Weblink
         case Contact
         case SupportPhone
@@ -43,6 +45,7 @@ public class InfoViewController: UIViewController {
     private func setupUI() {
         setupTableView()
         setupDataSource()
+        setupVersionLabel()
     }
     
     private func setupTableView() {
@@ -61,6 +64,7 @@ public class InfoViewController: UIViewController {
     private func setupDataSource() {
         infoData = [
             [
+                TableCell(cellType: .Info, cellTitle: "Was ist Donando?", cellDetailText: nil, cellContent: nil),
                 TableCell(cellType: .Contact, cellTitle: "Feedback Geben", cellDetailText: nil, cellContent: nil)
             ]
         ]
@@ -75,6 +79,24 @@ public class InfoViewController: UIViewController {
         
         presentViewController(mailVC, animated: true, completion: nil)
     }
+    
+    /**
+     Setup the version label to include the version number and the build number
+     */
+    private func setupVersionLabel() {
+        guard let infoDict = NSBundle.mainBundle().infoDictionary,
+            versionNumber = infoDict["CFBundleShortVersionString"] as? String,
+            buildNumber = infoDict["CFBundleVersion"] as? String,
+            label = versionLabel
+            else { return }
+        
+        label.text =  "Version \(versionNumber) Build \(buildNumber)"
+    }
+    
+    private func openInfoDetail() {
+        performSegueWithIdentifier("showInfoDetail", sender: nil)
+    }
+
 }
 
 extension InfoViewController: UITableViewDataSource {
@@ -102,12 +124,22 @@ extension InfoViewController: UITableViewDelegate {
         return cell
     }
     
+    public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return versionLabel
+    }
+    
+    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cellData = infoData[indexPath.section][indexPath.row]
         
         switch cellData.cellType {
         case .Contact:
             openContact()
+        case .Info:
+            openInfoDetail()
         default:
             break
         }

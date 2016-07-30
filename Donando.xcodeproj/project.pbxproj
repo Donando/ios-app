@@ -28,6 +28,7 @@
 		248D00471CCFB109009853D1 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D00461CCFB109009853D1 /* DataStore.swift */; };
 		248D008C1CD01B8A009853D1 /* NGOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248D008B1CD01B8A009853D1 /* NGOCell.xib */; };
 		248D008F1CD102D5009853D1 /* NGODetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D008E1CD102D5009853D1 /* NGODetailViewController.swift */; };
+		24A62FA31D3C09ED00C72B23 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A62FA21D3C09ED00C72B23 /* InfoDetailViewController.swift */; };
 		24A7D4011D229A8700ABC5D9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D4001D229A8700ABC5D9 /* AlertHandler.swift */; };
 		24A7D41B1D22A66000ABC5D9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7D4191D22A66000ABC5D9 /* Fabric.framework */; };
 		24A7D41C1D22A66000ABC5D9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7D41A1D22A66000ABC5D9 /* Crashlytics.framework */; };
@@ -296,11 +297,14 @@
 		248D005A1CCFC732009853D1 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = "../../Downloads/Result-master/Result.xcodeproj"; sourceTree = "<group>"; };
 		248D008B1CD01B8A009853D1 /* NGOCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NGOCell.xib; sourceTree = "<group>"; };
 		248D008E1CD102D5009853D1 /* NGODetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGODetailViewController.swift; sourceTree = "<group>"; };
+		24A62FA21D3C09ED00C72B23 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
 		24A7D4001D229A8700ABC5D9 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		24A7D4191D22A66000ABC5D9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		24A7D41A1D22A66000ABC5D9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		24AE2C0C1CF3001E00CEFBE1 /* NGO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NGO.swift; path = ../NGO.swift; sourceTree = "<group>"; };
 		24AE2C201CF327E200CEFBE1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		24ED55C71D3F9CB300B0C81D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		24ED55C81D3F9CB300B0C81D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		24F945921CCE44CD009F479A /* Donando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F945951CCE44CD009F479A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F945971CCE44CD009F479A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +356,7 @@
 		2460E7641D121DBA00A3E421 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24F945C31CCE8658009F479A /* MapKit.framework */,
 				24A7D4191D22A66000ABC5D9 /* Fabric.framework */,
 				24A7D41A1D22A66000ABC5D9 /* Crashlytics.framework */,
 				2460E7651D121DBA00A3E421 /* NotificationCenter.framework */,
@@ -420,7 +425,6 @@
 				24757B551D120C1B004D4D84 /* Dodo.xcodeproj */,
 				24757B3D1D120C15004D4D84 /* Alamofire.xcodeproj */,
 				248D005A1CCFC732009853D1 /* Result.xcodeproj */,
-				24F945C31CCE8658009F479A /* MapKit.framework */,
 				24F945941CCE44CD009F479A /* Donando */,
 				2460E7641D121DBA00A3E421 /* Frameworks */,
 				24F945931CCE44CD009F479A /* Products */,
@@ -480,6 +484,7 @@
 			children = (
 				24F945BF1CCE7BF1009F479A /* Info.storyboard */,
 				24F945C11CCE7C1E009F479A /* InfoViewController.swift */,
+				24A62FA21D3C09ED00C72B23 /* InfoDetailViewController.swift */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 			buildConfigurationList = 24F945A41CCE44CD009F479A /* Build configuration list for PBXNativeTarget "Donando" */;
 			buildPhases = (
 				24F9458E1CCE44CD009F479A /* Sources */,
+				24ED55AC1D3F9AAE00B0C81D /* Update Localizations */,
 				24F9458F1CCE44CD009F479A /* Frameworks */,
 				24F945901CCE44CD009F479A /* Resources */,
 				24757B751D120C83004D4D84 /* Embed Frameworks */,
@@ -540,6 +546,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 24F945891CCE44CD009F479A;
 			productRefGroup = 24F945931CCE44CD009F479A /* Products */;
@@ -778,6 +785,20 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 59f82d97aacc6c234b9b965c11b3556f72bf55ca 9ef9bea7bde025565267d3724ea179fb8961d7da676b0b74abd13c06074e3c19";
 		};
+		24ED55AC1D3F9AAE00B0C81D /* Update Localizations */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Localizations";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd stringstool\nruby ./createStrings.rb\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -792,6 +813,7 @@
 				24AE2C0D1CF3001E00CEFBE1 /* NGO.swift in Sources */,
 				24AE2C211CF327E200CEFBE1 /* LoadingView.swift in Sources */,
 				248D00451CCF7869009853D1 /* NGOAnnotation.swift in Sources */,
+				24A62FA31D3C09ED00C72B23 /* InfoDetailViewController.swift in Sources */,
 				24F945981CCE44CD009F479A /* SearchViewController.swift in Sources */,
 				2470EF9D1CD37E0000971D0D /* DataClient.swift in Sources */,
 				247FF5001D1315AA002808A3 /* NGODataSource.swift in Sources */,
@@ -837,6 +859,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				24F9459A1CCE44CD009F479A /* Base */,
+				24ED55C71D3F9CB300B0C81D /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -845,6 +868,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				24F9459F1CCE44CD009F479A /* Base */,
+				24ED55C81D3F9CB300B0C81D /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

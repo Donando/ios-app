@@ -381,6 +381,7 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                                             <constraint firstAttribute="height" constant="54" id="GgS-i5-MnQ"/>
                                                             <constraint firstItem="K2e-Ki-I4p" firstAttribute="centerX" secondItem="c8U-1I-xHY" secondAttribute="centerX" id="HlL-mT-hbq"/>
                                                             <constraint firstAttribute="width" constant="49" id="NQI-lp-viS"/>
+                                                            <constraint firstAttribute="width" constant="60" id="bHo-0b-JPJ"/>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -409,6 +410,7 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="Kjm-Yd-XVY"/>
                                                             <constraint firstItem="4cl-CT-RY7" firstAttribute="centerX" secondItem="Di0-cu-tH7" secondAttribute="centerX" id="b3n-HN-kO8"/>
                                                             <constraint firstAttribute="width" constant="49" id="j26-rZ-11I"/>
                                                             <constraint firstItem="4cl-CT-RY7" firstAttribute="top" secondItem="Di0-cu-tH7" secondAttribute="top" constant="4" id="jU4-WL-uM8"/>
@@ -441,6 +443,7 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="Btf-yO-K5M"/>
                                                             <constraint firstItem="uFu-k4-E3c" firstAttribute="top" secondItem="jm6-Z8-DyJ" secondAttribute="top" constant="4" id="asF-cU-B6c"/>
                                                             <constraint firstAttribute="height" constant="54" id="iCO-oP-Bx9"/>
                                                             <constraint firstAttribute="width" constant="49" id="iv9-vr-SKs"/>
@@ -483,6 +486,9 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="TET-au-wnZ"/>
+                                                        <exclude reference="Iae-rC-bW0"/>
+                                                        <exclude reference="159-bm-eII"/>
+                                                        <exclude reference="bKH-uP-bcR"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -570,17 +576,33 @@ Bitte keine Winterkleidung &amp; Absatzschuhe!…</string>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="Cws-IR-Pgf" id="bOv-iH-Sfg"/>
+                        <outlet property="callButtonContainer" destination="O5I-KE-vJG" id="G5d-j1-kQ3"/>
                         <outlet property="demandsHeightConstraint" destination="W0E-yK-FI3" id="ojU-W9-AlA"/>
                         <outlet property="demandsLabel" destination="R2R-Wf-IP8" id="93p-cR-dgb"/>
                         <outlet property="detailContainerView" destination="Tbx-Mn-f59" id="99u-wE-a8g"/>
+                        <outlet property="mapButtonContainer" destination="Di0-cu-tH7" id="WKa-GP-wkB"/>
                         <outlet property="mapView" destination="Lc9-ZJ-WZO" id="VQg-jv-vf5"/>
                         <outlet property="nameLabel" destination="1dq-7T-QzA" id="b6c-EA-GD4"/>
                         <outlet property="scrollView" destination="1mX-1F-XEH" id="cfN-34-dWh"/>
+                        <outlet property="shareButtonContainer" destination="jm6-Z8-DyJ" id="O0F-fC-KOZ"/>
                         <outlet property="telephoneButton" destination="FNA-14-Ao4" id="4iG-mu-G5y"/>
+                        <outlet property="webButtonContainer" destination="c8U-1I-xHY" id="gMM-4z-VPL"/>
                         <outletCollection property="actionButtons" destination="FNA-14-Ao4" collectionClass="NSMutableArray" id="u3q-Bn-EzT"/>
                         <outletCollection property="actionButtons" destination="K2e-Ki-I4p" collectionClass="NSMutableArray" id="0fv-dV-cOJ"/>
                         <outletCollection property="actionButtons" destination="4cl-CT-RY7" collectionClass="NSMutableArray" id="mg1-t9-lgk"/>
                         <outletCollection property="actionButtons" destination="uFu-k4-E3c" collectionClass="NSMutableArray" id="nbC-VD-BDX"/>
+                        <outletCollection property="callButtonConstraints" destination="AXI-bS-0PI" collectionClass="NSMutableArray" id="Mrw-0V-rEm"/>
+                        <outletCollection property="callButtonConstraints" destination="hWf-IQ-MEm" collectionClass="NSMutableArray" id="fJ9-yJ-AQ0"/>
+                        <outletCollection property="webButtonConstraints" destination="bHo-0b-JPJ" collectionClass="NSMutableArray" id="ewy-VG-9kn"/>
+                        <outletCollection property="webButtonConstraints" destination="AXI-bS-0PI" collectionClass="NSMutableArray" id="TnV-oY-vXn"/>
+                        <outletCollection property="webButtonConstraints" destination="tPr-8l-47j" collectionClass="NSMutableArray" id="JSw-47-8Ow"/>
+                        <outletCollection property="mapButtonConstraints" destination="Kjm-Yd-XVY" collectionClass="NSMutableArray" id="xzW-NG-GgI"/>
+                        <outletCollection property="mapButtonConstraints" destination="tPr-8l-47j" collectionClass="NSMutableArray" id="L8g-Iz-7Ns"/>
+                        <outletCollection property="mapButtonConstraints" destination="YLB-ag-Luc" collectionClass="NSMutableArray" id="dY3-ec-UEG"/>
+                        <outletCollection property="shareButtonConstraints" destination="Btf-yO-K5M" collectionClass="NSMutableArray" id="u0U-SE-t4G"/>
+                        <outletCollection property="shareButtonConstraints" destination="YLB-ag-Luc" collectionClass="NSMutableArray" id="Xac-Wd-1Ke"/>
+                        <outletCollection property="shareButtonConstraints" destination="wBy-Hv-BdM" collectionClass="NSMutableArray" id="q9h-K8-VSB"/>
+                        <outletCollection property="callButtonConstraints" destination="6T2-4I-C6w" collectionClass="NSMutableArray" id="KJ0-IE-zTM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSf-lN-WuO" userLabel="First Responder" sceneMemberID="firstResponder"/>

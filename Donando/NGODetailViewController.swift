@@ -24,6 +24,16 @@ class NGODetailViewController: UIViewController {
     @IBOutlet weak var seeMoreButton: UILabel!
     @IBOutlet weak var detailContainerView: UIView!
     
+    @IBOutlet weak var callButtonContainer: UIView!
+    @IBOutlet weak var webButtonContainer: UIView!
+    @IBOutlet weak var mapButtonContainer: UIView!
+    @IBOutlet weak var shareButtonContainer: UIView!
+    
+    @IBOutlet var callButtonConstraints: [NSLayoutConstraint]!
+    @IBOutlet var webButtonConstraints: [NSLayoutConstraint]!
+    @IBOutlet var mapButtonConstraints: [NSLayoutConstraint]!
+    @IBOutlet var shareButtonConstraints: [NSLayoutConstraint]!
+    
     @IBOutlet weak var demandsHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -45,16 +55,27 @@ class NGODetailViewController: UIViewController {
         
         setNavigationBarAlpha(0)
         
+        setupActionButtons()
+        
+        alertHandler = AlertHandler(view: view, topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
+        
+        zoomMapIntoDefaultLocation()
+    }
+    
+    
+    private func setupActionButtons() {
         for button in actionButtons {
             button.backgroundColor = UIColor.mainTintColor()
             button.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
             button.layer.cornerRadius = button.frame.width / 2
         }
-        
-        alertHandler = AlertHandler(view: view, topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
-        
-        zoomMapIntoDefaultLocation()
-        
+    }
+    
+    private func hideActionButtonContainer(constraints: [NSLayoutConstraint]) {
+        for constraint in constraints {
+            constraint.constant = 0
+        }
+        view.updateConstraints()
     }
     
     private func zoomMapIntoDefaultLocation() {
