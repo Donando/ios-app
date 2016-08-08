@@ -54,8 +54,12 @@ class SearchViewController: UIViewController {
         
         setupUI()
         setupDataSources()
-        loadInitialData()
         
+        if (UIApplication.sharedApplication().delegate as! AppDelegate).apiReady {
+            loadInitialData()
+        } else {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(loadInitialData), name: AppDelegate.APIReadyNotification, object: nil)
+        }
         searchViewTopConstraint.constant = -view.frame.height
     }
     
@@ -72,7 +76,7 @@ class SearchViewController: UIViewController {
         zoomMapIntoDefaultLocation()
     }
     
-    private func loadInitialData() {
+    @objc func loadInitialData() {
         loadingView = LoadingView.show(inView: view)
         ngoDataSource.loadData()
     }
@@ -129,7 +133,7 @@ class SearchViewController: UIViewController {
     }
     
     func moveListView(up up: Bool) {
-        let heightConstraint = up ? view.frame.height - 52 : 52
+        let heightConstraint = up ? view.frame.height - 42 : 52
         let listButtonTitle = up ? "Karte" : "Liste"
         let listButtonImage = up ? "downArrow" : "upArrow"
         

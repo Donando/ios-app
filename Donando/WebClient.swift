@@ -68,12 +68,36 @@ class WebClient {
             guard let _ = response.request else { return }
             
             if response.result.isSuccess {
-                promise.success(response.result.value)
+                promise.success (response.result.value)
             } else {
                 promise.failure(DonandoError.GenericError)
             }
             
         }.validate()
+        
+        return promise.future
+    }
+    
+    func checkUrlIsReachable(urlString: String) -> DataResult {
+        let promise = Promise<AnyObject?, DonandoError>()
+        
+        guard let url = NSURL(string: urlString) else {
+            promise.failure(DonandoError.GenericError)
+            return promise.future
+        }
+        
+        let request = NSMutableURLRequest(URL: url)
+        
+        request.HTTPMethod = HTTPMethod.HEAD.rawValue
+        
+        manager.request(request).response { _, _, _, error in
+            
+            if let _ = error {
+                promise.failure(DonandoError.GenericError)
+            } else {
+                promise.success(true)
+            }
+        }
         
         return promise.future
     }

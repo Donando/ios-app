@@ -10,14 +10,28 @@ import UIKit
 import Fabric
 import Crashlytics
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let mainAPIUrl = "https://backend.donando.eu"
+    let fallbackAPIUrl = "https://fathomless-ridge-60760.herokuapp.com/"
+    
+    var apiReady = false
+    
+    let webClient = WebClient()
+    
+    static let APIReadyNotification = "APIReadyNotification"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Endpoints.baseURI = "https://fathomless-ridge-60760.herokuapp.com/"
+        
+        let isReachable = webClient.checkUrlIsReachable(mainAPIUrl+"/demands")
+        isReachable.onSuccess(callback: useMainAPI)
+        isReachable.onFailure(callback: useFallbackAPI)
+        
         window?.tintColor = UIColor.mainTintColor()
         let barAppearace = UIBarButtonItem.appearance()
         barAppearace.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics:UIBarMetrics.Default)
@@ -25,6 +39,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupFabric()
         
         return true
+    }
+    
+    func useMainAPI(result: AnyObject?) {
+        Endpoints.baseURI = mainAPIUrl
+        apiIsReady()
+    }
+    
+    func useFallbackAPI(error: DonandoError) {
+        Endpoints.baseURI = fallbackAPIUrl
+        apiIsReady()
+    }
+    
+    func apiIsReady() {
+        apiReady = true
+        NSNotificationCenter.defaultCenter().postNotificationName(AppDelegate.APIReadyNotification, object: nil)
     }
 
     func applicationWillResignActive(application: UIApplication) {
